@@ -1,11 +1,15 @@
 /**
   
-   #BEE
+   #About Us
    
    # Out Telegram : https://t.me/billionaireglobal
      Out twitter  : https://twitter.com/IdeaBillionaire
      Out website  : https://billionaire-idea.jimdosite.com
-
+  
+   # Welcome to Billionaire Idea 
+      Billionaire Idea is a project based on Binance Smart Chain. 
+      We are community driven token based on merchandise fans art.
+   
    #Billionaire Tokenomic :
    Max supply 100.000.000
    47% burned
@@ -697,7 +701,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 }
 
 
-contract SafeMoon is Context, IERC20, Ownable {
+contract Billionaire is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -715,8 +719,8 @@ contract SafeMoon is Context, IERC20, Ownable {
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "Billionaire Test";
-    string private _symbol = "BIlltest";
+    string private _name = "Billionaire";
+    string private _symbol = "BIL";
     uint8 private _decimals = 9;
     
     uint256 public _taxFee = 5;
@@ -732,7 +736,7 @@ contract SafeMoon is Context, IERC20, Ownable {
     bool public swapAndLiquifyEnabled = true;
     
     uint256 public _maxTxAmount = 100 * 10**2 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 100 * 10**2 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 25 * 10**6 * 10**9;
     
     event MinTokensBeforeSwapUpdated(uint256 minTokensBeforeSwap);
     event SwapAndLiquifyEnabledUpdated(bool enabled);
