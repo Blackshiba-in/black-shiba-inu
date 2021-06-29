@@ -376,12 +376,6 @@ contract LittleYellowKoala is Context, IBEP20, Ownable {
     uint256 private _previousTaxFee = _taxFee;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    IUniswapV2Router02 public immutable uniswapV2Router;
-    address public immutable uniswapV2Pair;
-    
-    bool inSwapAndLiquify;
-    bool public swapAndLiquifyEnabled = true;
-    
     uint256 public _maxTxAmount = 100 * 10**12 * 10**9;
     uint256 private numTokensSellToAddToLiquidity = 50 * 10**15 * 10**9;
 
