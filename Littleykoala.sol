@@ -1,6 +1,20 @@
 // SPDX-License-Identifier: MIT
 
-//Telegram blackshiba_inu
+//    Welcome to Little Yellow Koala Stealth Launch!
+//      Air Rocket is a project based on Binance Smart Chain. 
+//    We are community driven token based on merchandise fans art.
+//    Name Token : Little Yellow Koala
+//    Symbol     : LYKO
+//    Supply     : 100.000.000.000.000.000    
+//    Decimals   : 9
+//
+//        Tokenomic
+//        Burned 90
+//        Devoloper and Marketing 1%
+//        Liquidity Pool 9%
+//        Max Tx 100.000.000.000.000 (Shield From Whale)
+
+//        Join our Telegram: https://t.me/LittleYellowKoala
 
 pragma solidity 0.5.16;
 
@@ -340,27 +354,36 @@ contract Ownable is Context {
   }
 }
 
-contract MYT is Context, IBEP20, Ownable {
+contract LittleYellowKoala is Context, IBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
 
   mapping (address => mapping (address => uint256)) private _allowances;
 
-  uint256 private _totalSupply;
-  uint8 private _decimals;
-  string private _symbol;
-  string private _name;
+    uint256 private constant MAX = ~uint256(0);
+    uint256 private _tTotal = 100 * 10**15 * 10**9;
+    uint256 private _rTotal = (MAX - (MAX % _tTotal));
+    uint256 private _tFeeTotal;
 
-  uint256 public_maxTxamount = 50000 * 10**8 * 10**0;
-  uint256 private nummtokensSellToAddLiquidity = 50000 * 10**8 * 10**0;
+    string private _name = "Little Yellow Koala";
+    string private _symbol = "LYKO";
+    uint8 private _decimals = 9;
+    
+    uint256 public _liquidityFee = 4;
+    uint256 public _taxFee = 4;
+    
+    uint256 private _previousTaxFee = _taxFee;
+    uint256 private _previousLiquidityFee = _liquidityFee;
 
-  constructor() public {
-    _name = "Black Shiba Inu";
-    _symbol = "BSHIB";
-    _decimals = 0;
-    _totalSupply = 10000 * 10**15 * 10**0;
-    _balances[msg.sender] = _totalSupply;
+    IUniswapV2Router02 public immutable uniswapV2Router;
+    address public immutable uniswapV2Pair;
+    
+    bool inSwapAndLiquify;
+    bool public swapAndLiquifyEnabled = true;
+    
+    uint256 public _maxTxAmount = 100 * 10**12 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 50 * 10**15 * 10**9;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
