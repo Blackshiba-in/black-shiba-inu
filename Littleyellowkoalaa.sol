@@ -907,7 +907,7 @@ contract LittleYellowKoala is Context, IERC20, Ownable {
    
     function setMaxTxPercent(uint256 maxTxPercent) external onlyOwner() {
         _maxTxAmount = _tTotal.mul(maxTxPercent).div(
-            10**4
+            10**6
         );
     }
 
