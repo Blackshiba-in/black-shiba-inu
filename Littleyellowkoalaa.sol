@@ -11,7 +11,7 @@
       Koala is very cute and many animated cartoons resemble koalas,
       So we build this token to make a charity for save koala population.
    
-   #Billionaire Tokenomic :
+   #Little Yellow Koala Tokenomic :
    Max supply 10.000.000.000.000.000.000
    30% burned 🔥
    32% Private sale ( fundraising for lp Burned )
