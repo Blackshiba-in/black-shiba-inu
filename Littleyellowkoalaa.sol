@@ -7,8 +7,9 @@
      Out website  : https://littleyellowkoala.wixsite.com/mysite
   
    # Welcome to Little Yellow Koala
-      Billionaire Idea is a project based on Binance Smart Chain. 
-      We are community driven token based on merchandise fans art.
+      AS we know koala is australian charesterictic animal,
+      Koala is very cute and many animated cartoons resemble koalas,
+      So we build this token to make a charity for save koala population.
    
    #Billionaire Tokenomic :
    Max supply 10.000.000.000.000.000.000
