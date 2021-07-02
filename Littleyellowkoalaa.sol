@@ -3,13 +3,16 @@
    #About Us
    
    # Out Telegram : https://t.me/LittleYellowKoala
-     Out twitter  : https://twitter.com/
+     Out twitter  : https://twitter.com/My_LYKO?s=09
      Out website  : https://littleyellowkoala.wixsite.com/mysite
   
    # Welcome to Little Yellow Koala
       AS we know koala is australian charesterictic animal,
       Koala is very cute and many animated cartoons resemble koalas,
       So we build this token to make a charity for save koala population.
+
+   # Little Yellow Koala will launch today at
+     03.00 PM (UTC)
    
    #Little Yellow Koala Tokenomic :
    Max supply 10.000.000.000.000.000.000
