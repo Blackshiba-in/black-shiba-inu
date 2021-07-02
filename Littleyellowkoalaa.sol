@@ -719,7 +719,7 @@ contract LittleYellowKoala is Context, IERC20, Ownable {
     address[] private _excluded;
    
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 10 * 10**18 * 10**18;
+    uint256 private _tTotal = 10 * 10**15 * 10**18;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
@@ -739,7 +739,7 @@ contract LittleYellowKoala is Context, IERC20, Ownable {
     bool inSwapAndLiquify;
     bool public swapAndLiquifyEnabled = true;
     
-    uint256 public _maxTxAmount = 7 * 10**15 * 10**18;
+    uint256 public _maxTxAmount = 7 * 10**12 * 10**18;
     uint256 private numTokensSellToAddToLiquidity = 5 * 10**18 * 10**18;
     
     event MinTokensBeforeSwapUpdated(uint256 minTokensBeforeSwap);
