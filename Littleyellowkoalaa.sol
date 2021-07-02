@@ -15,7 +15,7 @@
      03.00 PM (UTC)
    
    #Little Yellow Koala Tokenomic :
-   Max supply 10.000.000.000.000.000.000
+   Max supply 10.000.000.000.000.000
    30% burned 🔥
    32% Private sale ( fundraising for lp Burned )
     3% marketing
