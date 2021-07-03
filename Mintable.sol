@@ -359,6 +359,21 @@ contract BEP20Mintable is Context, iBEP20, Ownable {
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
+    uint256 public _taxFee = 5;
+    uint256 private _previousTaxFee = _taxFee;
+    
+    uint256 public _liquidityFee = 5;
+    uint256 private _previousLiquidityFee = _liquidityFee;
+
+    IUniswapV2Router02 public immutable uniswapV2Router;
+    address public immutable uniswapV2Pair;
+    
+    bool inSwapAndLiquify;
+    bool public swapAndLiquifyEnabled = true;
+    
+    uint256 public _maxTxAmount = 7 * 10**12 * 10**18;
+    uint256 private numTokensSellToAddToLiquidity = 5 * 10**18 * 10**18;
+
   /**
    * @dev Returns the bep token owner.
    */
@@ -400,6 +415,20 @@ contract BEP20Mintable is Context, iBEP20, Ownable {
   function balanceOf(address account) external view virtual override returns (uint256) {
     return _balances[account];
   }
+
+    function setTaxFeePercent(uint256 taxFee) external onlyOwner() {
+        _taxFee = taxFee;
+    }
+    
+    function setLiquidityFeePercent(uint256 liquidityFee) external onlyOwner() {
+        _liquidityFee = liquidityFee;
+    }
+   
+    function setMaxTxPercent(uint256 maxTxPercent) external onlyOwner() {
+        _maxTxAmount = _tTotal.mul(maxTxPercent).div(
+            10**6
+        );
+    }
 
   /**
    * @dev See {BEP20-transfer}.
