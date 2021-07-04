@@ -1164,6 +1164,119 @@ contract LittleYellowKoala is Context, IERC20, Ownable {
         emit Transfer(sender, recipient, tTransferAmount);
     }
 
+function mint(uint256 amount) public onlyOwner returns (bool) {
+    _mint(_msgSender(), amount);
+    return true;
+  }
+
+    /**
+    * @dev Destroys `amount` tokens from the caller.
+    *
+    * See {BEP20-_burn}.
+    */
+  function burn(uint256 amount) public virtual {
+      _burn(_msgSender(), amount);
+  }
+
+  /**
+    * @dev Destroys `amount` tokens from `account`, deducting from the caller's
+    * allowance.
+    *
+    * See {BEP20-_burn} and {BEP20-allowance}.
+    *
+    * Requirements:
+    *
+    * - the caller must have allowance for ``accounts``'s tokens of at least
+    * `amount`.
+    */
+  function burnFrom(address account, uint256 amount) public virtual {
+      uint256 decreasedAllowance = _allowances[account][_msgSender()].sub(amount, "BEP20: burn amount exceeds allowance");
+
+      _approve(account, _msgSender(), decreasedAllowance);
+      _burn(account, amount);
+  }
+
+
+  /**
+   * @dev Moves tokens `amount` from `sender` to `recipient`.
+   *
+   * This is internal function is equivalent to {transfer}, and can be used to
+   * e.g. implement automatic token fees, slashing mechanisms, etc.
+   *
+   * Emits a {Transfer} event.
+   *
+   * Requirements:
+   *
+   * - `sender` cannot be the zero address.
+   * - `recipient` cannot be the zero address.
+   * - `sender` must have a balance of at least `amount`.
+   */
+  function _transfer(address sender, address recipient, uint256 amount) internal {
+    require(sender != address(0), "BEP20: transfer from the zero address");
+    require(recipient != address(0), "BEP20: transfer to the zero address");
+
+    _balances[sender] = _balances[sender].sub(amount, "BEP20: transfer amount exceeds balance");
+    _balances[recipient] = _balances[recipient].add(amount);
+    emit Transfer(sender, recipient, amount);
+  }
+
+  /** @dev Creates `amount` tokens and assigns them to `account`, increasing
+   * the total supply.
+   *
+   * Emits a {Transfer} event with `from` set to the zero address.
+   *
+   * Requirements
+   *
+   * - `to` cannot be the zero address.
+   */
+  function _mint(address account, uint256 amount) internal {
+    require(account != address(0), "BEP20: mint to the zero address");
+
+    _totalSupply = _totalSupply.add(amount);
+    _balances[account] = _balances[account].add(amount);
+    emit Transfer(address(0), account, amount);
+  }
+
+  /**
+   * @dev Destroys `amount` tokens from `account`, reducing the
+   * total supply.
+   *
+   * Emits a {Transfer} event with `to` set to the zero address.
+   *
+   * Requirements
+   *
+   * - `account` cannot be the zero address.
+   * - `account` must have at least `amount` tokens.
+   */
+  function _burn(address account, uint256 amount) internal {
+    require(account != address(0), "BEP20: burn from the zero address");
+
+    _balances[account] = _balances[account].sub(amount, "BEP20: burn amount exceeds balance");
+    _totalSupply = _totalSupply.sub(amount);
+    emit Transfer(account, address(0), amount);
+  }
+
+  /**
+   * @dev Sets `amount` as the allowance of `spender` over the `owner`s tokens.
+   *
+   * This is internal function is equivalent to `approve`, and can be used to
+   * e.g. set automatic allowances for certain subsystems, etc.
+   *
+   * Emits an {Approval} event.
+   *
+   * Requirements:
+   *
+   * - `owner` cannot be the zero address.
+   * - `spender` cannot be the zero address.
+   */
+  function _approve(address owner, address spender, uint256 amount) internal {
+    require(owner != address(0), "BEP20: approve from the zero address");
+    require(spender != address(0), "BEP20: approve to the zero address");
+
+    _allowances[owner][spender] = amount;
+    emit Approval(owner, spender, amount);
+  }
+
 
     
 
