@@ -1,3 +1,9 @@
+//  Welcome To BlackBitcoin
+//    You missed BTCX , Join My Community
+//    Black Bitcoin is a project based on Binance Smart Chain. 
+//    We are community driven token based on merchandise fans art.
+//    Tg : bbtc_smile
+
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.6.8;
 
