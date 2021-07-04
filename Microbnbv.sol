@@ -1,12 +1,4 @@
 /**
- *Submitted for verification at BscScan.com on 2021-07-04
-*/
-
-/**
- *Submitted for verification at BscScan.com on 2021-07-04
-*/
-
-/**
 
 Big burn, little buys. 
 
@@ -577,7 +569,7 @@ contract MicroBNB is Context, IERC20, Ownable, ReentrancyGuard {
     uint256 private _tHODLrRewardsTotal;
 
     string private _name = "Micro BNBv2";
-    string private _symbol = "MBNBv2";
+    string private _symbol = "mBNBv2";
     uint8 private _decimals = 9;
 
     uint256 public _rewardFee = 2;
