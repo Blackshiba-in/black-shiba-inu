@@ -337,7 +337,7 @@ contract Ownable is Context {
   }
 }
 
-contract BEP20Mintable is Context, iBEP20, Ownable {
+contract BlackBitcoin is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -350,10 +350,10 @@ contract BEP20Mintable is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Token Name';
-    _symbol = 'TKN';
-    _decimals = 18;
-    _totalSupply = 1*10**8 * 10**18; //100m
+    _name = 'Black Bitcoin';
+    _symbol = 'BBTC';
+    _decimals = 9;
+    _tSupply = 21*10**6 * 10**9; //100m
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -365,14 +365,8 @@ contract BEP20Mintable is Context, iBEP20, Ownable {
     uint256 public _liquidityFee = 5;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    IUniswapV2Router02 public immutable uniswapV2Router;
-    address public immutable uniswapV2Pair;
-    
-    bool inSwapAndLiquify;
-    bool public swapAndLiquifyEnabled = true;
-    
-    uint256 public _maxTxAmount = 7 * 10**12 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 5 * 10**18 * 10**18;
+    uint256 public _maxTxAmount = 110 * 10**2 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 15 * 10**6 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
