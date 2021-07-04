@@ -353,7 +353,7 @@ contract BlackBitcoin is Context, iBEP20, Ownable {
     _name = 'Black Bitcoin';
     _symbol = 'BBTC';
     _decimals = 9;
-    _tSupply = 21*10**6 * 10**9; //100m
+    _totalSupply = 21*10**6 * 10**9; //100m
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -419,8 +419,8 @@ contract BlackBitcoin is Context, iBEP20, Ownable {
     }
    
     function setMaxTxPercent(uint256 maxTxPercent) external onlyOwner() {
-        _maxTxAmount = _tTotal.mul(maxTxPercent).div(
-            10**6
+        _maxTxAmount = _totalSupply.mul(maxTxPercent).div(
+            10**8
         );
     }
 
