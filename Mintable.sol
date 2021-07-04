@@ -3,9 +3,9 @@
 //    We are community driven token based on merchandise fans art.
 //
 //    Tg : LittleCrocodilebsc
-//         Supply 100.000.000.000.000.000.000
-//         Decimals 18
-//         Max Buy/Sell 500.000.000.000.000.000
+//         Supply 2.000.000.000.000
+//         Decimals 9
+//         Max Buy/Sell 20.000.000.000
 
 
 // SPDX-License-Identifier: UNLICENSED
@@ -362,8 +362,8 @@ contract LittleCrocodile is Context, iBEP20, Ownable {
   constructor() public {
     _name = 'Little Crocodile';
     _symbol = 'LICR';
-    _decimals = 18;
-    _totalSupply = 100 * 10**18 * 10**18; //
+    _decimals = 9
+    _totalSupply = 2 * 10**12 * 10**9; //
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -375,8 +375,8 @@ contract LittleCrocodile is Context, iBEP20, Ownable {
     uint256 public _liquidityFee = 2;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 50 * 10**16 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 60 * 10**16 * 10**18;
+    uint256 public _maxTxAmount = 20 * 10**9 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 15 * 10**11 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
@@ -430,7 +430,7 @@ contract LittleCrocodile is Context, iBEP20, Ownable {
    
     function setMaxTxPercent(uint256 maxTxPercent) external onlyOwner() {
         _maxTxAmount = _totalSupply.mul(maxTxPercent).div(
-            10**6
+            10**3
         );
     }
 
