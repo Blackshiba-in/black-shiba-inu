@@ -362,7 +362,7 @@ contract LittleCrocodile is Context, iBEP20, Ownable {
   constructor() public {
     _name = 'Little Crocodile';
     _symbol = 'LICR';
-    _decimals = 9
+    _decimals = 9;
     _totalSupply = 2 * 10**12 * 10**9; //
     _balances[msg.sender] = _totalSupply;
 
