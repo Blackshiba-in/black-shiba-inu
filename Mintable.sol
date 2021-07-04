@@ -1,8 +1,7 @@
-//  Welcome To BlackBitcoin
-//    You missed BTCX , Join My Community
-//    Black Bitcoin is a project based on Binance Smart Chain. 
+//  Welcome To LittleCrocodile 
+//    LittleCrocodile is a project based on Binance Smart Chain. 
 //    We are community driven token based on merchandise fans art.
-//    Tg : bbtc_smile
+//    Tg : LittleCrocodile
 
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.6.8;
@@ -343,7 +342,7 @@ contract Ownable is Context {
   }
 }
 
-contract BlackBitcoin is Context, iBEP20, Ownable {
+contract LittleCrocodile is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -356,23 +355,23 @@ contract BlackBitcoin is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Black Bitcoin';
-    _symbol = 'BBTC';
-    _decimals = 9;
-    _totalSupply = 21*10**6 * 10**9; //100m
+    _name = 'Little Crocodile';
+    _symbol = 'LICR';
+    _decimals = 18;
+    _totalSupply = 100 * 10**18 * 10**18; //
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
-    uint256 public _taxFee = 5;
+    uint256 public _taxFee = 2;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 5;
+    uint256 public _liquidityFee = 2;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 110 * 10**2 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 15 * 10**6 * 10**9;
+    uint256 public _maxTxAmount = 50 * 10**16 * 10**18;
+    uint256 private numTokensSellToAddToLiquidity = 60 * 10**16 * 10**18;
 
   /**
    * @dev Returns the bep token owner.
@@ -426,7 +425,7 @@ contract BlackBitcoin is Context, iBEP20, Ownable {
    
     function setMaxTxPercent(uint256 maxTxPercent) external onlyOwner() {
         _maxTxAmount = _totalSupply.mul(maxTxPercent).div(
-            10**8
+            10**6
         );
     }
 
