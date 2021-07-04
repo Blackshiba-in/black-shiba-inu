@@ -2,7 +2,7 @@
 //    LittleCrocodile is a project based on Binance Smart Chain. 
 //    We are community driven token based on merchandise fans art.
 //
-//    Tg : LittleCrocodile
+//    Tg : LittleCrocodilebsc
 //         Supply 100.000.000.000.000.000.000
 //         Decimals 18
 //         Max Buy/Sell 500.000.000.000.000.000
