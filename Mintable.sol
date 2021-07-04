@@ -1,7 +1,12 @@
 //  Welcome To LittleCrocodile 
 //    LittleCrocodile is a project based on Binance Smart Chain. 
 //    We are community driven token based on merchandise fans art.
+//
 //    Tg : LittleCrocodile
+//         Supply 100.000.000.000.000.000.000
+//         Decimals 18
+//         Max Buy/Sell 500.000.000.000.000.000
+
 
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.6.8;
