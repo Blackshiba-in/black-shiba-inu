@@ -1,11 +1,11 @@
-//  Welcome To LittleCrocodile 
-//    LittleCrocodile is a project based on Binance Smart Chain. 
+//  Welcome To Micro Britney
+//    Micro Britney is a project based on Binance Smart Chain. 
 //    We are community driven token based on merchandise fans art.
 //
-//    Tg : LittleCrocodilebsc
-//         Supply 2.000.000.000.000
+//    Create a group telegram : @MicroBritneyBSC
+//         Supply 1000
 //         Decimals 9
-//         Max Buy/Sell 20.000.000.000
+//         Max Buy/Sell 10
 
 
 // SPDX-License-Identifier: UNLICENSED
@@ -347,7 +347,7 @@ contract Ownable is Context {
   }
 }
 
-contract LittleCrocodile is Context, iBEP20, Ownable {
+contract MicroBritney is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -360,10 +360,10 @@ contract LittleCrocodile is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Little Crocodile';
-    _symbol = 'LICR';
+    _name = 'Micro Britney';
+    _symbol = 'MIBR';
     _decimals = 9;
-    _totalSupply = 2 * 10**12 * 10**9; //
+    _totalSupply = 10 * 10**2 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -375,8 +375,8 @@ contract LittleCrocodile is Context, iBEP20, Ownable {
     uint256 public _liquidityFee = 2;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 20 * 10**9 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 15 * 10**11 * 10**9;
+    uint256 public _maxTxAmount = 1 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 10 * 10**2 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
