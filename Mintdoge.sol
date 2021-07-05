@@ -1,12 +1,13 @@
-//  Welcome To Baby Red Ant Stealt Launch
-//      Baby Red Ant is a project based on Binance Smart Chain. 
+//  Welcome To CloneDoge Stealt Launch
+//      Clone Doge is a project based on Binance Smart Chain. 
 //    We are community driven token based on merchandise fans art.
 //
-//    Join Community Telegram : @BabyREDant
-//         Supply 1.000.000.000.000.000
-//         🔥 Burn Token 70*
-//         ➖ Lp 30%
-//         Decimals 18
+//    Join Community Telegram : https://t.me/clonedoge
+//         Supply 100.000.000
+//         🔥 Burn Token 30%
+//         ➖ Lp 67%
+//         🥰 dev and marketing 3%
+//         Decimals 9
 
 
 // SPDX-License-Identifier: UNLICENSED
@@ -348,7 +349,7 @@ contract Ownable is Context {
   }
 }
 
-contract BabyRedAnt is Context, iBEP20, Ownable {
+contract CloneDoge is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -361,10 +362,10 @@ contract BabyRedAnt is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Baby Red Ant';
-    _symbol = 'BRA';
-    _decimals = 18
-    _totalSupply = 1 * 10**15 * 10**18;
+    _name = 'Clone Doge';
+    _symbol = 'CDOGE';
+    _decimals = 9;
+    _totalSupply = 100 * 10**6 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -377,7 +378,7 @@ contract BabyRedAnt is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 100 * 10**19;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**18 * 10**18;
+    uint256 private numTokensSellToAddToLiquidity = 100 * 10**6 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
