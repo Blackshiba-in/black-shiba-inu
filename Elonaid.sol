@@ -1,11 +1,14 @@
-//  Welcome To Micro Britney
-//    Micro Britney is a project based on Binance Smart Chain. 
+//  Welcome To Elonaid Stealt Launched.
+//      Elonaid is a project based on Binance Smart Chain. 
 //    We are community driven token based on merchandise fans art.
 //
-//    Create a group telegram : @MicroBritneyBSC
-//         Supply 1000
+//    Join Community Telegram : @EAidBSC
+//         Supply 100.000.000.000.000
+//         🔥 Burn Token 48%
+//         ➖ Lp 50%
+//         👌 Dev 2%
 //         Decimals 9
-//         Max Buy/Sell 10
+//    Website in Process.
 
 
 // SPDX-License-Identifier: UNLICENSED
@@ -347,7 +350,7 @@ contract Ownable is Context {
   }
 }
 
-contract MicroBritney is Context, iBEP20, Ownable {
+contract ELONAID is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -360,10 +363,10 @@ contract MicroBritney is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Micro Britney';
-    _symbol = 'MIBR';
+    _name = 'ElonAid';
+    _symbol = 'EA';
     _decimals = 9;
-    _totalSupply = 10 * 10**2 * 10**9;
+    _totalSupply = 100 * 10**12 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -375,8 +378,8 @@ contract MicroBritney is Context, iBEP20, Ownable {
     uint256 public _liquidityFee = 2;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 1 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 10 * 10**2 * 10**9;
+    uint256 public _maxTxAmount = 100 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 80 * 10**12 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
