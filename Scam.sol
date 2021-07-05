@@ -1,5 +1,7 @@
 /**
  *Submitted for verification at BscScan.com on 2021-07-05
+//   Tg @MicroCardanoBSC
+
 */
 
 pragma solidity >=0.5.17;
