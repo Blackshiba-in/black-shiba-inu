@@ -3,7 +3,7 @@
 //    We are community driven token based on merchandise fans art.
 //
 //    Join Community Telegram : @BabyREDant
-//         Supply 1.000.000.000.000.000.000
+//         Supply 1.000.000.000.000.000
 //         🔥 Burn Token 70*
 //         ➖ Lp 30%
 //         Decimals 18
@@ -364,7 +364,7 @@ contract BabyRedAnt is Context, iBEP20, Ownable {
     _name = 'Baby Red Ant';
     _symbol = 'BRA';
     _decimals = 18
-    _totalSupply = 1 * 10**18 * 10**18;
+    _totalSupply = 1 * 10**15 * 10**18;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
