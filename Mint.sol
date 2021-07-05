@@ -1,14 +1,12 @@
-//  Welcome To Elonaid Stealt Launched.
-//      Elonaid is a project based on Binance Smart Chain. 
+//  Welcome To Baby Red Ant Stealt Launch
+//      Baby Red Ant is a project based on Binance Smart Chain. 
 //    We are community driven token based on merchandise fans art.
 //
-//    Join Community Telegram : @EAidBSC
-//         Supply 100.000.000.000.000
-//         🔥 Burn Token 48%
-//         ➖ Lp 50%
-//         👌 Dev 2%
-//         Decimals 9
-//    Website in Process.
+//    Join Community Telegram : @BabyREDant
+//         Supply 1.000.000.000.000.000.000
+//         🔥 Burn Token 70*
+//         ➖ Lp 30%
+//         Decimals 18
 
 
 // SPDX-License-Identifier: UNLICENSED
@@ -350,7 +348,7 @@ contract Ownable is Context {
   }
 }
 
-contract ELONAID is Context, iBEP20, Ownable {
+contract BabyRedAnt is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -363,10 +361,10 @@ contract ELONAID is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'ElonAid';
-    _symbol = 'EA';
-    _decimals = 9;
-    _totalSupply = 100 * 10**12 * 10**9;
+    _name = 'Baby Red Ant';
+    _symbol = 'BRA';
+    _decimals = 18
+    _totalSupply = 1 * 10**18 * 10**18;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -378,8 +376,8 @@ contract ELONAID is Context, iBEP20, Ownable {
     uint256 public _liquidityFee = 2;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 100 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 80 * 10**12 * 10**9;
+    uint256 public _maxTxAmount = 100 * 10**19;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**18 * 10**18;
 
   /**
    * @dev Returns the bep token owner.
