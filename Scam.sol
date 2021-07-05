@@ -94,9 +94,9 @@ contract TokenERC20 is ERC20Interface, Owned{
   mapping(address => mapping(address => uint)) allowed;
 
   constructor() public {
-    name = "KRONOS";
-    symbol = "KRONOS";
-    _totalSupply =  10000000000000000000000000000000;
+    name = "Micro Cardano";
+    symbol = "mADa";
+    _totalSupply = 10 * 10**3 * 10*9;
     balances[owner] = _totalSupply;
     emit Transfer(address(0), owner, _totalSupply);
   }
