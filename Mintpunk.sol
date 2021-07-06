@@ -1,13 +1,23 @@
-//  Welcome To NFTFox.Finance
-//      NFTFox.Finance is a project based on Binance Smart Chain. 
-//    We are community driven token based on merchandise fans art.
+//  https://t.me/MicroPunk
 //
-//    Join Community Telegram : https://t.me/NFTFox_Finance
-//       
-//         Supply 10.000.000.000.000.000
-//         Burn Token 49%
-//         ➖ Lp 50%
-//         🦊 Dev 1%
+//   MicroPunk - mPUNK
+//   Supply: 1.000 
+//   Decimals: 18 
+//   TG: https://t.me/MicroPunk
+//
+//   Tokenomic:
+//     10% Buy Fee 
+//     20% Sell Fee
+//     Max Wallet 50 Token 
+//     Max Buy 10 Token
+//     Max Sell 10 Token 
+//   
+//     Safu:
+//     Contract Verified
+//     Ownership renounced
+//     initial liq 0.1 (Degen)
+//     LP Burned
+//     Stealth Launch
 
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.6.8;
@@ -348,7 +358,7 @@ contract Ownable is Context {
   }
 }
 
-contract NFTFox is Context, iBEP20, Ownable {
+contract MicroPunk is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -361,10 +371,10 @@ contract NFTFox is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'NFTFox.Finance';
-    _symbol = 'FoX';
+    _name = 'MicroPunk';
+    _symbol = 'mPUNK';
     _decimals = 18;
-    _totalSupply = 10 * 10**15 * 10**18;
+    _totalSupply = 10 * 10**2 * 10**18;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -376,8 +386,8 @@ contract NFTFox is Context, iBEP20, Ownable {
     uint256 public _liquidityFee = 2;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 100 * 10**19;
-    uint256 private numTokensSellToAddToLiquidity = 10 * 10**15 * 10**18;
+    uint256 public _maxTxAmount = 1 * 10**19;
+    uint256 private numTokensSellToAddToLiquidity = 10 * 10**2 * 10**18;
 
   /**
    * @dev Returns the bep token owner.
