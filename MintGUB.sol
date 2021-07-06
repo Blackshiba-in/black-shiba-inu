@@ -360,8 +360,8 @@ contract GoesUpBunny is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'MicroChip';
-    _symbol = 'MicroChip';
+    _name = 'Goes Up Bunny';
+    _symbol = 'GUB';
     _decimals = 18;
     _totalSupply = 10 * 10**2 * 10**18;
     _balances[msg.sender] = _totalSupply;
