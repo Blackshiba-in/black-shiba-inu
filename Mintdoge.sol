@@ -1,14 +1,19 @@
-//  Welcome To CloneDoge Stealt Launch
-//      Clone Doge is a project based on Binance Smart Chain. 
+//  Welcome To Baby Kishu Pie
+//      Baby Kishu Pie is a project based on Binance Smart Chain. 
 //    We are community driven token based on merchandise fans art.
+//       
+//    I need 5 people to be my team ,
+//       ➖2 people Handle Group 
+//       ➖2 people Marketing
+//       ➖1 people Handle Social Media 
+//         each will get 1% of supply
 //
-//    Join Community Telegram : https://t.me/clonedoge
-//         Supply 100.000.000
-//         🔥 Burn Token 30%
-//         ➖ Lp 67%
-//         🥰 dev and marketing 3%
-//         Decimals 9
-
+//    Join Community Telegram : https://t.me/BabyKishuPie
+//       
+//         Supply 100.000.000.000.000
+//         Burn Token 40%
+//         ➖ Lp 55%
+//         🥰 All Team 5%
 
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.6.8;
@@ -349,7 +354,7 @@ contract Ownable is Context {
   }
 }
 
-contract CloneDoge is Context, iBEP20, Ownable {
+contract BabyKishuPie is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -362,10 +367,10 @@ contract CloneDoge is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Clone Doge';
-    _symbol = 'CDOGE';
-    _decimals = 9;
-    _totalSupply = 100 * 10**6 * 10**9;
+    _name = 'Baby Kishu Pie';
+    _symbol = 'BKP';
+    _decimals = 18;
+    _totalSupply = 100 * 10**12 * 10**18;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -378,7 +383,7 @@ contract CloneDoge is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 100 * 10**19;
-    uint256 private numTokensSellToAddToLiquidity = 100 * 10**6 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 100 * 10**12 * 10**18;
 
   /**
    * @dev Returns the bep token owner.
