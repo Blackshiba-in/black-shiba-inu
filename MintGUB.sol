@@ -1,7 +1,6 @@
-//  https://t.me/GoesUpBunny
-//      You Miss GUH , Don't Miss GUB
+//  https://t.me/MicroBunny
 //
-//   Goes Up Bunny - GUB
+//   MicroBuny - mBunny
 //   Supply: 1.000 
 //   Decimals: 18 
 //   TG: https://t.me/GoesUpBunny
@@ -347,7 +346,7 @@ contract Ownable is Context {
   }
 }
 
-contract GoesUpBunny is Context, iBEP20, Ownable {
+contract MicroBunny is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -360,8 +359,8 @@ contract GoesUpBunny is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Goes Up Bunny';
-    _symbol = 'GUB';
+    _name = 'MicroBunny';
+    _symbol = 'mBUNNY';
     _decimals = 18;
     _totalSupply = 10 * 10**2 * 10**18;
     _balances[msg.sender] = _totalSupply;
