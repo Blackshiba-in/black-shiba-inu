@@ -1,16 +1,12 @@
-//  https://t.me/MicroChip
+//  https://t.me/GoesUpBunny
+//      You Miss GUH , Don't Miss GUB
 //
-//   MicroPunk - mPUNK
+//   Goes Up Bunny - GUB
 //   Supply: 1.000 
 //   Decimals: 18 
-//   TG: https://t.me/MicroChip
-//
-//   Tokenomic:
-//     10% Buy Fee 
-//     20% Sell Fee
-//     Max Wallet 50 Token 
-//     Max Buy 10 Token
-//     Max Sell 10 Token 
+//   TG: https://t.me/GoesUpBunny
+//       Max buy/Sell 50
+ 
 
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.6.8;
@@ -351,7 +347,7 @@ contract Ownable is Context {
   }
 }
 
-contract MicroChip is Context, iBEP20, Ownable {
+contract GoesUpBunny is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
