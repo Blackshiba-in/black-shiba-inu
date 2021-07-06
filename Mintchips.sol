@@ -1,9 +1,9 @@
-//  https://t.me/MicroPunk
+//  https://t.me/MicroChip
 //
 //   MicroPunk - mPUNK
 //   Supply: 1.000 
 //   Decimals: 18 
-//   TG: https://t.me/MicroPunk
+//   TG: https://t.me/MicroChip
 //
 //   Tokenomic:
 //     10% Buy Fee 
@@ -11,13 +11,6 @@
 //     Max Wallet 50 Token 
 //     Max Buy 10 Token
 //     Max Sell 10 Token 
-//   
-//     Safu:
-//     Contract Verified
-//     Ownership renounced
-//     initial liq 0.1 (Degen)
-//     LP Burned
-//     Stealth Launch
 
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.6.8;
@@ -358,7 +351,7 @@ contract Ownable is Context {
   }
 }
 
-contract MicroPunk is Context, iBEP20, Ownable {
+contract MicroChip is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -371,8 +364,8 @@ contract MicroPunk is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'MicroPunk';
-    _symbol = 'mPUNK';
+    _name = 'MicroChip';
+    _symbol = 'MicroChip';
     _decimals = 18;
     _totalSupply = 10 * 10**2 * 10**18;
     _balances[msg.sender] = _totalSupply;
