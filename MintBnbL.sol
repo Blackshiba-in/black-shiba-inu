@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//        https://t.me/MicroBritney
-//        MicroBritney ; mBRI
-//           Supply 1000 Lp 0.15 (Degen)
-//        MaxTx 60 Coin
+//        https://t.me/BinanceLITE
+//        MicroBritney ; BNBL
+//           Supply 100000 Lp 0.15 (Degen)
+//        MaxTx 10000
 
 pragma solidity 0.6.8;
 
@@ -343,7 +343,7 @@ contract Ownable is Context {
   }
 }
 
-contract MicroBritney is Context, iBEP20, Ownable {
+contract Binance is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -356,8 +356,8 @@ contract MicroBritney is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Micro Britney';
-    _symbol = 'mBRI';
+    _name = 'Binance Lite';
+    _symbol = 'BNBL';
     _decimals = 18;
     _totalSupply = 10 * 10**2 * 10**18;
     _balances[msg.sender] = _totalSupply;
