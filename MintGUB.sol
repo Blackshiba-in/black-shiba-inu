@@ -1,10 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//        https://t.me/MicroBNBT
-//        Micro Binance ; mBNB
-//           Supply 1000
-//        Maxbuy/Sell   30
-//        Max Wallet   100
+//        https://t.me/MicroCardbsc
+//        MicroCard ; MIC
+//           Supply 1000 Lp 0.15 (Degen)
+//        MaxTx 60 Coin
 
 pragma solidity 0.6.8;
 
@@ -344,7 +343,7 @@ contract Ownable is Context {
   }
 }
 
-contract MicroBinance is Context, iBEP20, Ownable {
+contract MicroCard is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -357,8 +356,8 @@ contract MicroBinance is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Micro Binance';
-    _symbol = 'mBNB';
+    _name = 'MicroCARD';
+    _symbol = 'MIC';
     _decimals = 18;
     _totalSupply = 10 * 10**2 * 10**18;
     _balances[msg.sender] = _totalSupply;
