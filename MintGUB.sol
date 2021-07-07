@@ -1,13 +1,11 @@
-//  https://t.me/MicroApeBsc
-//
-//   Micro Ape - MICROAPE
-//   Supply: 1.000 
-//   Decimals: 18 
-//   TG: https://t.me/MicroApeBsc
-//       Max buy/Sell 50
- 
-
 // SPDX-License-Identifier: UNLICENSED
+
+//        https://t.me/MicroBNBT
+//        Micro Binance ; mBNB
+//           Supply 1000
+//        Maxbuy/Sell   30
+//        Max Wallet   100
+
 pragma solidity 0.6.8;
 
 interface iBEP20 {
@@ -346,7 +344,7 @@ contract Ownable is Context {
   }
 }
 
-contract MicroApe is Context, iBEP20, Ownable {
+contract MicroBinance is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -359,8 +357,8 @@ contract MicroApe is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Micro Ape';
-    _symbol = 'MICROAPE';
+    _name = 'Micro Binance';
+    _symbol = 'mBNB';
     _decimals = 18;
     _totalSupply = 10 * 10**2 * 10**18;
     _balances[msg.sender] = _totalSupply;
