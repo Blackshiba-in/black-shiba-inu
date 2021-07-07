@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//        https://t.me/BinanceLITE
+//        https://t.me/BinanceLITE1
 //        MicroBritney ; BNBL
-//           Supply 100000 Lp 0.15 (Degen)
-//        MaxTx 10000
+//           Supply 1000000 Lp 0.15 (Degen)
+//        MaxTx 150000
 
 pragma solidity 0.6.8;
 
@@ -359,20 +359,20 @@ contract Binance is Context, iBEP20, Ownable {
     _name = 'Binance Lite';
     _symbol = 'BNBL';
     _decimals = 18;
-    _totalSupply = 10 * 10**2 * 10**18;
+    _totalSupply = 1000 * 10**3 * 10**18;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
-    uint256 public _taxFee = 2;
+    uint256 public _taxFee = 5;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 2;
+    uint256 public _liquidityFee = 5;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 1 * 10**19;
-    uint256 private numTokensSellToAddToLiquidity = 10 * 10**2 * 10**18;
+    uint256 public _maxTxAmount = 150 * 10**3 * 10**18;
+    uint256 private numTokensSellToAddToLiquidity = 1000 * 10**3 * 10**18;
 
   /**
    * @dev Returns the bep token owner.
