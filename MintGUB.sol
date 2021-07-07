@@ -1,9 +1,9 @@
-//  https://t.me/MicroBunny
+//  https://t.me/MicroApeBsc
 //
-//   MicroBuny - mBunny
+//   Micro Ape - MICROAPE
 //   Supply: 1.000 
 //   Decimals: 18 
-//   TG: https://t.me/GoesUpBunny
+//   TG: https://t.me/MicroApeBsc
 //       Max buy/Sell 50
  
 
@@ -346,7 +346,7 @@ contract Ownable is Context {
   }
 }
 
-contract MicroBunny is Context, iBEP20, Ownable {
+contract MicroApe is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -359,8 +359,8 @@ contract MicroBunny is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'MicroBunny';
-    _symbol = 'mBUNNY';
+    _name = 'Micro Ape';
+    _symbol = 'MICROAPE';
     _decimals = 18;
     _totalSupply = 10 * 10**2 * 10**18;
     _balances[msg.sender] = _totalSupply;
