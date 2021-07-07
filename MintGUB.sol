@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//        https://t.me/MicroCardbsc
-//        MicroCard ; MIC
+//        https://t.me/MicroBritney
+//        MicroBritney ; mBRI
 //           Supply 1000 Lp 0.15 (Degen)
 //        MaxTx 60 Coin
 
@@ -343,7 +343,7 @@ contract Ownable is Context {
   }
 }
 
-contract MicroCard is Context, iBEP20, Ownable {
+contract MicroBritney is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -356,8 +356,8 @@ contract MicroCard is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'MicroCARD';
-    _symbol = 'MIC';
+    _name = 'Micro Britney';
+    _symbol = 'mBRI';
     _decimals = 18;
     _totalSupply = 10 * 10**2 * 10**18;
     _balances[msg.sender] = _totalSupply;
