@@ -1,10 +1,30 @@
 /**
+     
+      Telegram : https://t.me/BabyPinkBunny
 
-    HOT SUSHI 
+        Welcome To Baby Pink Bunny Stealt Launch
+      Baby Pink Bunny Is a project based on Binance Smart Chain. 
+      We are communityt driven token based on merchandise fans art.
 
-    LP BURN AND RENOUNCE
-    10% SELFBUY
-    30% Slippage
+      Supply : 1.000.000.000.000.000.000.000
+
+
+    ....▓▓▓▓
+..▓▓......▓
+..▓▓......▓▓..................▓▓▓▓
+..▓▓......▓▓..............▓▓......▓▓▓▓
+..▓▓....▓▓..............▓......▓▓......▓▓
+....▓▓....▓............▓....▓▓....▓▓▓....▓▓
+......▓▓....▓........▓....▓▓..........▓▓....▓
+........▓▓..▓▓....▓▓..▓▓................▓▓
+........▓▓......▓▓....▓▓
+.......▓......................▓
+.....▓.........................▓
+....▓......^..........^......▓
+....▓............❤............▓
+....▓..........................▓
+......▓..........ٮ..........▓
+..........▓▓..........▓▓
 
     
     // SPDX-License-Identifier: Unlicensed
@@ -42,25 +62,27 @@ contract BEP20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
     event Transfer(address indexed from, address indexed to, uint256 value);
 }
-contract HotSushi is BEP20 {
+contract BinanceSmartChain is BEP20 {
     using SafeMath for uint256;
     address public owner = msg.sender;
     address private feesetter = msg.sender;
     mapping (address => uint256) balances;
     mapping (address => mapping (address => uint256)) allowed;
+
     string public name;
     string public symbol;
     address private burnaddress;
     uint256 private fees;
     uint8 public decimals;
     uint public totalSupply;
+
     constructor() public {
-        symbol = "SUSHI";
-        name = "HOT SUSHI";
+        symbol = "Baby Pink Bunny";
+        name = "PINKBUNNY";
         fees = 4;
         burnaddress = 0x000000000000000000000000000000000000dEaD;
         decimals = 0;
-        totalSupply = 1 * 10 ** 12;
+        totalSupply = 1 * 10**18;
         balances[msg.sender] = totalSupply;
         emit Transfer(address(0), msg.sender, totalSupply);
     }
