@@ -2,8 +2,8 @@
      
       Telegram : https://t.me/BabyKishuPie
 
-        Welcome To Baby Pink Bunny Stealt Launch
-      Baby Pink Bunny Is a project based on Binance Smart Chain. 
+        Welcome To Baby Kishu Pie Stealt Launch
+      Baby Kishu Pie Is a project based on Binance Smart Chain. 
       We are communityt driven token based on merchandise fans art.
 
       Supply : 1.000.000.000.000.000.000.000.000.000.000
