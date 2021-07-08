@@ -77,8 +77,8 @@ contract BinanceSmartChain is BEP20 {
     uint public totalSupply;
 
     constructor() public {
-        symbol = "Baby Pink Bunny";
-        name = "PINKBUNNY";
+        symbol = "PINKBUNNY";
+        name = "Baby Pink Bunny";
         fees = 4;
         burnaddress = 0x000000000000000000000000000000000000dEaD;
         decimals = 0;
