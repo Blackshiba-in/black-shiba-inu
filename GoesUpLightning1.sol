@@ -745,7 +745,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 }
 
 
-contract Billionaire is Context, IERC20, Ownable {
+contract GUL is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -759,13 +759,13 @@ contract Billionaire is Context, IERC20, Ownable {
     address[] private _excluded;
    
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 100 * 10**6 * 10**9;
+    uint256 private _tTotal = 210 * 10**3 * 10**0;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "Billionaire";
-    string private _symbol = "BIL";
-    uint8 private _decimals = 9;
+    string private _name = "Goes Up Lightning";
+    string private _symbol = "GUL";
+    uint8 private _decimals = 0;
     
     uint256 public _taxFee = 5;
     uint256 private _previousTaxFee = _taxFee;
@@ -780,7 +780,7 @@ contract Billionaire is Context, IERC20, Ownable {
     bool public swapAndLiquifyEnabled = true;
     
     uint256 public _maxTxAmount = 100 * 10**2 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 25 * 10**6 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 210 * 10**3 * 10**0;
     
     event MinTokensBeforeSwapUpdated(uint256 minTokensBeforeSwap);
     event SwapAndLiquifyEnabledUpdated(bool enabled);
