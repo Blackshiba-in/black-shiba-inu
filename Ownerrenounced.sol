@@ -1,50 +1,15 @@
 /**
      
-      Telegram : https://t.me/BabyKishuPie
+      Telegram : https://t.me/MicroAirwark
 
-        Welcome To Baby Kishu Pie Stealt Launch
-      Baby Kishu Pie Is a project based on Binance Smart Chain. 
-      We are communityt driven token based on merchandise fans art.
+       Supply : 1.000
+       Max Wallet : 100
+       Max Tx     : 10
+       Lp Burn 
+       Owner Renounced
+       Dev Wallet 0%
 
-      Supply : 1.000.000.000.000.000.000.000.000.000.000
-
-
-    ....▓▓▓▓
-..▓▓......_________________________________¶¶¶¶¶¶¶
-_______________________________¶¶¶_____¶¶¶¶
-_____________________________¶¶¶__________¶¶
-___________________________¶¶______¶_______¶¶
-_____________¶¶¶¶¶___¶¶¶¶¶¶_________¶______¶¶
-_____________¶_¶__¶¶¶¶___¶¶¶¶¶¶¶¶____¶_____¶¶
-_____________¶__¶¶__¶__________¶¶¶¶¶_¶_____¶¶
-____________¶¶___¶¶_¶¶_____________¶¶¶¶_____¶
-____________¶¶____¶¶__¶¶¶¶¶__________¶¶_____¶
-_____________¶¶__¶¶________¶¶_________¶______¶
-______________¶¶_____________¶¶¶_______¶_____¶
-___________¶¶¶¶________________¶¶¶¶¶___¶¶____¶¶
-___________¶¶¶_____¶¶¶¶¶______¶¶¶¶¶¶¶___¶¶___¶¶
-____¶¶_____¶¶____¶¶_¶¶¶¶¶____¶_¶¶¶_¶¶¶¶__¶¶__¶
-____¶¶¶¶¶__¶¶¶___¶¶_¶¶¶__¶___¶_¶¶¶_¶¶_¶¶¶¶¶¶¶¶
-____¶___¶¶___¶¶____¶¶¶¶¶______¶¶¶¶¶_____¶¶¶¶_¶¶¶
-____¶_____¶___¶¶_________¶¶¶¶__________¶_¶_____¶¶
-___¶¶_____¶¶___¶¶_____¶___¶¶___¶_____¶¶__¶_____¶¶
-___¶¶______¶_____¶¶¶¶__¶¶¶¶¶¶¶¶___¶¶¶¶____¶¶_¶¶¶
-____¶______¶________¶¶¶_________¶¶¶________¶¶¶¶
-_____¶_____¶¶_________¶¶¶¶¶¶¶¶¶¶
-______¶¶_____¶¶¶_¶¶¶¶¶__¶___¶__¶¶
-_______¶¶¶_____¶¶¶_______¶¶¶____¶
-_________¶¶¶¶¶¶_________________¶¶
-______________¶¶_____________¶_¶¶
-______________¶______¶¶¶____¶_¶¶
-______________¶¶_____¶¶¶___¶¶_¶
-_______________¶¶____¶_¶¶__¶¶¶_¶
-________________¶_____¶¶____¶_¶¶¶
-________________¶¶¶¶_¶¶¶¶¶_¶¶¶¶¶
-___________________¶¶¶___¶¶¶
-
-
-    
-    // SPDX-License-Identifier: Unlicensed
+   // SPDX-License-Identifier: Unlicensed
 
 **/
 
@@ -79,7 +44,7 @@ contract BEP20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
     event Transfer(address indexed from, address indexed to, uint256 value);
 }
-contract SafeToken is BEP20 {
+contract MicroToken is BEP20 {
     using SafeMath for uint256;
     address public owner = msg.sender;
     address private feesetter = msg.sender;
@@ -94,14 +59,17 @@ contract SafeToken is BEP20 {
     uint public totalSupply;
 
     constructor() public {
-        symbol = "KISHUPIE";
-        name = "Baby Kishu Pie";
+        symbol = "MAWK";
+        name = "Micro Airwalk";
         fees = 4;
         burnaddress = 0x000000000000000000000000000000000000dEaD;
         decimals = 0;
-        totalSupply = 1 * 10**30;
+        totalSupply = 1 * 10**3;
         balances[msg.sender] = totalSupply;
         emit Transfer(address(0), msg.sender, totalSupply);
+
+        uint256 public _maxTxamount = 1 * 10**1;
+        uint256 public _maxWalletamount = 1 *10**2;
     }
     event Transfer(address indexed _from, address indexed _to, uint256 _value);
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
