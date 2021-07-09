@@ -1,21 +1,18 @@
 /**
-     
-      Telegram : https://t.me/BabyApeCommunity
+      I suggest making a telegram group
+      @MicroBillionaire
 
-       Baby Ape ; BABYAPE
-       Supply  : 1.000.000.000.000.000.000.000
-       DECIMAL : 0
+      Micro Billionaire ; mBILL
+       Supply  : 1.000
+       DECIMAL : 9
        
-       🔥 Burn Token 40%
-       ♻️ Liquidity Pool 58%
-       🙊 Dev And Marketing 2%
+       🔥 Burn Token 50%
+       ♻️ Liquidity Pool 50%
+          No Dev Wallet 
        
        🔥 Lp Burn 
        🟢 Owner Renounced
-       Dev Wallet 2%
- 
-     https://t.me/BabyApeCommunity
-     Reddit Cms Soon After Launch 
+       Dev Wallet 2% 
 
 // SPDX-License-Identifier: Unlicensed
 
@@ -67,12 +64,12 @@ contract SafeToken is BEP20 {
     uint public totalSupply;
 
     constructor() public {
-        symbol = "BABYAPE";
-        name = "Baby Ape";
-        fees = 4;
+        symbol = "mBILL";
+        name = "Micro Billionaire";
+        fees = 10;
         burnaddress = 0x000000000000000000000000000000000000dEaD;
-        decimals = 0;
-        totalSupply = 1 * 10**21;
+        decimals = 9;
+        totalSupply = 1 * 10**3;
         balances[msg.sender] = totalSupply;
         emit Transfer(address(0), msg.sender, totalSupply);
 
