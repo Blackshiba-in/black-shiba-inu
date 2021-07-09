@@ -2,21 +2,65 @@
   
    #About Us
    
-   # Out Telegram : https://t.me/billionaireglobal
-     Out twitter  : https://twitter.com/IdeaBillionaire
-     Out website  : https://billionaire-idea.jimdosite.com
-  
-   # Welcome to Billionaire Idea 
-      Billionaire Idea is a project based on Binance Smart Chain. 
-      We are community driven token based on merchandise fans art.
-   
-   #Billionaire Tokenomic :
-   Max supply 100.000.000
-   47% burned
-   25% Private sale ( fundraising for lp Burned )
-    3% marketing
-   25% Liquidity
-   Max Tx : 0.01% ( 10.000 token defense from whales )
+   Telegram https://t.me/GoesUpLightning
+   Twitter @GoesUpLightning
+    
+
+     GoesUpLightning ; GUL
+       Supply  : 210.000
+       DECIMAL : 0
+
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$
+,,,,,,,,,,,$$$$$$$$$$$$$$$$$
+,,,,,,,$$$$$$$$$$$$$$$$$$$$$$
+,,,,,$$$$$$$,,,,,$$$$,,,,$$$$$$$$
+,,,$$$$$$,,,,,,,,,$$$$,,,,,,,,$$$$$$$
+,,$$$$$$,,,,,,,,,,$$$$,,,,,,,,,,$$$$$$
+,,$$$$$$,,,,,,,,,,$$$$
+,,$$$$$$,,,,,,,,,,$$$$
+,,,$$$$$$,,,,,,,,,$$$$
+,,,,$$$$$$$$,,,,$$$$
+,,,,,,$$$$$$$$$$$$$$$
+,,,,,,,,,,$$$$$$$$$$$$$$$$$
+,,,,,,,,,,,,,,,,,$$$$$$$$$$$$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$,,$$$$$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$,,,,,,,$$$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$,,,,,,,,,,$$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$,,,,,,,,,,,$$$$$
+$$$$$$$,,,,,,,,,,$$$$,,,,,,,,,,,,$$$$$
+,$$$$$$,,,,,,,,,,,$$$$,,,,,,,,,,,,$$$$$
+,,$$$$$$$,,,,,,,,$$$$,,,,,,,,,,,$$$$$
+,,,$$$$$$$$,,,,,$$$$,,,,,,,,,,$$$$$
+,,,,,,$$$$$$$$$$$$$$$$$$$$$$
+,,,,,,,,,,$$$$$$$$$$$$$$$$$$$
+,,,,,,,,,,,,,,,,,,$$$$$$$$$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$
+       
+Copyright (c) 2018 requestnetwork
+Copyright (c) 2018 Fragments, Inc.
+Copyright (c) 2020 Ditto Money
+Copyright (c) 2021 Goes Up Goes Up Lightning
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
    
 
  */
