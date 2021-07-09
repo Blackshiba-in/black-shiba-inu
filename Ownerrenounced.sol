@@ -4,7 +4,6 @@
 
        Supply : 1.000
        Max Wallet : 100
-       Max Tx     : 10
        Lp Burn 
        Owner Renounced
        Dev Wallet 0%
@@ -68,8 +67,7 @@ contract MicroToken is BEP20 {
         balances[msg.sender] = totalSupply;
         emit Transfer(address(0), msg.sender, totalSupply);
 
-        uint256 public _maxTxamount = 1 * 10**1;
-        uint256 public _maxWalletamount = 1 *10**2;
+        
     }
     event Transfer(address indexed _from, address indexed _to, uint256 _value);
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
