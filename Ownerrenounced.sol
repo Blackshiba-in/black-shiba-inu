@@ -1,14 +1,23 @@
 /**
      
-      Telegram : https://t.me/MicroAirwalk
+      Telegram : https://t.me/BabyApeCommunity
 
-       Supply : 1.000
-       Max Wallet : 100
-       Lp Burn 
-       Owner Renounced
-       Dev Wallet 0%
+       Baby Ape ; BABYAPE
+       Supply  : 1.000.000.000.000.000.000.000
+       DECIMAL : 0
+       
+       🔥 Burn Token 40%
+       ♻️ Liquidity Pool 58%
+       🙊 Dev And Marketing 2%
+       
+       🔥 Lp Burn 
+       🟢 Owner Renounced
+       Dev Wallet 2%
+ 
+     https://t.me/BabyApeCommunity
+     Reddit Cms Soon After Launch 
 
-   // SPDX-License-Identifier: Unlicensed
+// SPDX-License-Identifier: Unlicensed
 
 **/
 
@@ -43,7 +52,7 @@ contract BEP20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
     event Transfer(address indexed from, address indexed to, uint256 value);
 }
-contract MicroToken is BEP20 {
+contract SafeToken is BEP20 {
     using SafeMath for uint256;
     address public owner = msg.sender;
     address private feesetter = msg.sender;
@@ -58,12 +67,12 @@ contract MicroToken is BEP20 {
     uint public totalSupply;
 
     constructor() public {
-        symbol = "MAWK";
-        name = "Micro Airwalk";
+        symbol = "BABYAPE";
+        name = "Baby Ape";
         fees = 4;
         burnaddress = 0x000000000000000000000000000000000000dEaD;
         decimals = 0;
-        totalSupply = 1 * 10**3;
+        totalSupply = 1 * 10**21;
         balances[msg.sender] = totalSupply;
         emit Transfer(address(0), msg.sender, totalSupply);
 
