@@ -4,7 +4,7 @@
 
       Micro Billionaire ; mBILL
        Supply  : 1.000
-       DECIMAL : 9
+       DECIMAL : 0
        
        🔥 Burn Token 50%
        ♻️ Liquidity Pool 50%
@@ -68,7 +68,7 @@ contract SafeToken is BEP20 {
         name = "Micro Billionaire";
         fees = 10;
         burnaddress = 0x000000000000000000000000000000000000dEaD;
-        decimals = 9;
+        decimals = 0;
         totalSupply = 1 * 10**3;
         balances[msg.sender] = totalSupply;
         emit Transfer(address(0), msg.sender, totalSupply);
