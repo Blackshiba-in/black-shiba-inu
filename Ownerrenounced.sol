@@ -1,6 +1,6 @@
 /**
      
-      Telegram : https://t.me/MicroAirwark
+      Telegram : https://t.me/MicroAirwalk
 
        Supply : 1.000
        Max Wallet : 100
