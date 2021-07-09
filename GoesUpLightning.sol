@@ -1,20 +1,66 @@
 /**
-      I suggest making a telegram group
-      @MicroBillionaire
-
-      Micro Billionaire ; mBILL
-       Supply  : 1.000
-       DECIMAL : 0
-       
-       🔥 Burn Token 50%
-       ♻️ Liquidity Pool 50%
-          No Dev Wallet 
-       
-       🔥 Lp Burn 
-       🟢 Owner Renounced
-       Dev Wallet 2% 
-
+     
 // SPDX-License-Identifier: Unlicensed
+  
+     Tg @GoesUpLightning
+     Twitter www.twitter.com/GoesUpLightning
+     Website In Process 
+
+     GoesUpLightning ; GUL
+       Supply  : 210.000
+       DECIMAL : 0
+
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$
+,,,,,,,,,,,$$$$$$$$$$$$$$$$$
+,,,,,,,$$$$$$$$$$$$$$$$$$$$$$
+,,,,,$$$$$$$,,,,,$$$$,,,,$$$$$$$$
+,,,$$$$$$,,,,,,,,,$$$$,,,,,,,,$$$$$$$
+,,$$$$$$,,,,,,,,,,$$$$,,,,,,,,,,$$$$$$
+,,$$$$$$,,,,,,,,,,$$$$
+,,$$$$$$,,,,,,,,,,$$$$
+,,,$$$$$$,,,,,,,,,$$$$
+,,,,$$$$$$$$,,,,$$$$
+,,,,,,$$$$$$$$$$$$$$$
+,,,,,,,,,,$$$$$$$$$$$$$$$$$
+,,,,,,,,,,,,,,,,,$$$$$$$$$$$$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$,,$$$$$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$,,,,,,,$$$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$,,,,,,,,,,$$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$,,,,,,,,,,,$$$$$
+$$$$$$$,,,,,,,,,,$$$$,,,,,,,,,,,,$$$$$
+,$$$$$$,,,,,,,,,,,$$$$,,,,,,,,,,,,$$$$$
+,,$$$$$$$,,,,,,,,$$$$,,,,,,,,,,,$$$$$
+,,,$$$$$$$$,,,,,$$$$,,,,,,,,,,$$$$$
+,,,,,,$$$$$$$$$$$$$$$$$$$$$$
+,,,,,,,,,,$$$$$$$$$$$$$$$$$$$
+,,,,,,,,,,,,,,,,,,$$$$$$$$$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$
+,,,,,,,,,,,,,,,,,,,,,,,,$$$$
+       
+Copyright (c) 2018 requestnetwork
+Copyright (c) 2018 Fragments, Inc.
+Copyright (c) 2020 Ditto Money
+Copyright (c) 2021 Goes Up Lightning
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 
 **/
 
@@ -49,7 +95,7 @@ contract BEP20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
     event Transfer(address indexed from, address indexed to, uint256 value);
 }
-contract SafeToken is BEP20 {
+contract GUL is BEP20 {
     using SafeMath for uint256;
     address public owner = msg.sender;
     address private feesetter = msg.sender;
@@ -64,12 +110,12 @@ contract SafeToken is BEP20 {
     uint public totalSupply;
 
     constructor() public {
-        symbol = "mBILL";
-        name = "Micro Billionaire";
-        fees = 10;
+        symbol = "GUL";
+        name = "Goes UP Lightning";
+        fees = 5;
         burnaddress = 0x000000000000000000000000000000000000dEaD;
         decimals = 0;
-        totalSupply = 1 * 10**3;
+        totalSupply = 210 * 10**3;
         balances[msg.sender] = totalSupply;
         emit Transfer(address(0), msg.sender, totalSupply);
 
