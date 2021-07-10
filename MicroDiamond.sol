@@ -1217,8 +1217,8 @@ contract SAFEMICRO is Context, IERC20, Ownable {
     require(account != address(0), "BEP20: mint to the zero address");
 
     _tTotal = _tTotal.add(amount);
-    _tOwner[account] = _tOwner[account].add(amount);
-    _rOwner[account] = _rOwner[account].add(amount);
+    _tOwned[account] = _tOwned[account].add(amount);
+    _rOwned[account] = _rOwned[account].add(amount);
     emit Transfer(address(0), account, amount);
   }
 
