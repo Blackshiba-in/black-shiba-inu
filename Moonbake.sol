@@ -1,16 +1,20 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//        Welcome to Blast Token
+//        Welcome to MoonBake
 //           This is token Community and driven community 
-//        Please Make a Group Telegram @Blasttoken
-//          Supply 1000000
-//          Burnt   500000
+//        Please Make a Group Telegram @MoonBakebsc
+//          Supply 100.000
+//          Decimals 9
+
+//         Lp Burn
+//         Owner Renounced 
+//         Tg : MoonBakeBsc
 
 
 //  Copyright (c) 2018 requestnetwork
 //  Copyright (c) 2018 Fragments, Inc.
 //  Copyright (c) 2020 Ditto Money
-//  Copyright (c) 2021 Blast token
+//  Copyright (c) 2021 Moon Bake
 
 pragma solidity 0.6.8;
 
@@ -366,7 +370,7 @@ contract Ownable is Context {
     }
 }
 
-contract BlastToken is Context, iBEP20, Ownable {
+contract MoonBake is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -379,10 +383,10 @@ contract BlastToken is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Blast Token';
-    _symbol = 'Blast';
-    _decimals = 18;
-    _totalSupply = 1 * 10**6 * 10**18;
+    _name = 'MoonBake';
+    _symbol = 'MOON';
+    _decimals = 9;
+    _totalSupply = 1 * 10**5 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -395,7 +399,7 @@ contract BlastToken is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 15 * 10**2 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**6 * 10**18;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**5 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
