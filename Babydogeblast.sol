@@ -2,27 +2,9 @@
 
 //        Welcome to Baby Doge Blast Stealt Launch
 //           This is token Community and driven community 
-
-//           Please Make a Group Telegram @BabyDogeBlast
-
-//        🔥 Lp burnt 
-//        🟢 Owner Renounced
-//        👌 SAFU 100%
-        
-//            ▄      ▄    
-//           ▐▒▀▄▄▄▄▀▒▌   
-//         ▄▀▒▒▒▒▒▒▒▒▓▀▄  
-//       ▄▀░█░░░░█░░▒▒▒▐  
-//       ▌░░░░░░░░░░░▒▒▐  
-//      ▐▒░██▒▒░░░░░░░▒▐  
-//      ▐▒░▓▓▒▒▒░░░░░░▄▀  
-//       ▀▄░▀▀▀▀░░░░▄▀    
-//         ▀▀▄▄▄▄▄▀▀       
-
-//        Baby Doge Blast ; DOGEBLAST
-//        Supply 1.000.000.000.000.000
-//        Lp 0.15 (Degen)
-//        Don't Miss BABY DOGE BLAST
+//        Please Make a Group Telegram @BabyDogeBlast
+//          Supply 1000000
+//          Burnt   500000
 
 
 //  Copyright (c) 2018 requestnetwork
