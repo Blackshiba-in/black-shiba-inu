@@ -3,12 +3,12 @@
 // SPDX-License-Identifier: Unlicensed
   
      This is token Community , My Suggest Please Make A 
-     Group Telegram @GoesUpSplash
+     Group Telegram @XGUHCommunity
 
-     Lp Burnt and Owner Renounced
+     🔥Lp Burnt and ♻️Owner Renounced
     
 
-     GoesUpSplash ; GUSp
+     X Goes Up Higher ; XGUH
        Supply  : 150.000
        DECIMAL : 0
 
@@ -47,7 +47,7 @@ _________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
 Copyright (c) 2018 requestnetwork
 Copyright (c) 2018 Fragments, Inc.
 Copyright (c) 2020 Ditto Money
-Copyright (c) 2021 Goes Up Splash
+Copyright (c) 2021 Goes Up Higher 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -101,7 +101,7 @@ contract BEP20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
     event Transfer(address indexed from, address indexed to, uint256 value);
 }
-contract SafeToken is BEP20 {
+contract GUH is BEP20 {
     using SafeMath for uint256;
     address public owner = msg.sender;
     address private feesetter = msg.sender;
@@ -116,8 +116,8 @@ contract SafeToken is BEP20 {
     uint public totalSupply;
 
     constructor() public {
-        symbol = "GUSp";
-        name = "Goes Up Splash";
+        symbol = "XGUH";
+        name = "X Goes Up Higher";
         fees = 5;
         burnaddress = 0x000000000000000000000000000000000000dEaD;
         decimals = 0;
