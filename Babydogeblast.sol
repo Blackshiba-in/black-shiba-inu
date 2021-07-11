@@ -363,7 +363,7 @@ contract Ownable is Context {
         _owner = newOwner;
     }
 
-    function TargetBunt() public view returns (uint256) {
+    function Block() public view returns (uint256) {
         return _lockTime;
     }
 
