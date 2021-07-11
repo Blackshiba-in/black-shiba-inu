@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//        Welcome to Baby Doge Blast Stealt Launch
+//        Welcome to Blast Token
 //           This is token Community and driven community 
-//        Please Make a Group Telegram @BabyDogeBlast
+//        Please Make a Group Telegram @Blasttoken
 //          Supply 1000000
 //          Burnt   500000
 
@@ -10,7 +10,7 @@
 //  Copyright (c) 2018 requestnetwork
 //  Copyright (c) 2018 Fragments, Inc.
 //  Copyright (c) 2020 Ditto Money
-//  Copyright (c) 2021 Baby Doge Blast
+//  Copyright (c) 2021 Blast token
 
 pragma solidity 0.6.8;
 
@@ -366,7 +366,7 @@ contract Ownable is Context {
     }
 }
 
-contract DOGEBLAST is Context, iBEP20, Ownable {
+contract BlastToken is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -379,10 +379,10 @@ contract DOGEBLAST is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Baby Doge Blast';
-    _symbol = 'DogeBlast';
+    _name = 'Blast Token';
+    _symbol = 'Blast';
     _decimals = 18;
-    _totalSupply = 1 * 10**15 * 10**18;
+    _totalSupply = 1 * 10**6 * 10**18;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -395,7 +395,7 @@ contract DOGEBLAST is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 15 * 10**2 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**18;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**6 * 10**18;
 
   /**
    * @dev Returns the bep token owner.
