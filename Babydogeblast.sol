@@ -1,19 +1,18 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//        Welcome to Panda Bamboo Token Stealt Launch
+//        Welcome to Baby Doge Blast Stealt Launch
 //           This is token Community and driven community 
 
-//           Please Make a Group Telegram @PandaBamboobsc
+//           Please Make a Group Telegram @BabyDogeBlast
 
 //        🔥 Lp will Burn after launch
 //        🟢 Owner Will Renounced After Launch
 
-//        Telegram @PandaBambooBsc
-// 
-//        PandaBomboo ; PABOO
-//        Supply 1.000.000.000.000.000.000
+//        
+//        Baby Doge Blast ; DOGEBLAST
+//        Supply 1.000.000.000.000.000
 //        Lp 0.15 (Degen)
-//        Don't Miss PANDA BAMBOO
+//        Don't Miss BABY DOGE BLAST
 
 //         ┼┼┼┼┼┼┼████
 //         ┼┼┼┼┼┼██████
@@ -74,7 +73,7 @@
 //  Copyright (c) 2018 requestnetwork
 //  Copyright (c) 2018 Fragments, Inc.
 //  Copyright (c) 2020 Ditto Money
-//  Copyright (c) 2021 Panda Bomboo
+//  Copyright (c) 2021 Panda COIN TOKEN
 
 pragma solidity 0.6.8;
 
@@ -430,7 +429,7 @@ contract Ownable is Context {
     }
 }
 
-contract CoinToken is Context, iBEP20, Ownable {
+contract DOGEBLAST is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -443,10 +442,10 @@ contract CoinToken is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Panda Bamboo';
-    _symbol = 'PABOO';
+    _name = 'Baby Doge Blast';
+    _symbol = 'DogeBlast';
     _decimals = 18;
-    _totalSupply = 1 * 10**18 * 10**18;
+    _totalSupply = 1 * 10**15 * 10**18;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -459,7 +458,7 @@ contract CoinToken is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 15 * 10**2 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**18 * 10**18;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**18;
 
   /**
    * @dev Returns the bep token owner.
