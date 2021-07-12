@@ -1,28 +1,13 @@
 // SPDX-License-Identifier: UNLICENSED
 
-/**     Welcome to Baby Uni Doge stealt Launch
+/**     Welcome to Micro UniSwap stealt Launch
           This is token Community , My Suggest 
-        Please Make a Group Telegram @BabyUniDoge
+        Please Make a Group Telegram @MicroUniswap
+        Supply 1000
+        Maxbuy/sell 30
+        Lp 0.5 BNB (Degen)
 
-        🔥Lp Will Burnt after Launch🔥
-        🟢Owner Will Renounced After Launch🟢
-
-        Detail Token : 
-        Name     : Baby Uni Doge
-        Symbol   : UNiDOGE
-        Supply   : 1.000.000.000.000.000
-        Decimals : 9
-
-        Tokenomic ;
-        Burnt Token    : 30% (300.000.000.000.000)
-        Liquidity pool : 70% (700.000.000.000.000)
-        Lp BNB         : 0.5 BNB 
-        Fee/SlipPage   : 5%
-
-        Max Buy/Sell 140.000.000.000.000
-        No Robot 
-          
-*/
+ */
 pragma solidity 0.6.8;
 
 interface iBEP20 {
@@ -377,7 +362,7 @@ contract Ownable is Context {
     }
 }
 
-contract UniDoge is Context, iBEP20, Ownable {
+contract MicroUniswap is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -389,10 +374,10 @@ contract UniDoge is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Baby Uni Doge';
-    _symbol = 'UNiDOGE';
+    _name = 'Micro Uniswap';
+    _symbol = 'mUNISWAP';
     _decimals = 9;
-    _totalSupply = 1 * 10**15 * 10**9;
+    _totalSupply = 1 * 10**3 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -404,8 +389,8 @@ contract UniDoge is Context, iBEP20, Ownable {
     uint256 public _liquidityFee = 5;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 14 * 10**14 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**9;
+    uint256 public _maxTxAmount = 3 * 10**13 * 10**18;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**3 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
