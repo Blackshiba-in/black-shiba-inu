@@ -1,14 +1,24 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//        Welcome to Baby Piggy
-//          Don't miss Baby Piggy, already poocoin ads
-//        Telegram @Babypiggi
+//     The FoxDCoin Project
+//     The Foxdcoin [Fox Digital Coin] project launched on 19th Feb 2020, 
+//     when the genesis block got mined.
+//     We are an open-source project designed to enable instant payments to anyone around the world. 
+//     The aim of the project is to create a blockchain optimized specifically for the transfer of assets such as tokens from one holder to another.
+//     We will remain open and receptive to differing ideas and be prepared to change even fundamental concepts in this project in response to community ideas and proposals. 
+//     The project has No pre-mine, No ICO or Masternodes.
 
-//          Supply 1.000.000.000.000.000
-//          Decimals 9
+//     Foxdcoin to be launched on the binance smart chain network
+//       Don't Miss Foxdcoin 
 
-//         Lp Burn after Launch 
-//         Owner Renounced after Launch
+//         Fox Digital Coin : FOXD
+//         Supply 12.000.000
+//         Decimal 9
+
+//         About Us 
+//         Website  : https://foxdcoin.com/
+//         Telegram : https://t.me/FoxdCoinBSC
+//         Twitter  : https://www.twitter.com/foxdcoin
 
 
 pragma solidity 0.6.8;
@@ -365,7 +375,7 @@ contract Ownable is Context {
     }
 }
 
-contract BABYPIGGY is Context, iBEP20, Ownable {
+contract CoinToken is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -377,10 +387,10 @@ contract BABYPIGGY is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Baby Piggy';
-    _symbol = 'BABYPIGGY';
+    _name = 'Fox Digital Coin';
+    _symbol = 'FOXD';
     _decimals = 9;
-    _totalSupply = 1 * 10**15 * 10**9;
+    _totalSupply = 11 * 10**6 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -393,7 +403,7 @@ contract BABYPIGGY is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 15 * 10**2 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 11 * 10**6 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
