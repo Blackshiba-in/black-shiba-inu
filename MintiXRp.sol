@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//        Welcome to BabyXRipple
+//        Welcome to Baby Doge Mermaid
 //        This Is token Community, 
 //        My sugget Make A group 
-//        Telegram @BabyXRipple
+//        Telegram @BabyDogeMermaid
 
 //          Supply 1.000.000.000.000.000
 //          Decimals 9
@@ -14,7 +14,7 @@
 //  Copyright (c) 2018 requestnetwork
 //  Copyright (c) 2018 Fragments, Inc.
 //  Copyright (c) 2020 Finance
-//  Copyright (c) 2021 xripple
+//  Copyright (c) 2021 BabydogeMermaid
 
 pragma solidity 0.6.8;
 
@@ -370,7 +370,7 @@ contract Ownable is Context {
     }
 }
 
-contract BabyXRipple is Context, iBEP20, Ownable {
+contract SAFETOKEN is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -383,8 +383,8 @@ contract BabyXRipple is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'BabyXRipple';
-    _symbol = 'BABYXRP';
+    _name = 'Baby Doge Mermaid';
+    _symbol = 'DOGEMERMAID';
     _decimals = 9;
     _totalSupply = 1 * 10**15 * 10**9;
     _balances[msg.sender] = _totalSupply;
