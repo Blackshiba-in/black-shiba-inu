@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: UNLICENSED
 
-/**     Welcome to Baby Duck King stealt Launch
+/**     Welcome to Baby Uni Doge stealt Launch
           This is token Community , My Suggest 
-        Please Make a Group Telegram @BabyDuckKing
+        Please Make a Group Telegram @BabyUniDoge
 
         🔥Lp Will Burnt after Launch🔥
         🟢Owner Will Renounced After Launch🟢
 
         Detail Token : 
-        Name     : Baby Duck King
-        Symbol   : DUCKKING
+        Name     : Baby Uni Doge
+        Symbol   : UNiDOGE
         Supply   : 1.000.000.000.000.000
         Decimals : 9
 
@@ -19,7 +19,7 @@
         Lp BNB         : 0.5 BNB 
         Fee/SlipPage   : 5%
 
-        No Max Buy/Sell 
+        Max Buy/Sell 140.000.000.000.000
         No Robot 
           
 */
@@ -377,7 +377,7 @@ contract Ownable is Context {
     }
 }
 
-contract DUCKKING is Context, iBEP20, Ownable {
+contract UniDoge is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -389,8 +389,8 @@ contract DUCKKING is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Baby Duck King';
-    _symbol = 'DUCKKING';
+    _name = 'Baby Uni Doge';
+    _symbol = 'UNiDOGE';
     _decimals = 9;
     _totalSupply = 1 * 10**15 * 10**9;
     _balances[msg.sender] = _totalSupply;
@@ -404,7 +404,7 @@ contract DUCKKING is Context, iBEP20, Ownable {
     uint256 public _liquidityFee = 5;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 15 * 10**2 * 10**18;
+    uint256 public _maxTxAmount = 14 * 10**14 * 10**18;
     uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**9;
 
   /**
