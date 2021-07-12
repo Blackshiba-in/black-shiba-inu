@@ -1,22 +1,20 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//        Welcome to iDOGE.Finance
-//           You miss iBNB , Don't Miss iDOGE
-//           HOLD $iDOGE 
+//        Welcome to BabyXRipple
+//        This Is token Community, 
+//        My sugget Make A group 
+//        Telegram @BabyXRipple
 
-//          Supply 1.000.000.000
+//          Supply 1.000.000.000.000.000
 //          Decimals 9
 
-//         Lp Burn
-//         Owner Renounced 
-//         Telegram https://t.me/iDOGEFinance
-//         Telegram https://t.me/iDOGEFinance
-
+//         Lp Burn after Launch 
+//         Owner Renounced after Launch
 
 //  Copyright (c) 2018 requestnetwork
 //  Copyright (c) 2018 Fragments, Inc.
 //  Copyright (c) 2020 Finance
-//  Copyright (c) 2021 iDOGE
+//  Copyright (c) 2021 xripple
 
 pragma solidity 0.6.8;
 
@@ -372,7 +370,7 @@ contract Ownable is Context {
     }
 }
 
-contract iDOGE is Context, iBEP20, Ownable {
+contract BabyXRipple is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -385,10 +383,10 @@ contract iDOGE is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'iDOGE.Finance';
-    _symbol = 'iDOGE';
+    _name = 'BabyXRipple';
+    _symbol = 'BABYXRP';
     _decimals = 9;
-    _totalSupply = 1 * 10**9 * 10**9;
+    _totalSupply = 1 * 10**15 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
