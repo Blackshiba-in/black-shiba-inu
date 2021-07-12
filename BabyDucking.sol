@@ -1,26 +1,28 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//     The FoxDCoin Project
-//     The Foxdcoin [Fox Digital Coin] project launched on 19th Feb 2020, 
-//     when the genesis block got mined.
-//     We are an open-source project designed to enable instant payments to anyone around the world. 
-//     The aim of the project is to create a blockchain optimized specifically for the transfer of assets such as tokens from one holder to another.
-//     We will remain open and receptive to differing ideas and be prepared to change even fundamental concepts in this project in response to community ideas and proposals. 
-//     The project has No pre-mine, No ICO or Masternodes.
+/**     Welcome to Baby Duck King stealt Launch
+          This is token Community , My Suggest 
+        Please Make a Group Telegram @BabyDuckKing
 
-//     Foxdcoin to be launched on the binance smart chain network
-//       Don't Miss Foxdcoin 
+        🔥Lp Will Burnt after Launch🔥
+        🟢Owner Will Renounced After Launch🟢
 
-//         Fox Digital Coin : FOXD
-//         Supply 12.000.000
-//         Decimal 9
+        Detail Token : 
+        Name     : Baby Duck King
+        Symbol   : DUCKKING
+        Supply   : 1.000.000.000.000.000
+        Decimals : 9
 
-//         About Us 
-//         Website  : https://foxdcoin.com/
-//         Telegram : https://t.me/FoxdCoinBSC
-//         Twitter  : https://www.twitter.com/foxdcoin
+        Tokenomic ;
+        Burnt Token    : 30% (300.000.000.000.000)
+        Liquidity pool : 70% (700.000.000.000.000)
+        Lp BNB         : 0.5 BNB 
+        Fee/SlipPage   : 5%
 
-
+        No Max Buy/Sell 
+        No Robot 
+          
+*/
 pragma solidity 0.6.8;
 
 interface iBEP20 {
@@ -375,7 +377,7 @@ contract Ownable is Context {
     }
 }
 
-contract CoinToken is Context, iBEP20, Ownable {
+contract DUCKKING is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -387,10 +389,10 @@ contract CoinToken is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Fox Digital Coin';
-    _symbol = 'FOXD';
+    _name = 'Baby Duck King';
+    _symbol = 'DUCKKING';
     _decimals = 9;
-    _totalSupply = 11 * 10**6 * 10**9;
+    _totalSupply = 1 * 10**15 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -403,7 +405,7 @@ contract CoinToken is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 15 * 10**2 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 11 * 10**6 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
