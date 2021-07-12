@@ -1,10 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 
-/**     Welcome to Micro UniSwap stealt Launch
+/**     Welcome to Baby Doge Chef stealt Launch
           This is token Community , My Suggest 
-        Please Make a Group Telegram @MicroUniswap
-        Supply 1000
-        Maxbuy/sell 30
+        Please Make a Group Telegram @BabyDogeChef
+        Supply 1.000.000.000.000.000
         Lp 0.5 BNB (Degen)
 
  */
@@ -362,7 +361,7 @@ contract Ownable is Context {
     }
 }
 
-contract MicroUniswap is Context, iBEP20, Ownable {
+contract DOGECHEF is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -374,10 +373,10 @@ contract MicroUniswap is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Micro Uniswap';
-    _symbol = 'mUNISWAP';
+    _name = 'Baby Doge Chef';
+    _symbol = 'DOGECHEF';
     _decimals = 9;
-    _totalSupply = 1 * 10**3 * 10**9;
+    _totalSupply = 1 * 10**15 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -390,7 +389,7 @@ contract MicroUniswap is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 3 * 10**13 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**3 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
