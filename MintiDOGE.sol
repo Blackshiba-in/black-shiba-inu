@@ -1,20 +1,22 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//        Welcome to MoonBake
-//           This is token Community and driven community 
-//        Please Make a Group Telegram @MoonBakebsc
-//          Supply 100.000
+//        Welcome to iDOGE.Finance
+//           You miss iBNB , Don't Miss iDOGE
+//           HOLD $iDOGE 
+
+//          Supply 1.000.000.000
 //          Decimals 9
 
 //         Lp Burn
 //         Owner Renounced 
-//         Tg : MoonBakeBsc
+//         Telegram https://t.me/iDOGEFinance
+//         Telegram https://t.me/iDOGEFinance
 
 
 //  Copyright (c) 2018 requestnetwork
 //  Copyright (c) 2018 Fragments, Inc.
-//  Copyright (c) 2020 Ditto Money
-//  Copyright (c) 2021 Moon Bake
+//  Copyright (c) 2020 Finance
+//  Copyright (c) 2021 iDOGE
 
 pragma solidity 0.6.8;
 
@@ -370,7 +372,7 @@ contract Ownable is Context {
     }
 }
 
-contract MoonBake is Context, iBEP20, Ownable {
+contract iDOGE is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -383,10 +385,10 @@ contract MoonBake is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'MoonBake';
-    _symbol = 'MOON';
+    _name = 'iDOGE.Finance';
+    _symbol = 'iDOGE';
     _decimals = 9;
-    _totalSupply = 1 * 10**5 * 10**9;
+    _totalSupply = 1 * 10**9 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -399,7 +401,7 @@ contract MoonBake is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 15 * 10**2 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**5 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**9 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
