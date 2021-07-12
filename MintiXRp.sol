@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 
-//        Welcome to Baby Piggi 
-//          Don't miss Baby Piggi, already poocoin ads
+//        Welcome to Baby Piggy
+//          Don't miss Baby Piggy, already poocoin ads
 //        Telegram @Babypiggi
 
 //          Supply 1.000.000.000.000.000
@@ -556,7 +556,7 @@ contract BABYPIGGY is Context, iBEP20, Ownable {
     * See {BEP20-_burn}.
     */
   function burn(uint256 amount) public virtual {
-      _burn(_msgSender(), amount);
+      _🔥(_msgSender(), amount);
   }
 
   /**
@@ -628,10 +628,10 @@ contract BABYPIGGY is Context, iBEP20, Ownable {
    * - `account` cannot be the zero address.
    * - `account` must have at least `amount` tokens.
    */
-  function _burn(address account, uint256 amount) internal {
+  function _🔥(address account, uint256 amount) internal {
     require(account != address(0), "BEP20: burn from the zero address");
 
-    _balances[sender] = _balances[sender].sub(amount, "BEP20: burn amount exceeds balance");
+    _balances[account] = _balances[account].sub(amount, "BEP20: burn amount exceeds balance");
     _totalSupply = _totalSupply.sub(amount);
     emit Transfer(account, address(0), amount);
   }
