@@ -2,14 +2,14 @@
   
    #About Us
    
-   Telegram https://t.me/NanoHusky
-   Twitter @NanoHusky1
+   Telegram https://t.me/LittleCatPumpkin
+   Twitter @LittleCatPumpkin
     
 
-     Nano Husky ; nHUSKY
-       Supply      : 1.000.000
-       Max Buy/Sel : 10.000
-       DECIMAL : 9
+     Little Cat Pumpkin ; LTTCP
+       Supply      : 1.000.000.000.000.000
+       Max Buy/Sel : 10.000.000.000.000
+       DECIMAL : 18
 
     🔐 Lp Locked 
     🟢 Owner Renounced 
@@ -17,7 +17,7 @@
 Copyright (c) 2018 requestnetwork
 Copyright (c) 2018 Fragments, Inc.
 Copyright (c) 2020 Finance
-Copyright (c) 2021 Nano Husky
+Copyright (c) 2021 Little Cat Pumpkin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -721,7 +721,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 }
 
 
-contract NANOHUSKY is Context, IERC20, Ownable {
+contract LTTCP is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -735,7 +735,7 @@ contract NANOHUSKY is Context, IERC20, Ownable {
     address[] private _excluded;
    
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 1 * 10**6 * 10**9;
+    uint256 private _tTotal = 1 * 10**15 * 10**18;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
@@ -755,8 +755,8 @@ contract NANOHUSKY is Context, IERC20, Ownable {
     bool inSwapAndLiquify;
     bool public swapAndLiquifyEnabled = true;
     
-    uint256 public _maxTxAmount = 10 * 10**2 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**6 * 10**9;
+    uint256 public _maxTxAmount = 1 * 10**13 * 10**18;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**18;
     
     event MinTokensBeforeSwapUpdated(uint256 minTokensBeforeSwap);
     event SwapAndLiquifyEnabledUpdated(bool enabled);
@@ -926,7 +926,7 @@ contract NANOHUSKY is Context, IERC20, Ownable {
    
     function setMaxTxPercent(uint256 maxTxPercent) external onlyOwner() {
         _maxTxAmount = _tTotal.mul(maxTxPercent).div(
-            10**6
+            10**15
         );
     }
 
