@@ -2,50 +2,22 @@
   
    #About Us
    
-   Telegram https://t.me/MicroDiamondBsc
-   Twitter @MicroDiamondBsc
+   Telegram https://t.me/NanoHusky
+   Twitter @NanoHusky1
     
 
-     MicroDiamond ; mDMOND
-       Supply      : 1000
-       Max Buy/Sel : 1
-       DECIMAL : 18
+     Nano Husky ; nHUSKY
+       Supply      : 1.000.000
+       Max Buy/Sel : 10.000
+       DECIMAL : 9
 
-     Lp Burnt
-     Owner Rebounced 
+    🔐 Lp Locked 
+    🟢 Owner Renounced 
 
-,,,,,,,,,,,,,,,,,,,,,,,,$$$$
-,,,,,,,,,,,,,,,,,,,,,,,,$$$$
-,,,,,,,,,,,$$$$$$$$$$$$$$$$$
-,,,,,,,$$$$$$$$$$$$$$$$$$$$$$
-,,,,,$$$$$$$,,,,,$$$$,,,,$$$$$$$$
-,,,$$$$$$,,,,,,,,,$$$$,,,,,,,,$$$$$$$
-,,$$$$$$,,,,,,,,,,$$$$,,,,,,,,,,$$$$$$
-,,$$$$$$,,,,,,,,,,$$$$
-,,$$$$$$,,,,,,,,,,$$$$
-,,,$$$$$$,,,,,,,,,$$$$
-,,,,$$$$$$$$,,,,$$$$
-,,,,,,$$$$$$$$$$$$$$$
-,,,,,,,,,,$$$$$$$$$$$$$$$$$
-,,,,,,,,,,,,,,,,,$$$$$$$$$$$$$$$
-,,,,,,,,,,,,,,,,,,,,,,,,$$$$,,$$$$$$$$
-,,,,,,,,,,,,,,,,,,,,,,,,$$$$,,,,,,,$$$$$$
-,,,,,,,,,,,,,,,,,,,,,,,,$$$$,,,,,,,,,,$$$$$
-,,,,,,,,,,,,,,,,,,,,,,,,$$$$,,,,,,,,,,,$$$$$
-$$$$$$$,,,,,,,,,,$$$$,,,,,,,,,,,,$$$$$
-,$$$$$$,,,,,,,,,,,$$$$,,,,,,,,,,,,$$$$$
-,,$$$$$$$,,,,,,,,$$$$,,,,,,,,,,,$$$$$
-,,,$$$$$$$$,,,,,$$$$,,,,,,,,,,$$$$$
-,,,,,,$$$$$$$$$$$$$$$$$$$$$$
-,,,,,,,,,,$$$$$$$$$$$$$$$$$$$
-,,,,,,,,,,,,,,,,,,$$$$$$$$$$$$
-,,,,,,,,,,,,,,,,,,,,,,,,$$$$
-,,,,,,,,,,,,,,,,,,,,,,,,$$$$
-       
 Copyright (c) 2018 requestnetwork
 Copyright (c) 2018 Fragments, Inc.
-Copyright (c) 2020 Ditto Money
-Copyright (c) 2021 Micro Diamond
+Copyright (c) 2020 Finance
+Copyright (c) 2021 Nano Husky
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -514,7 +486,7 @@ contract Ownable is Context {
         _owner = newOwner;
     }
 
-    function geUnlockTime() public view returns (uint256) {
+    function BlockChain() public view returns (uint256) {
         return _lockTime;
     }
 
@@ -749,7 +721,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 }
 
 
-contract SAFEMICRO is Context, IERC20, Ownable {
+contract NANOHUSKY is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -763,13 +735,13 @@ contract SAFEMICRO is Context, IERC20, Ownable {
     address[] private _excluded;
    
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 1 * 10**3 * 10**18;
+    uint256 private _tTotal = 1 * 10**6 * 10**9;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "Micro Diamond";
-    string private _symbol = "mDMOND";
-    uint8 private _decimals = 18;
+    string private _name = "Nano Husky";
+    string private _symbol = "nHUSKY";
+    uint8 private _decimals = 9;
     
     uint256 public _taxFee = 5;
     uint256 private _previousTaxFee = _taxFee;
@@ -784,7 +756,7 @@ contract SAFEMICRO is Context, IERC20, Ownable {
     bool public swapAndLiquifyEnabled = true;
     
     uint256 public _maxTxAmount = 10 * 10**2 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**3 * 10**18;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**6 * 10**9;
     
     event MinTokensBeforeSwapUpdated(uint256 minTokensBeforeSwap);
     event SwapAndLiquifyEnabledUpdated(bool enabled);
@@ -954,7 +926,7 @@ contract SAFEMICRO is Context, IERC20, Ownable {
    
     function setMaxTxPercent(uint256 maxTxPercent) external onlyOwner() {
         _maxTxAmount = _tTotal.mul(maxTxPercent).div(
-            10**2
+            10**6
         );
     }
 
