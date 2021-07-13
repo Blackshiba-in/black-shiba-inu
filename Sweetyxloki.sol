@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: UNLICENSED
 
-/**    Welcome To Nano Hamster
-       Supply 10.000
+/**    Welcome To Cold Doge Token
+       Supply 1500
        Lp degen (Burnt)
        Owner Renounced after launch
+       Max Buy/Sell 30 Token
 
  */
 pragma solidity 0.6.8;
@@ -360,7 +361,7 @@ contract Ownable is Context {
     }
 }
 
-contract NanoHAMSTER is Context, iBEP20, Ownable {
+contract ColdDoge is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -372,10 +373,10 @@ contract NanoHAMSTER is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Nano Hamster';
-    _symbol = 'nHAMS';
+    _name = 'Cold Doge Token';
+    _symbol = 'CDT';
     _decimals = 9;
-    _totalSupply = 1 * 10**4 * 10**9;
+    _totalSupply = 15 * 10**2 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -387,8 +388,8 @@ contract NanoHAMSTER is Context, iBEP20, Ownable {
     uint256 public _liquidityFee = 5;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 3 * 10**13 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**4 * 10**9;
+    uint256 public _maxTxAmount = 3 * 10**1 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 15 * 10**2 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
