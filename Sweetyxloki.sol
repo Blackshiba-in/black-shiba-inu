@@ -1,16 +1,17 @@
 // SPDX-License-Identifier: UNLICENSED
 
-/**     Welcome to Sun Wukong 🦧👑 Token 
-        stealt Launch.
+/**     Welcome to Monster Chef 👑👑
 
-     we have massive plans to make this 
-     the best meme coin on the market🚀🌑
-     Telegram https://t.me/SunWukongTOKEN
+     FAIRLAUNCH start at 1 Pm UTC July 13 2021
 
-        Supply 1.000.000.000.000.000
-        🔥 Lp Burnt 
-        ♻️ Owner Renounced 
-        🟢 Safe Check Bscheck.eu
+     🍱 Website 
+     https://monsterchef.fun
+     🥘 Twitter
+     @funmonsterchef
+     🍔 Facebook
+     @mnstrchefbsc
+     🥞 Medium
+     @monsterchef
 
  */
 pragma solidity 0.6.8;
@@ -367,7 +368,7 @@ contract Ownable is Context {
     }
 }
 
-contract SunWukong is Context, iBEP20, Ownable {
+contract MonsterChef is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -379,8 +380,8 @@ contract SunWukong is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Sun Wukong Token';
-    _symbol = 'SWT';
+    _name = 'MonsterChef';
+    _symbol = 'MC';
     _decimals = 9;
     _totalSupply = 1 * 10**15 * 10**9;
     _balances[msg.sender] = _totalSupply;
