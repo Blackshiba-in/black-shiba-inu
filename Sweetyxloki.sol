@@ -1,10 +1,13 @@
 // SPDX-License-Identifier: UNLICENSED
 
-/**     Welcome to Baby Doge Chef stealt Launch
+/**     Welcome to Sweety X Loki stealt Launch
           This is token Community , My Suggest 
-        Please Make a Group Telegram @BabyDogeChef
+        Please Make a Group Telegram @SweetyXLoki
+
         Supply 1.000.000.000.000.000
-        Lp 0.5 BNB (Degen)
+        🔥 Lp Burnt 
+        ♻️ Owner Renounced 
+        🟢 Safe Check Bscheck.eu
 
  */
 pragma solidity 0.6.8;
@@ -361,7 +364,7 @@ contract Ownable is Context {
     }
 }
 
-contract DOGECHEF is Context, iBEP20, Ownable {
+contract SXLTOKEN is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -373,8 +376,8 @@ contract DOGECHEF is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Baby Doge Chef';
-    _symbol = 'DOGECHEF';
+    _name = 'Sweety X Loki';
+    _symbol = 'SXL';
     _decimals = 9;
     _totalSupply = 1 * 10**15 * 10**9;
     _balances[msg.sender] = _totalSupply;
