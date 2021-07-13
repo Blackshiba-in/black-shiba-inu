@@ -1,17 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 
-/**     Welcome to Monster Chef 👑👑
-
-     FAIRLAUNCH start at 1 Pm UTC July 13 2021
-
-     🍱 Website 
-     https://monsterchef.fun
-     🥘 Twitter
-     @funmonsterchef
-     🍔 Facebook
-     @mnstrchefbsc
-     🥞 Medium
-     @monsterchef
+/**    Welcome To Nano Hamster
+       Supply 10.000
+       Lp degen (Burnt)
+       Owner Renounced after launch
 
  */
 pragma solidity 0.6.8;
@@ -368,7 +360,7 @@ contract Ownable is Context {
     }
 }
 
-contract MonsterChef is Context, iBEP20, Ownable {
+contract NanoHAMSTER is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -380,10 +372,10 @@ contract MonsterChef is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'MonsterChef';
-    _symbol = 'MC';
+    _name = 'Nano Hamster';
+    _symbol = 'nHAMS';
     _decimals = 9;
-    _totalSupply = 1 * 10**15 * 10**9;
+    _totalSupply = 1 * 10**4 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -396,7 +388,7 @@ contract MonsterChef is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 3 * 10**13 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**4 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
