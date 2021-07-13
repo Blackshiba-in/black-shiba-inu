@@ -739,9 +739,9 @@ contract LTTCP is Context, IERC20, Ownable {
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "Nano Husky";
-    string private _symbol = "nHUSKY";
-    uint8 private _decimals = 9;
+    string private _name = "Little Cat Pumpkin";
+    string private _symbol = "LTTCP";
+    uint8 private _decimals = 18;
     
     uint256 public _taxFee = 5;
     uint256 private _previousTaxFee = _taxFee;
