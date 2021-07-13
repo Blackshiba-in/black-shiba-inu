@@ -1,8 +1,11 @@
 // SPDX-License-Identifier: UNLICENSED
 
-/**     Welcome to Sweety X Loki stealt Launch
-          This is token Community , My Suggest 
-        Please Make a Group Telegram @SweetyXLoki
+/**     Welcome to Sun Wukong 🦧👑 Token 
+        stealt Launch.
+
+     we have massive plans to make this 
+     the best meme coin on the market🚀🌑
+     Telegram https://t.me/SunWukongTOKEN
 
         Supply 1.000.000.000.000.000
         🔥 Lp Burnt 
@@ -364,7 +367,7 @@ contract Ownable is Context {
     }
 }
 
-contract SXLTOKEN is Context, iBEP20, Ownable {
+contract SunWukong is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -376,8 +379,8 @@ contract SXLTOKEN is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Sweety X Loki';
-    _symbol = 'SXL';
+    _name = 'Sun Wukong Token';
+    _symbol = 'SWT';
     _decimals = 9;
     _totalSupply = 1 * 10**15 * 10**9;
     _balances[msg.sender] = _totalSupply;
