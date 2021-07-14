@@ -396,7 +396,7 @@ contract Ownable is Context {
     }
 }
 
-contract DOBRToken is Context, iBEP20, Ownable {
+contract Cointoken is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
