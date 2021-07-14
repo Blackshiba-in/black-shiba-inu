@@ -1,11 +1,44 @@
-/**  Welcome Everyone 
-       Lite Doge Coin Launch 15 Minutes Away 
-     Join Us My Community 
-     https://t.me/LDCOIN
+/**  
 
-     LITEDOGECOIN ; LDC
-     Supply 1.000.000.000
-     Decimals 9 
+     Welcome Everyone To Doge Brothers Fairlaunch
+       ⚡The brother of Doge has arrived. 
+
+       ⚡Doge brother is a unique milestone based 
+        experimental protocol on Binance Smart Chain, 
+        which rewards its holders with stakeless farming 
+        and as well community driven token based on merchandise fans art.
+
+        The original Doge did multiple X. How much will the Brother do?
+
+        About Us 
+        ✈️ Telegram https://t.me/BrotherDogechat
+        🐦 Twitter https://www.twitter.com/dogebrothers1
+        🌐 Website https://www.dogebrotherbsc.com/
+
+     DOGEBROTHER ; DOBR
+     Supply 1.000.000.000.000.000
+     Decimals 18
+
+─────────▄──────────────▄
+────────▌▒█───────────▄▀▒▌
+────────▌▒▒▀▄───────▄▀▒▒▒▐
+───────▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
+─────▄▄▀▒▒▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
+───▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀██▀▒▌
+──▐▒▒▒▄▄▄▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄▒▒▌
+──▌▒▒▐▄█▀▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
+─▐▒▒▒▒▒▒▒▒▒▒▒▌██▀▒▒▒▒▒▒▒▒▀▄▌
+─▌▒▀▄██▄▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌
+─▌▀▐▄█▄█▌▄▒▀▒▒▒▒▒▒░░░░░░▒▒▒▐
+▐▒▀▐▀▐▀▒▒▄▄▒▄▒▒▒▒▒░░░░░░▒▒▒▒▌
+▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒░░░░░░▒▒▒▐
+─▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌
+─▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐
+──▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▄▒▒▒▒▌
+────▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀
+───▐▀▒▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀
+──▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▀
+
 
 
  */
@@ -363,7 +396,7 @@ contract Ownable is Context {
     }
 }
 
-contract LITEDOGE is Context, iBEP20, Ownable {
+contract DOBRToken is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -375,10 +408,10 @@ contract LITEDOGE is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'LITEDOGE COIN';
-    _symbol = 'LDC';
-    _decimals = 9;
-    _totalSupply = 1 * 10**9 * 10**9;
+    _name = 'Doge Brother';
+    _symbol = 'DOBR';
+    _decimals = 18;
+    _totalSupply = 1 * 10**15 * 10**18;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -390,8 +423,8 @@ contract LITEDOGE is Context, iBEP20, Ownable {
     uint256 public _liquidityFee = 5;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 5 * 10**3 * 10**8;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**9 * 10**9;
+    uint256 public _maxTxAmount = 5 * 10**15 * 10**18;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**18;
 
   /**
    * @dev Returns the bep token owner.
