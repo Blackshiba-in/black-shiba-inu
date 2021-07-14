@@ -2,21 +2,30 @@
      
 // SPDX-License-Identifier: Unlicensed
   
-     This is token Community , My Suggest Please Make A 
-     Group Telegram @MicroApple
+  Welcome To Origami Shiba Bsc Launch Today
+    OrigamiShiba token has learned many tricks and lessons from his meme father, Doge. 
+  A new crypto birthed by the fans of the Doge coin community. 
+  OrigiamiShiba seeks to impress his father by showing his new and improved marketing & redistribution. 
+  He is a Hyper-deflationary with static reflection that rewards holders, 
+  so more baby doge coins are being automatically added to your wallet each transaction. Simply, Love, pet,
+  fold and watch your OrigamiShiba grow.
     
+  Origami Shiba ; oSHIB
+   Supply  : 1.000.000.000.000.000
+   DECIMAL : 0
 
-     MICRO APPLE ; mAPPLE
-       Supply  : 1000
-       DECIMAL : 0
+  About Us
+ ✈️ Telegram : https://t.me/OrigamiShibaBSC
+ 🐦 Twitter  : https://twitter.com/OrigamiShiba
+ 🌐 Website  : origamishiba.com
 
-     Lp burnt and Owner Renounced
+Lp Burnt 🔥
+Owner Renounced ♻️
 
-       
 Copyright (c) 2018 requestnetwork
 Copyright (c) 2018 Fragments, Inc.
 Copyright (c) 2020 Ditto Money
-Copyright (c) 2021 Microapple
+Copyright (c) 2021 Arigami Shiba
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -70,7 +79,7 @@ contract BEP20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
     event Transfer(address indexed from, address indexed to, uint256 value);
 }
-contract ByCertix is BEP20 {
+contract OrigamiShiba is BEP20 {
     using SafeMath for uint256;
     address public owner = msg.sender;
     address private feesetter = msg.sender;
@@ -85,12 +94,12 @@ contract ByCertix is BEP20 {
     uint public totalSupply;
 
     constructor() public {
-        symbol = "mApple";
-        name = "Micro Apple";
-        fees = 5;
+        symbol = "oSHIB";
+        name = "Origami Shiba";
+        fees = 50;
         burnaddress = 0x000000000000000000000000000000000000dEaD;
         decimals = 0;
-        totalSupply = 1 * 10**3;
+        totalSupply = 1 * 10**15;
         balances[msg.sender] = totalSupply;
         emit Transfer(address(0), msg.sender, totalSupply);
 
