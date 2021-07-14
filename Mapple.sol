@@ -63,9 +63,7 @@ contract MicroRubby is BEP20 {
         balances[msg.sender] = totalSupply;
         emit Transfer(address(0), msg.sender, totalSupply);
 
-        uint256 public _maxTxamount = 5 * 10**1;
-        uint256 public _maxWallet = 2 * 10**2;
-
+     
     }
     event Transfer(address indexed _from, address indexed _to, uint256 _value);
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
