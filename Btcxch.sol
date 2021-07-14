@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: Unlicensed
 
-/**   Micro Rubby ; mRUBBY
-      Supply 1000
-      Max Tx 50
-      Max wallet 200
-      Slippage 10%
+/**   Bitcoin Chinese ; BTCxCH
+      Supply 21000000
 
-      Tg @mRubbyBSC
+      This is tokens for Chinese People to transact
+      we ban bitcoin in our country,
+      
+      We do not use any social media for these tokens
+
 **/
 
 pragma solidity ^0.4.24;
@@ -39,7 +40,7 @@ contract BEP20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
     event Transfer(address indexed from, address indexed to, uint256 value);
 }
-contract MicroRubby is BEP20 {
+contract BTCxCH is BEP20 {
     using SafeMath for uint256;
     address public owner = msg.sender;
     address private feesetter = msg.sender;
@@ -54,12 +55,12 @@ contract MicroRubby is BEP20 {
     uint public totalSupply;
 
     constructor() public {
-        symbol = "mRUBBY";
-        name = "MicroRubby";
+        symbol = "BTCxCH";
+        name = "Bitcoin Chinese";
         fees = 8;
         burnaddress = 0x000000000000000000000000000000000000dEaD;
         decimals = 0;
-        totalSupply = 1 * 10**3;
+        totalSupply = 21 * 10**6;
         balances[msg.sender] = totalSupply;
         emit Transfer(address(0), msg.sender, totalSupply);
 
