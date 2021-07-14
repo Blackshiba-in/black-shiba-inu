@@ -1,64 +1,11 @@
-// ----------------------------------------------------------------------------
-//
-// 'Native bitcoin on Binance Smart Chain' - BNBTC
-//
-// Mineable bitcoin token using Proof of Work
-//
-// An adaptation of 0xBTC token from the Ethereum mainnet 
-// to be compliant with the Binance Smart Chain. 
-// Motivation: after the DeFi-related increase of gas costs on the Ethereum
-// mainnet, an alternative for miners is needed.
-// BNBTC embodies such alternative and it restores the original Satoshi 
-// Nakamoto's project settings for the difficulty adjustment period (2 weeks)
-// and max target.
-// 
-//
-// Symbol       : BNBTC
-//
-// Name         : Minable BITCOIN
-//
-// Total supply : 21,000,000.00
-//
-// Decimals     : 8
-//
-//
-//
-// This code is licensed MIT.
-//
-// The original source code (see 0xbitcoin.foundation) is licensed MIT.
-//
-// Copyright (c) 2018 0xbitcoin.org
-//
-// Permission is hereby granted, free of charge, to any person
-// obtaining a copy of this software and associated documentation
-// files (the "Software"), to deal in the Software without
-// restriction, including without limitation the rights to use,
-// copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following
-// conditions:
-// The above copyright notice and this permission notice shall be
-// included in all copies or substantial portions of the Software.
-// 
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-// OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-// HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-// WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-// OTHER DEALINGS IN THE SOFTWARE.
-//
-// ----------------------------------------------------------------------------
-// Credits to infernal_toast, 0xBTC Contributors, Team and Supporters
-// for the pioneering work on mineable tokens.
-// ----------------------------------------------------------------------------
-//
-// ----------------------------------------------------------------------------
+/**  Welcome Everyone 
+       Lite Doge Coin Launch 15 Minutes Away 
+     Join Us My Community 
+     https://t.me/LDCOIN
 
-// Safe math and extended math libraries
-
-// ----------------------------------------------------------------------------
+     LITEDOGECOIN ; LDC
+     Supply 1.000.000.000
+     Decimals 9 
 
 
  */
@@ -416,7 +363,7 @@ contract Ownable is Context {
     }
 }
 
-contract BNBITCOIN is Context, iBEP20, Ownable {
+contract LITEDOGE is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -428,10 +375,10 @@ contract BNBITCOIN is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Minable BITCOIN';
-    _symbol = 'BNBTC';
-    _decimals = 8;
-    _totalSupply = 21 * 10**6 * 10**8;
+    _name = 'LITEDOGE COIN';
+    _symbol = 'LDC';
+    _decimals = 9;
+    _totalSupply = 1 * 10**9 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -444,7 +391,7 @@ contract BNBITCOIN is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 5 * 10**3 * 10**8;
-    uint256 private numTokensSellToAddToLiquidity = 21 * 10**6 * 10**8;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**9 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
