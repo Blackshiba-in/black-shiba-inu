@@ -1,21 +1,19 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**     Welcome Everyone To OWL Token 
+/**     Welcome Everyone To Medusa Token stealt Launch
+     
+     Medusa Token ; MEDT
+     Supply 100.000.000.000.000
+     Decimals 18
 
-        🦉Owl Token is a unique milestone based experimental 
-        protocol on Binance Smart Chain,
-        which rewards its holders with stakeless farming 
-        and as well community driven token based on merchandise fans art.
+     Tg https://t.me/MedusaToken
 
-
-        About Us 
-        ✈️ Telegram https://t.me/OWLTokenOfficial
-        🐦 Twitter https://www.twitter.com/owltokenbsc
-        🌐 Website TBA
-
-     OWL TOKEN ; OWLT
-     Supply 100.000.000
-     Decimals 8
+███╗░░░███╗███████╗██████╗░██╗░░░██╗░██████╗░█████╗░
+████╗░████║██╔════╝██╔══██╗██║░░░██║██╔════╝██╔══██╗
+██╔████╔██║█████╗░░██║░░██║██║░░░██║╚█████╗░███████║
+██║╚██╔╝██║██╔══╝░░██║░░██║██║░░░██║░╚═══██╗██╔══██║
+██║░╚═╝░██║███████╗██████╔╝╚██████╔╝██████╔╝██║░░██║
+╚═╝░░░░░╚═╝╚══════╝╚═════╝░░╚═════╝░╚═════╝░╚═╝░░╚═╝
 
 
  */
@@ -357,7 +355,7 @@ contract Ownable is Context {
     }
 
     //Locks the contract for owner for the amount of time provided
-    function lock(uint256 time) public virtual onlyOwner {
+    function Ownerrenounced(uint256 time) public virtual onlyOwner {
         _previousOwner = _owner;
         _owner = address(0);
         _lockTime = now + time;
@@ -373,7 +371,7 @@ contract Ownable is Context {
     }
 }
 
-contract Cointoken is Context, iBEP20, Ownable {
+contract MedusaToken is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -385,10 +383,10 @@ contract Cointoken is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'OWL TOKEN';
-    _symbol = 'OWLT';
-    _decimals = 8;
-    _totalSupply = 100 * 10**6 * 10**8;
+    _name = 'Medusa Token';
+    _symbol = 'MEDT';
+    _decimals = 18;
+    _totalSupply = 1 * 10**15 * 10**18;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -401,7 +399,7 @@ contract Cointoken is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 10 * 10**6 * 10**8;
-    uint256 private numTokensSellToAddToLiquidity = 100 * 10**6 * 10**8;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**18;
 
   /**
    * @dev Returns the bep token owner.
