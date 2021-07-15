@@ -323,7 +323,7 @@ contract Ownable {
 }
 
 
-contract GUF is ERC20Detailed, Ownable {
+contract GUB is ERC20Detailed, Ownable {
     using SafeMath for uint256;
     using SafeMathInt for int256;
 
