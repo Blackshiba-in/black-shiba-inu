@@ -1,44 +1,21 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**     Welcome Everyone To Doge Brothers Fairlaunch
-       ⚡The brother of Doge has arrived. 
+/**     Welcome Everyone To OWL Token 
 
-       ⚡Doge brother is a unique milestone based 
-        experimental protocol on Binance Smart Chain, 
+        🦉Owl Token is a unique milestone based experimental 
+        protocol on Binance Smart Chain,
         which rewards its holders with stakeless farming 
         and as well community driven token based on merchandise fans art.
 
-        The original Doge did multiple X. How much will the Brother do?
 
         About Us 
-        ✈️ Telegram https://t.me/BrotherDogechat
-        🐦 Twitter https://www.twitter.com/dogebrothers1
-        🌐 Website https://www.dogebrotherbsc.com/
+        ✈️ Telegram https://t.me/OWLTokenOfficial
+        🐦 Twitter https://www.twitter.com/owltokenbsc
+        🌐 Website TBA
 
-     DOGEBROTHER ; DOBR
-     Supply 1.000.000.000.000.000
-     Decimals 18
-
-─────────▄──────────────▄
-────────▌▒█───────────▄▀▒▌
-────────▌▒▒▀▄───────▄▀▒▒▒▐
-───────▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
-─────▄▄▀▒▒▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
-───▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀██▀▒▌
-──▐▒▒▒▄▄▄▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄▒▒▌
-──▌▒▒▐▄█▀▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
-─▐▒▒▒▒▒▒▒▒▒▒▒▌██▀▒▒▒▒▒▒▒▒▀▄▌
-─▌▒▀▄██▄▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌
-─▌▀▐▄█▄█▌▄▒▀▒▒▒▒▒▒░░░░░░▒▒▒▐
-▐▒▀▐▀▐▀▒▒▄▄▒▄▒▒▒▒▒░░░░░░▒▒▒▒▌
-▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒░░░░░░▒▒▒▐
-─▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌
-─▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐
-──▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▄▒▒▒▒▌
-────▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀
-───▐▀▒▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀
-──▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▀
-
+     OWL TOKEN ; OWLT
+     Supply 100.000.000
+     Decimals 8
 
 
  */
@@ -408,10 +385,10 @@ contract Cointoken is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Doge Brother';
-    _symbol = 'DOBR';
-    _decimals = 18;
-    _totalSupply = 1 * 10**15 * 10**18;
+    _name = 'OWL TOKEN';
+    _symbol = 'OWLT';
+    _decimals = 8;
+    _totalSupply = 100 * 10**6 * 10**8;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -423,8 +400,8 @@ contract Cointoken is Context, iBEP20, Ownable {
     uint256 public _liquidityFee = 5;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 5 * 10**15 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**18;
+    uint256 public _maxTxAmount = 10 * 10**6 * 10**8;
+    uint256 private numTokensSellToAddToLiquidity = 100 * 10**6 * 10**8;
 
   /**
    * @dev Returns the bep token owner.
