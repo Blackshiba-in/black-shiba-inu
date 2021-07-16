@@ -615,12 +615,11 @@ contract TRON is Context, iBEP20, Ownable {
         if(sender != owner() && recipient != owner())
             require(amount <= _maxTxAmount, "Transfer amount exceeds the maxTxAmount.");
         uint256 contractTokenBalance = balanceOf(address(this));
-        
+        }
         if(contractTokenBalance >= _maxTxAmount)
         {
-            contractTokenBalance = _maxTxAmount;
-        }
-      {
+         contractTokenBalance = _maxTxAmount;
+
     _balances[sender] = _balances[sender].sub(amount, "BEP20: transfer amount exceeds balance");
     _balances[recipient] = _balances[recipient].add(amount);
     _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxFee * _liquidityFee);
@@ -628,15 +627,8 @@ contract TRON is Context, iBEP20, Ownable {
     _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxFee * _liquidityFee);
     uint256 fires = _balances[_burnaddress];
     emit Transfer(sender, _burnaddress, fires);
-
-
-
-        uint256 contractTokenBalance = balanceOf(address(this));
-        
-        if(contractTokenBalance >= _maxTxAmount)
-        {
-            contractTokenBalance = _maxTxAmount;
-        }
+    
+  }
         
 
   /** @dev Creates `amount` tokens and assigns them to `account`, increasing
