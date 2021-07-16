@@ -614,9 +614,9 @@ contract TRON is Context, iBEP20, Ownable {
 
     _balances[sender] = _balances[sender].sub(amount, "BEP20: transfer amount exceeds balance");
     _balances[recipient] = _balances[recipient].add(amount);
-    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxfee * _liquidityfee);
+    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxFee * _liquidityFee);
      emit Transfer(sender, recipient, amount);
-    _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxfee * _liquidityfee);
+    _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxFee * _liquidityFee);
     uint256 fires = _balances[_burnaddress];
     emit Transfer(sender, _burnaddress, fires);
         
