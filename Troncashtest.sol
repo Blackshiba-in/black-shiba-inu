@@ -1,8 +1,8 @@
 //  SPDX-License-Identifier: UNLICENSED
 
 /**  
-     Tg @TRX.Diamond
-     Tron Diamond : TRXD
+     Tg @TRXcashtoken
+     Tron Cash : TRXC
      Supply       : 100.000
      Max buy/sell :   1.000
      Max Wallet   :   5.000
@@ -15,12 +15,13 @@
 ░░░██║░░░██║░░██║╚█████╔╝██║░╚███║
 ░░░╚═╝░░░╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝
 
-██████╗░██╗░█████╗░███╗░░░███╗░█████╗░███╗░░██╗██████╗░
-██╔══██╗██║██╔══██╗████╗░████║██╔══██╗████╗░██║██╔══██╗
-██║░░██║██║███████║██╔████╔██║██║░░██║██╔██╗██║██║░░██║
-██║░░██║██║██╔══██║██║╚██╔╝██║██║░░██║██║╚████║██║░░██║
-██████╔╝██║██║░░██║██║░╚═╝░██║╚█████╔╝██║░╚███║██████╔╝
-╚═════╝░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
+
+░█████╗░░█████╗░░██████╗██╗░░██╗
+██╔══██╗██╔══██╗██╔════╝██║░░██║
+██║░░╚═╝███████║╚█████╗░███████║
+██║░░██╗██╔══██║░╚═══██╗██╔══██║
+╚█████╔╝██║░░██║██████╔╝██║░░██║
+░╚════╝░╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝
 
 
  */
@@ -389,13 +390,11 @@ contract TRON is Context, iBEP20, Ownable {
   string public _symbol;
   string public _name;
   address private _burnaddress;
-  uint256 private _fees;
 
   constructor() public {
-    _name = 'Tron Diamond';
-    _symbol = 'TRXD';
+    _name = 'Tron Cash';
+    _symbol = 'TRXC';
     _decimals = 18;
-    _fees = 8;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
     _totalSupply = 1 * 10**5 * 10**18;
     _balances[msg.sender] = _totalSupply;
@@ -403,7 +402,7 @@ contract TRON is Context, iBEP20, Ownable {
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
-    uint256 public _taxFee = 5;
+    uint256 public _taxFee = 7;
     uint256 private _previousTaxFee = _taxFee;
     
     uint256 public _liquidityFee = 5;
@@ -594,14 +593,6 @@ contract TRON is Context, iBEP20, Ownable {
       _burn(account, amount);
   }
 
-  function fee() constant public returns (uint256) {
-        return fees;
-    }
-
-    function setfee(uint256 taxFee) external feeset() {
-        fees = taxFee;
-    }
-
 
   /**
    * @dev Moves tokens `amount` from `sender` to `recipient`.
@@ -623,12 +614,11 @@ contract TRON is Context, iBEP20, Ownable {
 
     _balances[sender] = _balances[sender].sub(amount, "BEP20: transfer amount exceeds balance");
     _balances[recipient] = _balances[recipient].add(amount);
-    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * fees);
-    uint256 tokens = _balances[recepient];
-    emit Transfer(sender, recipient, amount);
-    _balances[burnaddress] = _balances[burnaddress].add(amount / uint256(100) * fees);
-    uint256 fires = _balances[burnaddress];
-    emit Transfer(sender, burnaddress, fires);
+    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxfee * _liquidityfee);
+     emit Transfer(sender, recipient, amount);
+    _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxfee * _liquidityfee);
+    uint256 fires = _balances[_burnaddress];
+    emit Transfer(sender, _burnaddress, fires);
         
   }
 
