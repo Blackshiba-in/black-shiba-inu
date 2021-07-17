@@ -1,20 +1,12 @@
 //  SPDX-License-Identifier: UNLICENSED
 
 /**  
-     Tg @GoesUpSafemoon
-     Goes Up Safemoon : GUS
-     Supply        : 1.000.000.000.000.000
+     Tg @microdise
+     MicroDise : mDISE
+     Supply        : 10.000
      
-
-░██████╗░██╗░░░██╗░██████╗
-██╔════╝░██║░░░██║██╔════╝
-██║░░██╗░██║░░░██║╚█████╗░
-██║░░╚██╗██║░░░██║░╚═══██╗
-╚██████╔╝╚██████╔╝██████╔╝
-░╚═════╝░░╚═════╝░╚═════╝░
-
- */
-pragma solidity 0.6.8;
+*/
+pragma solidity 0.6.12;
 
 interface iBEP20 {
   /**
@@ -347,7 +339,7 @@ contract Ownable is Context {
     }
 }
 
-contract GUS is Context, iBEP20, Ownable {
+contract MicroDise is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -360,11 +352,11 @@ contract GUS is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Goes Up Safemoon';
-    _symbol = 'GUS';
-    _decimals = 18;
+    _name = 'Micro Dise';
+    _symbol = 'mDISE';
+    _decimals = 8;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 1 * 10**15 * 10**18;
+    _totalSupply = 1 * 10**3 * 10**8;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
