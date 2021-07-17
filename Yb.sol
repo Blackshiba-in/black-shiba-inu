@@ -1,21 +1,17 @@
 //  SPDX-License-Identifier: UNLICENSED
 
 /**  
-     Tg @BabySafemoon
-     Baby Safemoon : BSFM
+     Tg @GoesUpSafemoon
+     Goes Up Safemoon : GUS
      Supply        : 1.000.000.000.000.000
      
 
-
-┏━━┓╋╋╋┏┓╋╋╋╋╋╋╋╋╋╋╋╋╋┏━┓
-┃┏┓┃╋╋╋┃┃╋╋╋╋╋╋╋╋╋╋╋╋╋┃┏┛
-┃┗┛┗┳━━┫┗━┳┓╋┏┓┏━━┳━━┳┛┗┳━━┳┓┏┳━━┳━━┳━┓
-┃┏━┓┃┏┓┃┏┓┃┃╋┃┃┃━━┫┏┓┣┓┏┫┃━┫┗┛┃┏┓┃┏┓┃┏┓┓
-┃┗━┛┃┏┓┃┗┛┃┗━┛┃┣━━┃┏┓┃┃┃┃┃━┫┃┃┃┗┛┃┗┛┃┃┃┃
-┗━━━┻┛┗┻━━┻━┓┏┛┗━━┻┛┗┛┗┛┗━━┻┻┻┻━━┻━━┻┛┗┛
-╋╋╋╋╋╋╋╋╋╋┏━┛┃
-╋╋╋╋╋╋╋╋╋╋┗━━┛
-
+░██████╗░██╗░░░██╗░██████╗
+██╔════╝░██║░░░██║██╔════╝
+██║░░██╗░██║░░░██║╚█████╗░
+██║░░╚██╗██║░░░██║░╚═══██╗
+╚██████╔╝╚██████╔╝██████╔╝
+░╚═════╝░░╚═════╝░╚═════╝░
 
  */
 pragma solidity 0.6.8;
@@ -351,7 +347,7 @@ contract Ownable is Context {
     }
 }
 
-contract TRON is Context, iBEP20, Ownable {
+contract GUS is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -364,20 +360,20 @@ contract TRON is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Tron Cash';
-    _symbol = 'TRXC';
+    _name = 'Goes Up Safemoon';
+    _symbol = 'GUS';
     _decimals = 18;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 1 * 10**5 * 10**18;
+    _totalSupply = 1 * 10**15 * 10**18;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
-    uint256 public _taxFee = 7;
+    uint256 public _taxFee = 3;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 5;
+    uint256 public _liquidityFee = 2;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 10 * 10**2 * 10**8;
