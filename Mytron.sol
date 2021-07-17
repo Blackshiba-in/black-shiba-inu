@@ -1,7 +1,3 @@
-/**
- *Submitted for verification at BscScan.com on 2021-07-11
-*/
-
 // SPDX-License-Identifier: MIT
 
 
@@ -407,7 +403,7 @@ contract MYTRX is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'MY TRON';
+    _name = 'MYTRON';
     _symbol = 'MYTRX';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
