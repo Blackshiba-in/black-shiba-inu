@@ -356,16 +356,16 @@ contract MicroDise is Context, iBEP20, Ownable {
     _symbol = 'mDISE';
     _decimals = 8;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 1 * 10**3 * 10**8;
+    _totalSupply = 1 * 10**4 * 10**8;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
-    uint256 public _taxFee = 3;
+    uint256 public _taxFee = 4;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 2;
+    uint256 public _liquidityFee = 4;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 10 * 10**2 * 10**8;
