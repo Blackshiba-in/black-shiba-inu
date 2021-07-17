@@ -372,7 +372,7 @@ contract TronRangers is Context, iBEP20, Ownable {
 
   constructor() public {
     _name = 'Tron Rangers';
-    _symbol = 'mDISE';
+    _symbol = 'TRXR';
     _decimals = 8;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
     _totalSupply = 1 * 10**6 * 10**8;
