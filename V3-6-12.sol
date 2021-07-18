@@ -1,33 +1,35 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**  Welcome To Poodie Coins Stealt Launch
-        Poodie Coins  is a unique milestone based 
-     experimental protocol on Binance Smart Chain,
-     which rewards its holders with stakeless farming and as well 
-     community driven token based on merchandise fans art.
+/**  welcome To Nandi Bull Stealt Launch 
+        This is token community , driven bye community
+
+     Telegram group : https://t.me/Nbulltoken
+
+    NandiBull stealt Launch
+
+    Token Name : NANDI BULL
+    Token Ticker : NANDI
+    Total Supply : 100,000,000,000
+
+    Auto buy Back & BURN   : 5% 
+
+    Marketing wallet : 2%
 
 
-     Telegram : https://t.me/Poodiecoin
+███╗░░██╗░█████╗░███╗░░██╗██████╗░██╗
+████╗░██║██╔══██╗████╗░██║██╔══██╗██║
+██╔██╗██║███████║██╔██╗██║██║░░██║██║
+██║╚████║██╔══██║██║╚████║██║░░██║██║
+██║░╚███║██║░░██║██║░╚███║██████╔╝██║
+╚═╝░░╚══╝╚═╝░░╚═╝╚═╝░░╚══╝╚═════╝░╚═╝
 
-     Poodie Coin ; POC
-     Supply 1.000.000.000
-     Decimal 9
+██████╗░██╗░░░██╗██╗░░░░░██╗░░░░░
+██╔══██╗██║░░░██║██║░░░░░██║░░░░░
+██████╦╝██║░░░██║██║░░░░░██║░░░░░
+██╔══██╗██║░░░██║██║░░░░░██║░░░░░
+██████╦╝╚██████╔╝███████╗███████╗
+╚═════╝░░╚═════╝░╚══════╝╚══════╝
 
-
-
-██████╗░░█████╗░░█████╗░
-██╔══██╗██╔══██╗██╔══██╗
-██████╔╝██║░░██║██║░░██║
-██╔═══╝░██║░░██║██║░░██║
-██║░░░░░╚█████╔╝╚█████╔╝
-╚═╝░░░░░░╚════╝░░╚════╝░
-
-██████╗░██╗███████╗
-██╔══██╗██║██╔════╝
-██║░░██║██║█████╗░░
-██║░░██║██║██╔══╝░░
-██████╔╝██║███████╗
-╚═════╝░╚═╝╚══════╝
      
 */
 pragma solidity 0.6.12;
@@ -363,7 +365,7 @@ contract Ownable is Context {
     }
 }
 
-contract POODIE is Context, iBEP20, Ownable {
+contract NandiBULL is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -376,11 +378,11 @@ contract POODIE is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Poodie Coin';
-    _symbol = 'POC';
+    _name = 'Nandi BuLL';
+    _symbol = 'NANDI';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 1 * 10**9 * 10**9;
+    _totalSupply = 100 * 10**9 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -389,11 +391,11 @@ contract POODIE is Context, iBEP20, Ownable {
     uint256 public _taxFee = 3;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 2;
+    uint256 public _liquidityFee = 3;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 100 * 10**6 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**9 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 100 * 10**9 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
