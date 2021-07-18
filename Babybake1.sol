@@ -1,8 +1,10 @@
-/**
- *Submitted for verification at BscScan.com on 2021-07-18
-*/
+// SPDX-License-Identifier: Unlicensed
 
-/* Tokenomics:
+/** Welcome To Baby Bake
+        This is token Community & Hold $BBAKE Get Bake Coin
+    Don't Miss Baby Bake 
+    Mu suggest , Create a group telegram @Babybakecoin 
+    Tokenomics:
     *  10% BAKE reflection
     *  5% liquidity fee
     *  Max wallet size of 1.5%
@@ -11,10 +13,8 @@
     
     *set 15% slippage
     *sell will incur 20% extra tax, i.e set 18% slippage for tax
-    *https://t.me/FreeBakeryToken
+    *https://t.me/Babybakecoin
 */
-
-// SPDX-License-Identifier: Unlicensed
 
 pragma solidity ^0.8.4;
 
