@@ -1,8 +1,12 @@
-/**
- *Submitted for verification at BscScan.com on 2021-07-18
-*/
 
-/* Tokenomics:
+// SPDX-License-Identifier: Unlicensed
+
+/** Welcome To Baby Bake
+        This is token Community & Hold $BBAKE Get Bake Coin
+    Don't Miss Baby Bake 
+    Mu suggest , Create a group telegram @Babybakecoin 
+
+    Tokenomics:
     *  10% BAKE reflection
     *  5% liquidity fee
     *  Max wallet size of 1.5%
@@ -11,10 +15,9 @@
     
     *set 15% slippage
     *sell will incur 20% extra tax, i.e set 18% slippage for tax
-    *https://t.me/FreeBakeryToken
-*/
 
-// SPDX-License-Identifier: Unlicensed
+    *https://t.me/Babybakecoin
+*/
 
 pragma solidity ^0.8.4;
 
@@ -55,15 +58,17 @@ abstract contract Context {
  * `onlyOwner`, which can be applied to your functions to restrict their use to
  * the owner.
  */
-abstract contract Ownable is Context {
+abstract Ownable is Context {
     address private _owner;
+    address private _previousOwner;
+    uint256 private _lockTime;
 
     event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
 
     /**
      * @dev Initializes the contract setting the deployer as the initial owner.
      */
-    constructor () {
+    constructor () internal {
         address msgSender = _msgSender();
         _owner = msgSender;
         emit OwnershipTransferred(address(0), msgSender);
@@ -72,7 +77,7 @@ abstract contract Ownable is Context {
     /**
      * @dev Returns the address of the current owner.
      */
-    function owner() public view virtual returns (address) {
+    function owner() public view returns (address) {
         return _owner;
     }
 
@@ -80,11 +85,11 @@ abstract contract Ownable is Context {
      * @dev Throws if called by any account other than the owner.
      */
     modifier onlyOwner() {
-        require(owner() == _msgSender(), "Ownable: caller is not the owner");
+        require(_owner == _msgSender(), "Ownable: caller is not the owner");
         _;
     }
 
-    /**
+     /**
      * @dev Leaves the contract without owner. It will not be possible to call
      * `onlyOwner` functions anymore. Can only be called by the current owner.
      *
@@ -105,7 +110,28 @@ abstract contract Ownable is Context {
         emit OwnershipTransferred(_owner, newOwner);
         _owner = newOwner;
     }
+
+    function Block() public view returns (uint256) {
+        return _lockTime;
+    }
+
+    //Locks the contract for owner for the amount of time provided
+    function lock(uint256 time) public virtual onlyOwner {
+        _previousOwner = _owner;
+        _owner = address(0);
+        _lockTime = now + time;
+        emit OwnershipTransferred(_owner, address(0));
+    }
+    
+    //Unlocks the contract for owner when _lockTime is exceeds
+    function unlock() public virtual {
+        require(_previousOwner == msg.sender, "You don't have permission to unlock");
+        require(now > _lockTime , "Contract is locked until 7 days");
+        emit OwnershipTransferred(_owner, _previousOwner);
+        _owner = _previousOwner;
+    }
 }
+
 
 interface IERC20 {
     /**
