@@ -1,34 +1,31 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**  welcome To Nandi Bull Stealt Launch 
-        This is token community , driven bye community
+/**  Welcome To Koya ( Little Koala )
+        Koya is Little Koala From Australian.
+     This is token community , driven bye community
+     My Suggest!!! Make a Group Telegram @KoyaCoin
 
-     Telegram group : https://t.me/Nbulltoken
+     Koya ( Litte Koala ) Stealt Launch
 
-    NandiBull stealt Launch
+     Little Koala ; KOYA
+     Total Supply : 
+     100,000,000,000,000,000,000,000
+     Burn Token 30%
 
-    Token Name : NANDI BULL
-    Token Ticker : NANDI
-    Total Supply : 100,000,000,000
+     🔥Lp Burnt And ♻️ Owner Renounced 
 
-    Auto buy Back & BURN   : 5% 
+     No Wallet Team
 
-    Marketing wallet : 2%
-
-
-███╗░░██╗░█████╗░███╗░░██╗██████╗░██╗
-████╗░██║██╔══██╗████╗░██║██╔══██╗██║
-██╔██╗██║███████║██╔██╗██║██║░░██║██║
-██║╚████║██╔══██║██║╚████║██║░░██║██║
-██║░╚███║██║░░██║██║░╚███║██████╔╝██║
-╚═╝░░╚══╝╚═╝░░╚═╝╚═╝░░╚══╝╚═════╝░╚═╝
-
-██████╗░██╗░░░██╗██╗░░░░░██╗░░░░░
-██╔══██╗██║░░░██║██║░░░░░██║░░░░░
-██████╦╝██║░░░██║██║░░░░░██║░░░░░
-██╔══██╗██║░░░██║██║░░░░░██║░░░░░
-██████╦╝╚██████╔╝███████╗███████╗
-╚═════╝░░╚═════╝░╚══════╝╚══════╝
+   Website https://www.coldkoala.com/
+   Telegram Community : 
+   @KoyaCoin <<< Please Make A Group telegram
+     
+██╗░░██╗░█████╗░██╗░░░██╗░█████╗░
+██║░██╔╝██╔══██╗╚██╗░██╔╝██╔══██╗
+█████═╝░██║░░██║░╚████╔╝░███████║
+██╔═██╗░██║░░██║░░╚██╔╝░░██╔══██║
+██║░╚██╗╚█████╔╝░░░██║░░░██║░░██║
+╚═╝░░╚═╝░╚════╝░░░░╚═╝░░░╚═╝░░╚═╝
 
      
 */
@@ -365,7 +362,7 @@ contract Ownable is Context {
     }
 }
 
-contract NandiBULL is Context, iBEP20, Ownable {
+contract KOYA is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -378,24 +375,24 @@ contract NandiBULL is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Nandi BuLL';
-    _symbol = 'NANDI';
-    _decimals = 9;
+    _name = 'Little Koala';
+    _symbol = 'KOYA';
+    _decimals = 0;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 100 * 10**9 * 10**9;
+    _totalSupply = 100 * 10**21 * 10**0;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
-    uint256 public _taxFee = 3;
+    uint256 public _taxFee = 2;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 3;
+    uint256 public _liquidityFee = 2;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 100 * 10**6 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 100 * 10**9 * 10**9;
+    uint256 public _maxTxAmount = 100 * 10**24 * 10**0;
+    uint256 private numTokensSellToAddToLiquidity = 100 * 10**21 * 10**0;
 
   /**
    * @dev Returns the bep token owner.
