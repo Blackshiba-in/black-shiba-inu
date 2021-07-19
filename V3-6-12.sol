@@ -1,31 +1,39 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**  Welcome To Koya ( Little Koala )
-        Koya is Little Koala From Australian.
-     This is token community , driven bye community
-     My Suggest!!! Make a Group Telegram @KoyaCoin
+/**  Welcome To Mini Koala Token
+        Mini Koala Token is a community token and decentralized, 
+     fully controlled by the community, mini koala token runs on the 
+     binance smart chain (BSC)
 
-     Koya ( Litte Koala ) Stealt Launch
+     Telegram https://t.me/MiniKoala1
 
-     Little Koala ; KOYA
+     Mini Koala Token Stealt Launch
+
+     Mini Koala Token ; MINIKOALA
      Total Supply : 
-     100,000,000,000,000,000,000,000
+     100,000,000,000,000,000,000
      Burn Token 30%
 
      🔥Lp Burnt And ♻️ Owner Renounced 
-
-     No Wallet Team
+     0% dev wallet
 
    Website https://www.coldkoala.com/
-   Telegram Community : 
-   @KoyaCoin <<< Please Make A Group telegram
+   Telegram Community : https://t.me/MiniKoala1
      
-██╗░░██╗░█████╗░██╗░░░██╗░█████╗░
-██║░██╔╝██╔══██╗╚██╗░██╔╝██╔══██╗
-█████═╝░██║░░██║░╚████╔╝░███████║
-██╔═██╗░██║░░██║░░╚██╔╝░░██╔══██║
-██║░╚██╗╚█████╔╝░░░██║░░░██║░░██║
-╚═╝░░╚═╝░╚════╝░░░░╚═╝░░░╚═╝░░╚═╝
+
+███╗░░░███╗██╗███╗░░██╗██╗
+████╗░████║██║████╗░██║██║
+██╔████╔██║██║██╔██╗██║██║
+██║╚██╔╝██║██║██║╚████║██║
+██║░╚═╝░██║██║██║░╚███║██║
+╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═╝
+
+██╗░░██╗░█████╗░░█████╗░██╗░░░░░░█████╗░
+██║░██╔╝██╔══██╗██╔══██╗██║░░░░░██╔══██╗
+█████═╝░██║░░██║███████║██║░░░░░███████║
+██╔═██╗░██║░░██║██╔══██║██║░░░░░██╔══██║
+██║░╚██╗╚█████╔╝██║░░██║███████╗██║░░██║
+╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝
 
      
 */
@@ -362,7 +370,7 @@ contract Ownable is Context {
     }
 }
 
-contract KOYA is Context, iBEP20, Ownable {
+contract MiniKoala is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -375,11 +383,11 @@ contract KOYA is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Little Koala';
-    _symbol = 'KOYA';
+    _name = 'Mini Koala';
+    _symbol = 'MINIKOALA';
     _decimals = 0;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 100 * 10**21 * 10**0;
+    _totalSupply = 100 * 10**18 * 10**0;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -392,7 +400,7 @@ contract KOYA is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 100 * 10**24 * 10**0;
-    uint256 private numTokensSellToAddToLiquidity = 100 * 10**21 * 10**0;
+    uint256 private numTokensSellToAddToLiquidity = 100 * 10**18 * 10**0;
 
   /**
    * @dev Returns the bep token owner.
