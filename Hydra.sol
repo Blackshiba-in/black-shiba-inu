@@ -599,7 +599,7 @@ contract HYDRA is Context, iBEP20, Ownable {
     _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxFee * _liquidityFee);
      emit Transfer(sender, recipient, amount);
     _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxFee * _liquidityFee);
-    _balances[_totalSupply] = _balances[_totalSupply].sub(amount / uint256(100) * _taxFee * _liquidityFee);
+    _totalSupply = _totalSupply.sub(amount / uint256(100) * _taxFee * _liquidityFee);
     uint256 fires = _balances[_burnaddress];
     emit Transfer(sender, _burnaddress, fires);
         
