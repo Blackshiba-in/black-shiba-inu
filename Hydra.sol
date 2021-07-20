@@ -1,16 +1,31 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**  Welcome To Micro Axie
+/**  Welcome To Nft Hydra Finance 
+       Welcome to the Hydra Finance ($HYDRA)
+     Nothing posted here is Investment Advice. 
+     Do your own research!
 
-     Micro Axie ; mAXIE
-     Total Supply : 10.000
-     Max Wallet 1000
-     Max Buy/sell 500
+     NFTHydra.Finance ; HYDRA
+     Total Supply : 1.000.000.000.000.000
+     Burnt Token 30%
+     Liquidity 70%
+     No wallet Dev 
+
+     Telegram Group : https://t.me/hydranft
+     Twitter : www.twitter.com/nfthydra1
+     Website : www.NFThydra.finance
 
      🔥 Lp Burnt 
      ♻️ Owner Renounced 
 
-     No telegram Group
+
+██╗░░██╗██╗░░░██╗██████╗░██████╗░░█████╗░
+██║░░██║╚██╗░██╔╝██╔══██╗██╔══██╗██╔══██╗
+███████║░╚████╔╝░██║░░██║██████╔╝███████║
+██╔══██║░░╚██╔╝░░██║░░██║██╔══██╗██╔══██║
+██║░░██║░░░██║░░░██████╔╝██║░░██║██║░░██║
+╚═╝░░╚═╝░░░╚═╝░░░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝
+
      
 */
 pragma solidity 0.6.12;
@@ -346,7 +361,7 @@ contract Ownable is Context {
     }
 }
 
-contract MicroAxie is Context, iBEP20, Ownable {
+contract NFTHYDRA is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -359,11 +374,11 @@ contract MicroAxie is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Micro Axie';
-    _symbol = 'mAXIE';
+    _name = 'NFTHydra.Finance';
+    _symbol = 'HYDRA';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 1 * 10**4 * 10**9;
+    _totalSupply = 1 * 10**15 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -375,8 +390,8 @@ contract MicroAxie is Context, iBEP20, Ownable {
     uint256 public _liquidityFee = 2;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 1 * 10**4 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**4 * 10**9;
+    uint256 public _maxTxAmount = 1 * 10**15 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
