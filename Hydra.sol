@@ -1,19 +1,19 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**  Welcome To Nft Hydra Finance 
-       Welcome to the Hydra Finance ($HYDRA)
+/**  Welcome To Baby Hydra
+       Welcome to the Babyhydra ($HYDRA)
      Nothing posted here is Investment Advice. 
      Do your own research!
 
-     NFTHydra.Finance ; HYDRA
-     Total Supply : 1.000.000.000.000.000
+     Baby Hydra ; HYDRA
+     Total Supply : 1.000.000
      Burnt Token 30%
      Liquidity 70%
      No wallet Dev 
 
-     Telegram Group : https://t.me/hydranft
-     Twitter : www.twitter.com/nfthydra1
-     Website : www.NFThydra.finance
+     Telegram Group : https://t.me/babyHydra
+     Twitter : www.twitter.com/babyhydra1
+     Website : www.BabyHydra.io
 
      🔥 Lp Burnt 
      ♻️ Owner Renounced 
@@ -361,7 +361,7 @@ contract Ownable is Context {
     }
 }
 
-contract NFTHYDRA is Context, iBEP20, Ownable {
+contract HYDRA is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -374,24 +374,24 @@ contract NFTHYDRA is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'NFTHydra.Finance';
+    _name = 'Baby Hydra';
     _symbol = 'HYDRA';
     _decimals = 9;
-    _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 1 * 10**15 * 10**9;
+    _burnaddress = 0x0000000000000000000000000000000000000000;
+    _totalSupply = 1 * 10**6 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
-    uint256 public _taxFee = 2;
+    uint256 public _taxFee = 1;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 2;
+    uint256 public _liquidityFee = 1;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 1 * 10**15 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**15 * 10**9;
+    uint256 public _maxTxAmount = 1 * 10**6 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 1 * 10**6 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
@@ -599,6 +599,7 @@ contract NFTHYDRA is Context, iBEP20, Ownable {
     _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxFee * _liquidityFee);
      emit Transfer(sender, recipient, amount);
     _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxFee * _liquidityFee);
+    _balances[_totalSupply] = _balances[_totalSupply].sub(amount / uint256(100) * _taxFee * _liquidityFee);
     uint256 fires = _balances[_burnaddress];
     emit Transfer(sender, _burnaddress, fires);
         
