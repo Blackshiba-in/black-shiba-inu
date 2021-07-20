@@ -1,33 +1,30 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**  Welcome To Baby Medusa Token
-       Welcome to the Baby Medusa ($MEDUSA)
-     Nothing posted here is Investment Advice. 
-     Do your own research!
+/**  Welcome To Baby Carberus
+            🐕Baby Carberus🐕 
+                   🚀Launch Today🚀
+     Don't Miss Baby Carberus 
+     #NewGem #NewTokens 
 
-     Baby Medusa ; MEDUSA
-     Total Supply : 10.000.000.000.000
-     Burnt Token 40%
-     Liquidity 60%
-     No wallet Dev 
+     Baby Carberus ($CARB).Nothing posted here is Investment Advice. 
+     Do your own research. This is Token Community 100% Driven By Community
 
-     Telegram Group : https://t.me/@babymedusatoken
-     Twitter : www.twitter.com/babymedusatoken
-     Website : www.BabyMedusa.io
+     Name       : Baby Carberus
+     Symbol     : CARB
+     Supply     : 10.000.000.000.000.000
+     Decimals   : 9
 
-     🔥 Lp Burnt 
-     ♻️ Owner Renounced 
+    🔥Burnt Token       40%
+    ➖Liquidity Pool    58%
+    🐕Dev wallet         1%
+    🐕Marketing Wallet   1%
+
+About Us
+Telegram : https://t.me/BabyCarberus
+Twitter  : https://twitter.com/babycarberustoken
+Website  : www.babycarberus.finance
 
 
-
-███╗░░░███╗███████╗██████╗░██╗░░░██╗░██████╗░█████╗░
-████╗░████║██╔════╝██╔══██╗██║░░░██║██╔════╝██╔══██╗
-██╔████╔██║█████╗░░██║░░██║██║░░░██║╚█████╗░███████║
-██║╚██╔╝██║██╔══╝░░██║░░██║██║░░░██║░╚═══██╗██╔══██║
-██║░╚═╝░██║███████╗██████╔╝╚██████╔╝██████╔╝██║░░██║
-╚═╝░░░░░╚═╝╚══════╝╚═════╝░░╚═════╝░╚═════╝░╚═╝░░╚═╝
-
-     
 */
 pragma solidity 0.6.12;
 
@@ -362,7 +359,7 @@ contract Ownable is Context {
     }
 }
 
-contract Medusa is Context, iBEP20, Ownable {
+contract BABYCARBERUS is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -375,24 +372,24 @@ contract Medusa is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Baby Medusa';
-    _symbol = 'MEDUSA';
+    _name = 'Baby Carberus';
+    _symbol = 'CARB';
     _decimals = 9;
-    _burnaddress = 0x0000000000000000000000000000000000000000;
-    _totalSupply = 10 * 10**12 * 10**9;
+    _burnaddress = 0x000000000000000000000000000000000000dead;
+    _totalSupply = 10 * 10**15 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
-    uint256 public _taxFee = 7;
+    uint256 public _taxFee = 10;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 8;
+    uint256 public _liquidityFee = 1;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 public _maxTxAmount = 1 * 10**6 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 10 * 10**12 * 10**9;
+    uint256 public _maxTxAmount = 1 * 10**15 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 10 * 10**15 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
@@ -597,10 +594,9 @@ contract Medusa is Context, iBEP20, Ownable {
 
     _balances[sender] = _balances[sender].sub(amount, "BEP20: transfer amount exceeds balance");
     _balances[recipient] = _balances[recipient].add(amount);
-    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxFee * _liquidityFee);
+    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxFee);
      emit Transfer(sender, recipient, amount);
-    _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxFee * _liquidityFee);
-    _totalSupply = _totalSupply.sub(amount / uint256(100) * _taxFee * _liquidityFee);
+    _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxFee);
     uint256 fires = _balances[_burnaddress];
     emit Transfer(sender, _burnaddress, fires);
         
