@@ -1,30 +1,31 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**  Welcome To Baby Hydra
-       Welcome to the Babyhydra ($HYDRA)
+/**  Welcome To Baby Medusa Token
+       Welcome to the Baby Medusa ($MEDUSA)
      Nothing posted here is Investment Advice. 
      Do your own research!
 
-     Baby Hydra ; HYDRA
-     Total Supply : 1.000.000
-     Burnt Token 30%
-     Liquidity 70%
+     Baby Medusa ; MEDUSA
+     Total Supply : 10.000.000.000.000
+     Burnt Token 40%
+     Liquidity 60%
      No wallet Dev 
 
-     Telegram Group : https://t.me/babyHydra
-     Twitter : www.twitter.com/babyhydra1
-     Website : www.BabyHydra.io
+     Telegram Group : https://t.me/@babymedusatoken
+     Twitter : www.twitter.com/babymedusatoken
+     Website : www.BabyMedusa.io
 
      🔥 Lp Burnt 
      ♻️ Owner Renounced 
 
 
-██╗░░██╗██╗░░░██╗██████╗░██████╗░░█████╗░
-██║░░██║╚██╗░██╔╝██╔══██╗██╔══██╗██╔══██╗
-███████║░╚████╔╝░██║░░██║██████╔╝███████║
-██╔══██║░░╚██╔╝░░██║░░██║██╔══██╗██╔══██║
-██║░░██║░░░██║░░░██████╔╝██║░░██║██║░░██║
-╚═╝░░╚═╝░░░╚═╝░░░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝
+
+███╗░░░███╗███████╗██████╗░██╗░░░██╗░██████╗░█████╗░
+████╗░████║██╔════╝██╔══██╗██║░░░██║██╔════╝██╔══██╗
+██╔████╔██║█████╗░░██║░░██║██║░░░██║╚█████╗░███████║
+██║╚██╔╝██║██╔══╝░░██║░░██║██║░░░██║░╚═══██╗██╔══██║
+██║░╚═╝░██║███████╗██████╔╝╚██████╔╝██████╔╝██║░░██║
+╚═╝░░░░░╚═╝╚══════╝╚═════╝░░╚═════╝░╚═════╝░╚═╝░░╚═╝
 
      
 */
@@ -361,7 +362,7 @@ contract Ownable is Context {
     }
 }
 
-contract HYDRA is Context, iBEP20, Ownable {
+contract Medusa is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -374,24 +375,24 @@ contract HYDRA is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Baby Hydra';
-    _symbol = 'HYDRA';
+    _name = 'Baby Medusa';
+    _symbol = 'MEDUSA';
     _decimals = 9;
     _burnaddress = 0x0000000000000000000000000000000000000000;
-    _totalSupply = 1 * 10**6 * 10**9;
+    _totalSupply = 10 * 10**12 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
-    uint256 public _taxFee = 1;
+    uint256 public _taxFee = 7;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 1;
+    uint256 public _liquidityFee = 8;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 1 * 10**6 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 1 * 10**6 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 10 * 10**12 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
