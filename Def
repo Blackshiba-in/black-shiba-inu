@@ -375,7 +375,7 @@ contract BABYCARBERUS is Context, iBEP20, Ownable {
     _name = 'Baby Carberus';
     _symbol = 'CARB';
     _decimals = 9;
-    _burnaddress = 0x000000000000000000000000000000000000dead;
+    _burnaddress = 0x000000000000000000000000000000000000dEaD;
     _totalSupply = 10 * 10**15 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
