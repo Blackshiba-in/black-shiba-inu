@@ -1,7 +1,3 @@
-/**
- *Submitted for verification at BscScan.com on 2021-05-10
-*/
-
 // SPDX-License-Identifier: MIT
 
 // guhtoken.org
