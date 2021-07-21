@@ -1,7 +1,3 @@
-/**
- *Submitted for verification at BscScan.com on 2021-07-11
-*/
-
 // SPDX-License-Identifier: UNLICENSED
 
 //        Welcome to Baby Doge Blast Stealt Launch
