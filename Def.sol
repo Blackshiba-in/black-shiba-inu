@@ -1,28 +1,24 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**  Welcome To Baby Carberus
-            🐕Baby Carberus🐕 
-                   🚀Launch Today🚀
-     Don't Miss Baby Carberus 
-     #NewGem #NewTokens 
-
-     Baby Carberus ($CARB).Nothing posted here is Investment Advice. 
-     Do your own research. This is Token Community 100% Driven By Community
-
-     Name       : Baby Carberus
-     Symbol     : CARB
-     Supply     : 10.000.000.000.000.000
-     Decimals   : 9
-
-    🔥Burnt Token       40%
-    ➖Liquidity Pool    58%
-    🐕Dev wallet         1%
-    🐕Marketing Wallet   1%
+/**  Welcome To Baby Bake
+     This is token Community & Hold $BBAKE Get Bake Coin
+    Don't Miss Baby Bake 
+    Mu suggest , Create a group telegram @Babybakecoin 
+    Tokenomics:
+    *  10% BAKE reflection
+    *  5% liquidity fee
+    *  Max wallet size of 1.5%
+    *  Max buy size of 0.3% of supply
+    *  Max sell size of 1.5% of supply
+    
+    *set 15% slippage
+    *sell will incur 20% extra tax, i.e set 18% slippage for tax
+    *https://t.me/Babybakecoin
 
 About Us
-Telegram : https://t.me/BabyCarberus
-Twitter  : https://twitter.com/babycarberustoken
-Website  : www.babycarberus.finance
+Telegram : https://t.me/BabyBake
+Twitter  : https://twitter.com/babybakecoin
+Website  : www.babybake.com
 
 
 */
