@@ -355,7 +355,7 @@ contract Ownable is Context {
     }
 }
 
-contract BABYCARBERUS is Context, iBEP20, Ownable {
+contract BABYBAKE is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -368,11 +368,11 @@ contract BABYCARBERUS is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Baby Carberus';
-    _symbol = 'CARB';
+    _name = 'Baby Bake';
+    _symbol = 'BBAKE';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 10 * 10**15 * 10**9;
+    _totalSupply = 10 * 10**9 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -385,7 +385,7 @@ contract BABYCARBERUS is Context, iBEP20, Ownable {
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 1 * 10**15 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 10 * 10**15 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 10 * 10**9 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
