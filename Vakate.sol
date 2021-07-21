@@ -1,11 +1,11 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**  Welcome To Baby Bake
+/**  Welcome To Vanilla Cake
      This is token Community & Hold $BBAKE Get Bake Coin
-    Don't Miss Baby Bake 
-    Mu suggest , Create a group telegram @Babybakecoin 
+    Don't Miss Vanilla Cake
+    Mu suggest , Create a group telegram @Vanillacake
     Tokenomics:
-    *  10% BAKE reflection
+    *  10% Cake reflection
     *  5% liquidity fee
     *  Max wallet size of 1.5%
     *  Max buy size of 0.3% of supply
@@ -13,12 +13,12 @@
     
     *set 15% slippage
     *sell will incur 20% extra tax, i.e set 18% slippage for tax
-    *https://t.me/Babybakecoin
+    *https://t.me/Vanillacake
 
 About Us
-Telegram : https://t.me/BabyBake
-Twitter  : https://twitter.com/babybakecoin
-Website  : www.babybake.com
+Telegram : https://t.me/Vanillacake
+Twitter  : https://twitter.com/VanillaCake
+Website  : www.VanillaCake.com
 
 
 */
@@ -355,7 +355,7 @@ contract Ownable is Context {
     }
 }
 
-contract BABYBAKE is Context, iBEP20, Ownable {
+contract VanillaCake is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -368,24 +368,24 @@ contract BABYBAKE is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Baby Bake';
-    _symbol = 'BBAKE';
+    _name = 'Vanilla Cake';
+    _symbol = 'VACAKE';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 10 * 10**9 * 10**9;
+    _totalSupply = 10 * 10**12 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
-    uint256 public _taxFee = 10;
+    uint256 public _taxFee = 16;
     uint256 private _previousTaxFee = _taxFee;
     
     uint256 public _liquidityFee = 1;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 1 * 10**15 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 10 * 10**9 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 10 * 10**12 * 10**9;
 
   /**
    * @dev Returns the bep token owner.
