@@ -6,12 +6,13 @@
        Information :
        Name    : Blazzer Token 
        Symbol  : BLAZ
-       Supply  : 10.000.000.000.000
+       Supply  : 1,000,000,000,000,000
        Decimal : 9
 
-       Max Buy : 50.000.000.000
+       Max Buy : 10,000,000,000,000
        
        Telegram : @BlazzerToken
+
 
 */
 
@@ -666,7 +667,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
     ) external;
 }
 
-contract Blazzer is Context, IERC20, Ownable {
+contract BlazzerToken is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -680,11 +681,11 @@ contract Blazzer is Context, IERC20, Ownable {
     address[] private _excluded;
    
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 10 * 10**12 * 10**9;
+    uint256 private _tTotal = 1 * 10**6 * 10**9 * 10**9;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "Blazzer Token";
+    string private _name = "BlazzerToken";
     string private _symbol = "BLAZZ";
     uint8 private _decimals = 9;
 
@@ -694,7 +695,7 @@ contract Blazzer is Context, IERC20, Ownable {
     uint256 public _liquidityFee = 3;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 private _maxTxAmount = 50 * 10**9 * 10**9;
+    uint256 private _maxTxAmount = 10 * 10**3 * 10**9 * 10**9;
 
     IUniswapV2Router02 public immutable uniswapV2Router;
     address public immutable uniswapV2Pair;
