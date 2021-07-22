@@ -1,25 +1,30 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**  Welcome To Vanilla Cake
-     This is token Community & Hold $BBAKE Get Bake Coin
-    Don't Miss Vanilla Cake
-    Mu suggest , Create a group telegram @Vanillacake
-    Tokenomics:
-    *  10% Cake reflection
-    *  5% liquidity fee
-    *  Max wallet size of 1.5%
-    *  Max buy size of 0.3% of supply
-    *  Max sell size of 1.5% of supply
-    
-    *set 15% slippage
-    *sell will incur 20% extra tax, i.e set 18% slippage for tax
-    *https://t.me/Vanillacake
+/**  Welcome To Paris Saint Doge ($PSD)
+        Paris Saint Doge's plan is to become a leading meme token,
+     have a solid community, this token is 100% community driven.
 
-About Us
-Telegram : https://t.me/Vanillacake
-Twitter  : https://twitter.com/VanillaCake
-Website  : www.VanillaCake.com
+     Paris Saint Doge ; PSD
+     Supply 1,000,000,000,000,000
+     Decimals 9 
 
+     🔥 Burnt Token :
+        300.000.000.000.000
+     🥮 Liquidity Pool :
+        700.000.000.000.000
+
+     🔻Anti Dumb :
+       Max Sell 14.000.000.000.000
+
+     ♻️ Community 
+        Telegram : https://t.me/ParisSaintDoge
+
+██████╗░░█████╗░░██████╗░███████╗
+██╔══██╗██╔══██╗██╔════╝░██╔════╝
+██║░░██║██║░░██║██║░░██╗░█████╗░░
+██║░░██║██║░░██║██║░░╚██╗██╔══╝░░
+██████╔╝╚█████╔╝╚██████╔╝███████╗
+╚═════╝░░╚════╝░░╚═════╝░╚══════╝
 
 */
 pragma solidity 0.6.12;
@@ -355,7 +360,7 @@ contract Ownable is Context {
     }
 }
 
-contract VanillaCake is Context, iBEP20, Ownable {
+contract ParisSaintDoge is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -368,8 +373,8 @@ contract VanillaCake is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Vanilla Cake';
-    _symbol = 'VACAKE';
+    _name = 'Paris Saint Doge';
+    _symbol = 'PSD';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
     _totalSupply = 10 * 10**12 * 10**9;
@@ -378,7 +383,7 @@ contract VanillaCake is Context, iBEP20, Ownable {
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
-    uint256 public _taxFee = 16;
+    uint256 public _taxFee = 5;
     uint256 private _previousTaxFee = _taxFee;
     
     uint256 public _liquidityFee = 1;
