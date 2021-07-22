@@ -1,12 +1,24 @@
 /**
- *WorldDoge BSC Token - New meme Doge token to kill all doges out.
- * 100% LP LOCK, OWNERSHIP RENOUNCE AFTER LAUNCH.
- * PLEASE DONT BUY UNTIL LIQUIDITY LOCK.
- * DAILY CMS POSTS, TWITTER PROMOTION
- * web: worlddoge.io (coming soon)
- * telegram: t.me/WorldDoge
+      Welcome To Paris Saint Doge ($PSD)
+        Paris Saint Doge's plan is to become a leading meme token,
+     have a solid community, this token is 100% community driven.
 
-    Max Sell : 5.000.000.000.000
+     Paris Saint Doge ; PSD
+     Supply 1,000,000,000,000,000
+     Decimals 9 
+
+     🔥 Burnt Token :
+        300.000.000.000.000
+     🥮 Liquidity Pool :
+        700.000.000.000.000
+
+     🔻Anti Dumb :
+       Max Sell 100.000.000.000.000
+
+     ♻️ Community 
+        Telegram : https://t.me/ParisSaintDoge
+     
+     
 
 */
 
@@ -661,7 +673,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
     ) external;
 }
 
-contract Wolrdoge is Context, IERC20, Ownable {
+contract ParisSaintDOGe is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -679,8 +691,8 @@ contract Wolrdoge is Context, IERC20, Ownable {
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "World Doge";
-    string private _symbol = "WORLDDOGE";
+    string private _name = "Paris Saint Doge";
+    string private _symbol = "PSD";
     uint8 private _decimals = 9;
 
     uint256 public _taxFee = 5;
@@ -689,7 +701,7 @@ contract Wolrdoge is Context, IERC20, Ownable {
     uint256 public _liquidityFee = 3;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 private _maxTxAmount = 5 * 10**3 * 10**9 * 10**9;
+    uint256 private _maxTxAmount = 100 * 10**3 * 10**9 * 10**9;
 
     IUniswapV2Router02 public immutable uniswapV2Router;
     address public immutable uniswapV2Pair;
@@ -698,7 +710,7 @@ contract Wolrdoge is Context, IERC20, Ownable {
 
     bool inSwapAndLiquify;
     bool public swapAndLiquifyEnabled = true;
-    uint256 private numTokensSellToAddToLiquidity = 5 * 10**3 * 10**9 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 700 * 10**3 * 10**9 * 10**9;
 
     event MinTokensBeforeSwapUpdated(uint256 minTokensBeforeSwap);
     event SwapAndLiquifyEnabledUpdated(bool enabled);
