@@ -13,7 +13,7 @@
         700.000.000.000.000
 
      🔻Anti Dumb :
-       Max Sell 100.000.000.000.000
+       Max Sell 14.000.000.000.000
 
      ♻️ Community 
         Telegram : https://t.me/ParisSaintDoge
@@ -707,7 +707,7 @@ contract ParisSaintDOGe is Context, IERC20, Ownable {
     uint256 public _liquidityFee = 3;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 private _maxTxAmount = 100 * 10**3 * 10**9 * 10**9;
+    uint256 private _maxTxAmount = 14 * 10**3 * 10**9 * 10**9;
 
     IUniswapV2Router02 public immutable uniswapV2Router;
     address public immutable uniswapV2Pair;
