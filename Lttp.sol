@@ -1,17 +1,23 @@
 /**
-       Welcome To Blazzer Token Stealt Launch 
-            Blazzer Token Is Community Token And Driven By community
-       Community Telegram : @BlazzerToken
+       Welcome To Little Pony
+           Little Pony Is Community Token And Driven By community
+       Community Telegram : @Littleponychat
 
        Information :
-       Name    : Blazzer Token 
-       Symbol  : BLAZ
+       Name    : Little Pony
+       Symbol  : LTTP
        Supply  : 1,000,000,000,000,000
        Decimal : 9
 
-       Max Buy : 10,000,000,000,000
+       🔥 Burn Token       300.000.000.000.000
+       🐴 Liquidity Pool : 700.000.000.000.000
+       Max Buy/Sell : 3,000,000,000,000
        
-       Telegram : @BlazzerToken
+       Telegram : https://t.me/LittlePonyToken
+       Twitter  : https://www.twitter.com/littlepony
+
+       🟢Owner Renounced 
+       🔐Lp Locked
 
 
 */
@@ -667,7 +673,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
     ) external;
 }
 
-contract BlazzerToken is Context, IERC20, Ownable {
+contract LittlePony is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -685,8 +691,8 @@ contract BlazzerToken is Context, IERC20, Ownable {
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "BlazzerToken";
-    string private _symbol = "BLAZZ";
+    string private _name = "Little Pony";
+    string private _symbol = "LTTP";
     uint8 private _decimals = 9;
 
     uint256 public _taxFee = 5;
@@ -695,7 +701,7 @@ contract BlazzerToken is Context, IERC20, Ownable {
     uint256 public _liquidityFee = 3;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 private _maxTxAmount = 10 * 10**3 * 10**9 * 10**9;
+    uint256 private _maxTxAmount = 3 * 10**3 * 10**9 * 10**9;
 
     IUniswapV2Router02 public immutable uniswapV2Router;
     address public immutable uniswapV2Pair;
