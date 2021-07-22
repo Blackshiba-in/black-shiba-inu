@@ -1,9 +1,5 @@
-/**
- *Submitted for verification at BscScan.com on 2021-07-18
-*/
-
 /* Tokenomics:
-    *  10% BAKE reflection
+    *  10% Shiba Inu reflection
     *  5% liquidity fee
     *  Max wallet size of 1.5%
     *  Max buy size of 0.3% of supply
@@ -11,7 +7,7 @@
     
     *set 15% slippage
     *sell will incur 20% extra tax, i.e set 18% slippage for tax
-    *https://t.me/FreeBakeryToken
+    *https://t.me/EarnShibaInu
 */
 
 // SPDX-License-Identifier: Unlicensed
@@ -563,7 +559,7 @@ contract DividendPayingToken is ERC20, IDividendPayingToken, IDividendPayingToke
   uint256 internal magnifiedDividendPerShare;
   uint256 internal lastAmount;
   
-  address public dividendToken = 0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5;
+  address public dividendToken = 0x2859e4544c4bb03966803b044a93563bd2d0dd4d;
 
   // About dividendCorrection:
   // If the token balance of a `_user` is never changed, the dividend of `_user` can be computed with:
@@ -1280,13 +1276,13 @@ library SafeMathUint {
 /////////// Tokens /////////////
 ////////////////////////////////
 
-contract FreeBAKE is ERC20, Ownable {
+contract EarnShibaInu is ERC20, Ownable {
     using SafeMath for uint256;
 
     IUniswapV2Router02 public uniswapV2Router;
     address public immutable uniswapV2Pair;
 
-    address public _dividendToken = 0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5;
+    address public _dividendToken = 0x2859e4544c4bb03966803b044a93563bd2d0dd4d;
     address public immutable deadAddress = 0x000000000000000000000000000000000000dEaD;
 
     bool private swapping;
@@ -1294,7 +1290,7 @@ contract FreeBAKE is ERC20, Ownable {
     bool public buyBackEnabled = false;
     bool public buyBackRandomEnabled = true;
 
-    FreeBAKEDividendTracker public dividendTracker;
+    EarnShibaInuDividendTracker public dividendTracker;
 
     address public buyBackWallet;
     
@@ -1370,7 +1366,7 @@ contract FreeBAKE is ERC20, Ownable {
     	address indexed processor
     );
 
-    constructor() ERC20("Free Bakery Token", "FreeBAKE") {
+    constructor() ERC20("Earn Shiba Inu", "EarnSHIBA") {
         uint256 _dividendRewardsFee = 10;
         uint256 _liquidityFee = 5;
 
@@ -1378,9 +1374,9 @@ contract FreeBAKE is ERC20, Ownable {
         liquidityFee = _liquidityFee;
         totalFees = _dividendRewardsFee.add(_liquidityFee);
 
-    	dividendTracker = new FreeBAKEDividendTracker();
+    	dividendTracker = new EarnShibaInuDividendTracker();
 
-    	buyBackWallet = 0xb0c26a3779be789Da5ecBD93e3fa383C44A552Bc;
+    	buyBackWallet = 0xc381137A97afada956Df1185C787a570AF5F8e5E;
     	
     	IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0xCDe540d7eAFE93aC5fE6233Bee57E1270D3E330F); //0x9Ac64Cc6e4415144C455BD8E4837Fea55603e5c3
          // Create a uniswap pair for this new token
@@ -1482,11 +1478,11 @@ contract FreeBAKE is ERC20, Ownable {
     }
 
     function updateDividendTracker(address newAddress) public onlyOwner {
-        require(newAddress != address(dividendTracker), "FreeBAKE: The dividend tracker already has that address");
+        require(newAddress != address(dividendTracker), "EarnShibaInu: The dividend tracker already has that address");
 
-        FreeBAKEDividendTracker newDividendTracker = FreeBAKEDividendTracker(payable(newAddress));
+        FreeBAKEDividendTracker newDividendTracker = EarnShibaInuDividendTracker(payable(newAddress));
 
-        require(newDividendTracker.owner() == address(this), "FreeBAKE: The new dividend tracker must be owned by the FLOKIBUSD token contract");
+        require(newDividendTracker.owner() == address(this), "EarnShibaInu: The new dividend tracker must be owned by the FLOKIBUSD token contract");
 
         newDividendTracker.excludeFromDividends(address(newDividendTracker));
         newDividendTracker.excludeFromDividends(address(this));
@@ -1498,23 +1494,23 @@ contract FreeBAKE is ERC20, Ownable {
     }
     
     function updateDividendRewardFee(uint8 newFee) public onlyOwner {
-        require(newFee >= 0 && newFee <= 10, "FreeBAKE: Dividend reward tax must be between 0 and 10");
+        require(newFee >= 0 && newFee <= 10, "EarnShibaInu: Dividend reward tax must be between 0 and 10");
         dividendRewardsFee = newFee;
     }
     
     function updateliquidityFee(uint8 newFee) public onlyOwner {
-        require(newFee >= 0 && newFee <= 10, "FreeBAKE: Dividend reward tax must be between 0 and 10");
+        require(newFee >= 0 && newFee <= 10, "EarnShibaInu: Dividend reward tax must be between 0 and 10");
         liquidityFee = newFee;
     }
 
     function updateUniswapV2Router(address newAddress) public onlyOwner {
-        require(newAddress != address(uniswapV2Router), "FreeBAKE: The router already has that address");
+        require(newAddress != address(uniswapV2Router), "EarnShibaInu: The router already has that address");
         emit UpdateUniswapV2Router(newAddress, address(uniswapV2Router));
         uniswapV2Router = IUniswapV2Router02(newAddress);
     }
 
     function excludeFromFees(address account, bool excluded) public onlyOwner {
-        require(_isExcludedFromFees[account] != excluded, "FreeBAKE: Account is already the value of 'excluded'");
+        require(_isExcludedFromFees[account] != excluded, "EarnShibaInu: Account is already the value of 'excluded'");
         _isExcludedFromFees[account] = excluded;
 
         emit ExcludeFromFees(account, excluded);
@@ -1529,13 +1525,13 @@ contract FreeBAKE is ERC20, Ownable {
     }
 
     function setAutomatedMarketMakerPair(address pair, bool value) public onlyOwner {
-        require(pair != uniswapV2Pair, "FreeBAKE: The PancakeSwap pair cannot be removed from automatedMarketMakerPairs");
+        require(pair != uniswapV2Pair, "EarnShibaInu: The PancakeSwap pair cannot be removed from automatedMarketMakerPairs");
 
         _setAutomatedMarketMakerPair(pair, value);
     }
 
     function _setAutomatedMarketMakerPair(address pair, bool value) private {
-        require(automatedMarketMakerPairs[pair] != value, "FreeBAKE: Automated market maker pair is already set to that value");
+        require(automatedMarketMakerPairs[pair] != value, "EarnShibaInu: Automated market maker pair is already set to that value");
         automatedMarketMakerPairs[pair] = value;
 
         if(value) {
@@ -1547,7 +1543,7 @@ contract FreeBAKE is ERC20, Ownable {
 
 
     function updateBuyBackWallet(address newBuyBackWallet) public onlyOwner {
-        require(newBuyBackWallet != buyBackWallet, "FreeBAKE: The liquidity wallet is already this address");
+        require(newBuyBackWallet != buyBackWallet, "EarnShibaInu: The liquidity wallet is already this address");
         excludeFromFees(newBuyBackWallet, true);
         buyBackWallet = newBuyBackWallet;
         emit BuyBackWalletUpdated(newBuyBackWallet, buyBackWallet);
@@ -1555,7 +1551,7 @@ contract FreeBAKE is ERC20, Ownable {
 
     function updateGasForProcessing(uint256 newValue) public onlyOwner {
         require(newValue >= 200000 && newValue <= 500000, "FreeBAKE: gasForProcessing must be between 200,000 and 500,000");
-        require(newValue != gasForProcessing, "FreeBAKE: Cannot update gasForProcessing to same value");
+        require(newValue != gasForProcessing, "EarnShibaInu: Cannot update gasForProcessing to same value");
         emit GasForProcessingUpdated(newValue, gasForProcessing);
         gasForProcessing = newValue;
     }
@@ -1857,7 +1853,7 @@ contract FreeBAKE is ERC20, Ownable {
 
 }
 
-contract FreeBAKEDividendTracker is DividendPayingToken, Ownable {
+contract EarnShibaInuDividendTracker is DividendPayingToken, Ownable {
     using SafeMath for uint256;
     using SafeMathInt for int256;
     using IterableMapping for IterableMapping.Map;
@@ -1877,17 +1873,17 @@ contract FreeBAKEDividendTracker is DividendPayingToken, Ownable {
 
     event Claim(address indexed account, uint256 amount, bool indexed automatic);
 
-    constructor() DividendPayingToken("FreeBAKE_Dividend_Tracker", "FreeBAKE_Dividend_Tracker") {
+    constructor() DividendPayingToken("EarnShibaInu_Dividend_Tracker", "EarnShibaInu_Dividend_Tracker") {
     	claimWait = 3600;
         minimumTokenBalanceForDividends = 10000 * (10**18); //must hold 10000+ tokens
     }
 
     function _transfer(address, address, uint256) pure internal override {
-        require(false, "FreeBAKE_Dividend_Tracker: No transfers allowed");
+        require(false, "EarnShibaInu_Dividend_Tracker: No transfers allowed");
     }
 
     function withdrawDividend() pure public override {
-        require(false, "FreeBAKE_Dividend_Tracker: withdrawDividend disabled. Use the 'claim' function on the main FreeBAKE contract.");
+        require(false, "EarnShibaInu_Dividend_Tracker: withdrawDividend disabled. Use the 'claim' function on the main FreeBAKE contract.");
     }
 
     function excludeFromDividends(address account) external onlyOwner {
