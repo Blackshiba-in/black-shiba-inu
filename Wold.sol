@@ -10,9 +10,6 @@
 
 */
 
-// SPDX-License-Identifier: Unlicensed
-*/
-
 pragma solidity ^0.6.12;
 // SPDX-License-Identifier: Unlicensed
 interface IERC20 {
@@ -664,7 +661,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
     ) external;
 }
 
-contract WorldDoge is Context, IERC20, Ownable {
+contract Wolrdoge is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -682,8 +679,8 @@ contract WorldDoge is Context, IERC20, Ownable {
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "WorldDoge";
-    string private _symbol = "WDOGE";
+    string private _name = "World Doge";
+    string private _symbol = "WORLDDOGE";
     uint8 private _decimals = 9;
 
     uint256 public _taxFee = 5;
