@@ -1,17 +1,20 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**  
-     Paris Saint Doge ; PSD
+/**     BabyBabyCake Holders passively in
+     Babycake , babycake will in turn reward
+     You cake passively
+
+     Baby Baby Cake : BABYBABYCAKE
      Supply 1,000,000,000,000,000
      Decimals 9 
 
-     Max buy/sell 100.000.000.000.000
+     5% Lp, 8% BabyCake reward , 3% marketing
+     16% Tax
+     Telegram : https://t.me/Babybabycake
 
      Owner Renounced 
      Lp Burnt
  
-     Telegram : https://t.me/ParisSaintDoge
-     Telegram : https://t.me/ParisSaintDoge
 */
 pragma solidity 0.6.8;
 
@@ -346,7 +349,7 @@ contract Ownable is Context {
     }
 }
 
-contract ParisSaintDoge is Context, iBEP20, Ownable {
+contract BabyCake is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -359,8 +362,8 @@ contract ParisSaintDoge is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Paris Saint Doge';
-    _symbol = 'PSD';
+    _name = 'Baby Baby Cake';
+    _symbol = 'BabyBabyCake';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
     _totalSupply = 1 * 10**15 * 10**9;
@@ -369,7 +372,7 @@ contract ParisSaintDoge is Context, iBEP20, Ownable {
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
-    uint256 public _taxFee = 5;
+    uint256 public _taxFee = 2;
     uint256 private _previousTaxFee = _taxFee;
     
     uint256 public _liquidityFee = 1;
