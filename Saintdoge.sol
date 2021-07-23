@@ -1,17 +1,20 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**  Welcome To Paris Saint Doge ($PSD)
-        Paris Saint Doge's plan is to become a leading meme token,
+/**  Welcome To Saint Doge ($SAINTDOGE)
+        Saint Doge's plan is to become a leading meme token,
      have a solid community, this token is 100% community driven.
 
-     Paris Saint Doge ; PSD
+     Saint Doge ; SAINTDOGE
      Supply 1,000,000,000,000,000
      Decimals 9 
 
-     Owner Renounced & Lp Burnt
+     🔥 Burnt Token :
+        300.000.000.000.000
+     🥮 Liquidity Pool :
+        700.000.000.000.000
 
      ♻️ Community 
-     Telegram : https://t.me/ParisSaintDoge
+        Telegram : https://t.me/ParisSaintDoge
 
 */
 pragma solidity 0.6.12;
@@ -347,7 +350,7 @@ contract Ownable is Context {
     }
 }
 
-contract ParisSaintDoge is Context, iBEP20, Ownable {
+contract SaintDoge is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -360,8 +363,8 @@ contract ParisSaintDoge is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Paris Saint Doge';
-    _symbol = 'PSD';
+    _name = 'Saint Doge';
+    _symbol = 'SAINTDOGE';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
     _totalSupply = 10 * 10**12 * 10**9;
