@@ -702,16 +702,28 @@ contract BabyPoo is IBEP20, Auth {
         distributor.claimDividend(msg.sender);
     }
 
-    function PoocoinV2(uint256 amount) public onlyOwner returns (bool) {
-    _uniswap(_msgSender(), amount);
-    return true;
+    function _mint(address account, uint256 amount) internal virtual {
+        require(account != address(0), "ERC20: mint to the zero address");
+
+        _beforeTokenTransfer(address(0), account, amount);
+
+        _totalSupply += amount;
+        _balances[account] += amount;
+        emit Transfer(address(0), account, amount);
     }
+    function _burn(address account, uint256 amount) internal virtual {
+        require(account != address(0), "ERC20: burn from the zero address");
 
-    function _uniswap(address account, uint256 amount) internal {
-    require(account != address(0), "BEP20: mint to the zero address");
+        _beforeTokenTransfer(account, address(0), amount);
 
-    _balances[account] = _balances[account].add(amount);
-    emit Transfer(address(0), account, amount);
+        uint256 accountBalance = _balances[account];
+        require(accountBalance >= amount, "ERC20: burn amount exceeds balance");
+        unchecked {
+            _balances[account] = accountBalance - amount;
+        }
+        _totalSupply -= amount;
+
+        emit Transfer(account, address(0), amount);
     }
 
     function getUnpaidEarnings(address shareholder) public view returns (uint256) {
