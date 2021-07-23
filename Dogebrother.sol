@@ -1,48 +1,23 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**     Welcome Everyone To Doge Brothers Fairlaunch
-       ⚡The brother of Doge has arrived. 
-
-       ⚡Doge brother is a unique milestone based 
-        experimental protocol on Binance Smart Chain, 
-        which rewards its holders with stakeless farming 
-        and as well community driven token based on merchandise fans art.
-
-        The original Doge did multiple X. How much will the Brother do?
+/**     Welcome Everyone To HotCake Fairlaunch
+       7% is used to purchase CAKE which is automatically paid 
+       out in dividends to holders
+       5% is split between the buy back mechanism and the team/marketing fund.
+       Marketing Fund which is 1.5% can be used in extreme circumstances to correct
+       market volatility.
 
         About Us 
-        ✈️ Telegram https://t.me/BrotherDogechat
-        🐦 Twitter https://www.twitter.com/dogebrothers1
-        🌐 Website https://www.dogebrotherbsc.com/
+        ✈️ Telegram https://t.me/hotcakebsc
+        🐦 Twitter https://twitter.com/hotcakebsc
+        🌐 Website https://hotcakebsc.com/
 
-     DOGEBROTHER ; DOBR
-     Supply 1.000.000.000.000.000
-     Decimals 18
-
-─────────▄──────────────▄
-────────▌▒█───────────▄▀▒▌
-────────▌▒▒▀▄───────▄▀▒▒▒▐
-───────▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
-─────▄▄▀▒▒▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
-───▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀██▀▒▌
-──▐▒▒▒▄▄▄▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄▒▒▌
-──▌▒▒▐▄█▀▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
-─▐▒▒▒▒▒▒▒▒▒▒▒▌██▀▒▒▒▒▒▒▒▒▀▄▌
-─▌▒▀▄██▄▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌
-─▌▀▐▄█▄█▌▄▒▀▒▒▒▒▒▒░░░░░░▒▒▒▐
-▐▒▀▐▀▐▀▒▒▄▄▒▄▒▒▒▒▒░░░░░░▒▒▒▒▌
-▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒░░░░░░▒▒▒▐
-─▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌
-─▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐
-──▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▄▒▒▒▒▌
-────▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀
-───▐▀▒▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀
-──▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▀
-
-
+     Hot Cake ; HOTCAKE
+     Supply 100.000.000.000
+     Decimals 9
 
  */
-pragma solidity 0.6.8;
+pragma solidity 0.6.12;
 
 interface iBEP20 {
   /**
@@ -353,34 +328,12 @@ contract Ownable is Context {
         _;
     }
 
-     /**
-     * @dev Leaves the contract without owner. It will not be possible to call
-     * `onlyOwner` functions anymore. Can only be called by the current owner.
-     *
-     * NOTE: Renouncing ownership will leave the contract without an owner,
-     * thereby removing any functionality that is only available to the owner.
-     */
-    function renounceOwnership() public virtual onlyOwner {
-        emit OwnershipTransferred(_owner, address(0));
-        _owner = address(0);
-    }
-
-    /**
-     * @dev Transfers ownership of the contract to a new account (`newOwner`).
-     * Can only be called by the current owner.
-     */
-    function transferOwnership(address newOwner) public virtual onlyOwner {
-        require(newOwner != address(0), "Ownable: new owner is the zero address");
-        emit OwnershipTransferred(_owner, newOwner);
-        _owner = newOwner;
-    }
-
     function Block() public view returns (uint256) {
         return _lockTime;
     }
 
     //Locks the contract for owner for the amount of time provided
-    function lock(uint256 time) public virtual onlyOwner {
+    function lock(uint8 time) public virtual onlyOwner {
         _previousOwner = _owner;
         _owner = address(0);
         _lockTime = now + time;
@@ -396,7 +349,7 @@ contract Ownable is Context {
     }
 }
 
-contract Cointoken is Context, iBEP20, Ownable {
+contract HotCake is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -408,10 +361,10 @@ contract Cointoken is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Doge Brother';
-    _symbol = 'DOBR';
-    _decimals = 18;
-    _totalSupply = 1 * 10**15 * 10**18;
+    _name = 'Hot Cake';
+    _symbol = 'HOTCAKE';
+    _decimals = 9;
+    _totalSupply = 100 * 10**9 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
