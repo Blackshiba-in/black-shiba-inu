@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: MIT
 
-/*   Welcome to God Shiba
-       Hold $GSHIB And Earn Shiba Inu In 60 Minute
+/*   Welcome to SUH
+       Hold $SUh And Earn Shiba Inu In 60 Minute
      
-      This Is Token Community , GodShiba's Plan Token Meme Global
+      This Is Token Community , Shiba Up Higher's Plan Token Meme Global
 
-     GodShiba ; GSHIB
+     Shiba Up Higher ; $SUH
      Supplay 10.000.000.000
      Decimals 9 
 
      Lp Burn & Owner Renounced 
 
-     Telegram @GodShibaBSC
+     Telegram @ShibaUpHigher
 
     
 
