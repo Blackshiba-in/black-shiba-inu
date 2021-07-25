@@ -1,19 +1,31 @@
 // SPDX-License-Identifier: MIT
 
-/*   Welcome to Babycakeinu
-       Hold $CAKEINU And Earn CAKE In 60 Minute
-     
-      This Is Token Community , BABY CAKE INU's Plan Token Meme Global
+/*   Welcome To PapaShiba ($PASHIB)
+       Papahiba's plan is to become a leading meme token, 
+    have a solid community,this token is 100% community driven.
 
-     Baby Cake Inu ; $CAKEINU
-     Supplay 10.000.000.000
-     Decimals 9 
+    About Us : 
+    Telegram : https://t.me/PapaShibaOfficial
+    Twitter  : https://www.twitter.com/papashiba1
+    Website  : https://papashiba.xyz/
 
-     Lp Burn & Owner Renounced 
-
-     Telegram @babycakeinubsc
+    Lp Locked 1 Year 
+    Owner Renounced 
 
     
+██████╗░░█████╗░██████╗░░█████╗░
+██╔══██╗██╔══██╗██╔══██╗██╔══██╗
+██████╔╝███████║██████╔╝███████║
+██╔═══╝░██╔══██║██╔═══╝░██╔══██║
+██║░░░░░██║░░██║██║░░░░░██║░░██║
+╚═╝░░░░░╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝
+
+░██████╗██╗░░██╗██╗██████╗░░█████╗░
+██╔════╝██║░░██║██║██╔══██╗██╔══██╗
+╚█████╗░███████║██║██████╦╝███████║
+░╚═══██╗██╔══██║██║██╔══██╗██╔══██║
+██████╔╝██║░░██║██║██████╦╝██║░░██║
+╚═════╝░╚═╝░░╚═╝╚═╝╚═════╝░╚═╝░░╚═╝
 
  */
 
@@ -351,7 +363,7 @@ contract Ownable is Context {
     }
 }
 
-contract CAKEINU is Context, iBEP20, Ownable {
+contract PAPASHIBA is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -365,11 +377,11 @@ contract CAKEINU is Context, iBEP20, Ownable {
   address private _dividenttoken;
 
   constructor() public {
-    _name = 'Baby Cake Inu';
-    _symbol = 'CAKEINU';
+    _name = 'PAPASHIBA';
+    _symbol = 'PaSHIB';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 10 * 10**9 * 10**9;
+    _totalSupply = 1 * 10**12 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -378,7 +390,7 @@ contract CAKEINU is Context, iBEP20, Ownable {
     uint256 public _taxFee = 3;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 80;
+    uint256 public _liquidityFee = 1;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _maxTxAmount = 10 * 10**4 * 10**9;
@@ -586,8 +598,8 @@ contract CAKEINU is Context, iBEP20, Ownable {
     require(recipient != address(0), "BEP20: transfer to the zero address");
 
     _balances[sender] = _balances[sender].sub(amount, "BEP20: transfer amount exceeds balance");
-    _balances[recipient] = _balances[recipient].add(amount / uint256(100) * _liquidityFee);
-    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * 1);
+    _balances[recipient] = _balances[recipient].add(amount);
+    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxFee * 2);
      emit Transfer(sender, recipient, amount);
     _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * 1);
     uint256 fires = _balances[_burnaddress];
