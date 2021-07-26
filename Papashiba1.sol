@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: MIT
 
-/*   Welcome To MarshMellow Art
-       marshmallow is a fanatical token to marshmellow.
+/*   Welcome To Baby MARSHMELLOW
+      BABY MARSH Mellow  is a fanatical token to marshmellow.
      and has good plans.  namely being the Best NFT Token, having a solid Community and Investors.
+
+     Hold baby Marshmellow And Earn BNB
 
     About Us : 
     Telegram : https://t.me/mellowtoken
@@ -363,8 +365,8 @@ contract MELLOWART is Context, iBEP20, Ownable {
   address private _dividenttoken;
 
   constructor() public {
-    _name = 'MarshMellow Art';
-    _symbol = 'MELLOWART';
+    _name = 'Baby MarshMellow';
+    _symbol = 'BABYMELLOW';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
     _totalSupply = 1 * 10**12 * 10**9;
