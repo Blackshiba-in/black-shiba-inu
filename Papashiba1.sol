@@ -1,23 +1,35 @@
 // SPDX-License-Identifier: MIT
 
-/*   Welcome To Baby MARSHMELLOW
-      BABY MARSH Mellow  is a fanatical token to marshmellow.
-     and has good plans.  namely being the Best NFT Token, having a solid Community and Investors.
+/*   Welcome To Papa Stellar
+        Hold Papa Stellar and Earn Stellar
 
-     Hold baby Marshmellow And Earn BNB
+     Papa Stellar ; PXLM
+     Supply   1.000.000.000
+     Max buy    100.000.000
+     Max Wallet 500.000.000
+
 
     About Us : 
-    Telegram : https://t.me/mellowtoken
-    Twitter  : https://www.twitter.com/MarsmellowArt1
-    Website  : https://mellow-art.com/
+    Telegram : https://t.me/papastellar
+    Twitter  : https://www.twitter.com/Papastellar1
+    Website  : https://papa-stellar.com
 
     Lp Locked 1 Year 
     Owner Renounced 
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+▒▒▒▒▒▄███████▄▒▒▒▒▒
+▒▒▒▄███▀▀▀▀▀███▄▒▒▒
+▒▒███▀▒▒▒▒▒▒▒▀███▒▒
+▒███▒▒▒▄███▄▒▒▒███▒
+▐██▒▒▒███████▒▒▒██▌
+▒███▒▒▒▀███▀▒▒▒███▒
+▒▒███▄▒▒▒▒▒▒▒▄███▒▒
+▒▒▒▀███▄▄▄▄▄███▀▒▒▒
+▒▒▒▒▒▀███████▀▒▒▒▒▒
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 
- */
-
-
+*/
 pragma solidity 0.6.12;
 
 interface iBEP20 {
@@ -351,7 +363,7 @@ contract Ownable is Context {
     }
 }
 
-contract MELLOWART is Context, iBEP20, Ownable {
+contract PAPASTELLAR is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -365,17 +377,17 @@ contract MELLOWART is Context, iBEP20, Ownable {
   address private _dividenttoken;
 
   constructor() public {
-    _name = 'Baby MarshMellow';
-    _symbol = 'BABYMELLOW';
+    _name = 'PAPA STELLAR';
+    _symbol = 'PXLM';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 1 * 10**12 * 10**9;
+    _totalSupply = 1 * 10**9 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 
-    uint256 public _taxFee = 3;
+    uint256 public _taxFee = 1;
     uint256 private _previousTaxFee = _taxFee;
     
     uint256 public _liquidityFee = 1;
