@@ -1,31 +1,17 @@
 // SPDX-License-Identifier: MIT
 
-/*   Welcome To PapaShiba ($PASHIB)
-       Papahiba's plan is to become a leading meme token, 
-    have a solid community,this token is 100% community driven.
+/*   Welcome To MarshMellow Art
+       marshmallow is a fanatical token to marshmellow.
+     and has good plans.  namely being the Best NFT Token, having a solid Community and Investors.
 
     About Us : 
-    Telegram : https://t.me/PapaShibaOfficial
-    Twitter  : https://www.twitter.com/papashiba1
-    Website  : https://papashiba.xyz/
+    Telegram : https://t.me/mellowtoken
+    Twitter  : https://www.twitter.com/MarsmellowArt1
+    Website  : https://mellow-art.com/
 
     Lp Locked 1 Year 
     Owner Renounced 
 
-    
-██████╗░░█████╗░██████╗░░█████╗░
-██╔══██╗██╔══██╗██╔══██╗██╔══██╗
-██████╔╝███████║██████╔╝███████║
-██╔═══╝░██╔══██║██╔═══╝░██╔══██║
-██║░░░░░██║░░██║██║░░░░░██║░░██║
-╚═╝░░░░░╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝
-
-░██████╗██╗░░██╗██╗██████╗░░█████╗░
-██╔════╝██║░░██║██║██╔══██╗██╔══██╗
-╚█████╗░███████║██║██████╦╝███████║
-░╚═══██╗██╔══██║██║██╔══██╗██╔══██║
-██████╔╝██║░░██║██║██████╦╝██║░░██║
-╚═════╝░╚═╝░░╚═╝╚═╝╚═════╝░╚═╝░░╚═╝
 
  */
 
@@ -363,7 +349,7 @@ contract Ownable is Context {
     }
 }
 
-contract PAPASHIBA is Context, iBEP20, Ownable {
+contract MELLOWART is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -377,8 +363,8 @@ contract PAPASHIBA is Context, iBEP20, Ownable {
   address private _dividenttoken;
 
   constructor() public {
-    _name = 'PAPASHIBA';
-    _symbol = 'PaSHIB';
+    _name = 'MarshMellow Art';
+    _symbol = 'MELLOWART';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
     _totalSupply = 1 * 10**12 * 10**9;
