@@ -1,20 +1,18 @@
 //  SPDX-License-Identifier: UNLICENSED
 
-/**  Welcome To little Project
-        Little projek plan is to become a leading meme token,
-     have a solid community, this token is 100% community driven.
+/** Welcome to the little bunny sneak launch       
+        This is a community token, please make a telegram group 
+    My suggesh @LittleBunny
 
-     Saint Doge ; SAINTDOGE
-     Supply 1,000,000,000,000,000
-     Decimals 9 
+    Little Bunny ; LTTB
+    Supply 10.000.000
+    Decimals 9
 
-     🔥 Burnt Token :
-        300.000.000.000.000
-     🥮 Liquidity Pool :
-        700.000.000.000.000
+    Burnt token 30%
+    Liquidity pool 70%
 
-     ♻️ Community 
-        Telegram : https://t.me/ParisSaintDoge
+    Owner renounced and Lp Burnt 
+
 
 */
 pragma solidity 0.6.12;
@@ -350,7 +348,7 @@ contract Ownable is Context {
     }
 }
 
-contract SaintDoge is Context, iBEP20, Ownable {
+contract littleBUNNY is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -363,11 +361,11 @@ contract SaintDoge is Context, iBEP20, Ownable {
   address private _burnaddress;
 
   constructor() public {
-    _name = 'Saint Doge';
-    _symbol = 'SAINTDOGE';
+    _name = 'little BUNNY';
+    _symbol = 'LTTB';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 10 * 10**12 * 10**9;
+    _totalSupply = 10 * 10**6 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
