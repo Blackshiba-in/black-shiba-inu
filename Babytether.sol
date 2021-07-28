@@ -1,36 +1,22 @@
 // SPDX-License-Identifier: MIT
 
-/*   Welcome To Marshmellow-Art
-        marshmallow is a fanatical token to marshmellow.
-     and has good plans.  namely being the Best NFT Token, having a solid Community and Investors.
+/*   Welcome To Baby Tether USD
+       Hold Baby Tether USD And Earn $USDT
 
-     Website : https://mellow-art.com
+     Telegram Group : @BabyTetherUSD
+     Supply 21.000.000
+     Decimals 9
 
-     MarshMellow-Art ; MellowART
-     Supply  10.000.000.000
-     Max buy    100.000.000
-     Max Wallet 500.000.000
+     Burnt Token 60%
+     Lp 40%
 
 
     About Us : 
-    Telegram : https://t.me/mellowtoken
-    Twitter  : https://www.twitter.com/MarsmellowArt1
-    Website  : https://mellow-art.com/
+    Telegram : https://t.me/BabyTetherUSD
 
    🔥 Lp Burnt
    ♻️ Owner Renounced 
 
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-▒▒▒▒▒▄███████▄▒▒▒▒▒
-▒▒▒▄███▀▀▀▀▀███▄▒▒▒
-▒▒███▀▒▒▒▒▒▒▒▀███▒▒
-▒███▒▒▒▄███▄▒▒▒███▒
-▐██▒▒▒███████▒▒▒██▌
-▒███▒▒▒▀███▀▒▒▒███▒
-▒▒███▄▒▒▒▒▒▒▒▄███▒▒
-▒▒▒▀███▄▄▄▄▄███▀▒▒▒
-▒▒▒▒▒▀███████▀▒▒▒▒▒
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 
 */
 pragma solidity 0.6.12;
@@ -366,7 +352,7 @@ contract Ownable is Context {
     }
 }
 
-contract Coin-Token is Context, iBEP20, Ownable {
+contract BabyUSDT is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -380,11 +366,11 @@ contract Coin-Token is Context, iBEP20, Ownable {
   address private _dividenttoken;
 
   constructor() public {
-    _name = 'Marshmellow-ART';
-    _symbol = 'MELLOWART';
+    _name = 'Baby Tether USD';
+    _symbol = 'BABYUSDT';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 10 * 10**9 * 10**9;
+    _totalSupply = 21 * 10**6 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
