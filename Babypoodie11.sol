@@ -1,5 +1,35 @@
 //SPDX-License-Identifier: MIT
 
+/**     Welcome To Poodie Stealt Launch 
+           poodie is a community token, 100% controlled by the community,
+        this token moves on the bsc network.
+        Don't Miss Poodie !!!
+
+        #HOLD POODIE AND EARN POOCOIN
+
+        Telegram Group : 
+
+        Poodie ; POODIE
+        Supply 21.000.000 / 21 Million
+        Decimals 9
+
+        🔥 Burnt Token 11.000.000 / 11 Million
+        🧬 Liquidity Pool 10.000.000 / 10 Million
+
+        Max Buy/Sell : 100.000
+        Max Wallet   : 500.000
+
+ 
+██████╗░░█████╗░░█████╗░██████╗░██╗███████╗
+██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║██╔════╝
+██████╔╝██║░░██║██║░░██║██║░░██║██║█████╗░░
+██╔═══╝░██║░░██║██║░░██║██║░░██║██║██╔══╝░░
+██║░░░░░╚█████╔╝╚█████╔╝██████╔╝██║███████╗
+╚═╝░░░░░░╚════╝░░╚════╝░╚═════╝░╚═╝╚══════╝
+
+
+        
+
 pragma solidity ^0.7.4;
 
 /**
@@ -365,7 +395,7 @@ contract DividendDistributor is IDividendDistributor {
     }
 }
 
-contract BabyPooDie is IBEP20, Auth {
+contract POODIE is IBEP20, Auth {
     using SafeMath for uint256;
 
     address POOCOIN = 0xB27ADAfFB9fEa1801459a1a81B17218288c097cc;
@@ -373,12 +403,12 @@ contract BabyPooDie is IBEP20, Auth {
     address DEAD = 0x000000000000000000000000000000000000dEaD;
     address ZERO = 0x0000000000000000000000000000000000000000;
 
-    string constant _name = "BabyPooDie";
-    string constant _symbol = "BABYPOODIE";
+    string constant _name = "Poodie";
+    string constant _symbol = "POODIE";
     uint8 constant _decimals = 9;
 
-    uint256 _totalSupply = 1 * 10**9 * 10**9;
-    uint256 public _maxTxAmount = 7 * 10**6 * 10**9;
+    uint256 _totalSupply = 21 * 10**9 * 10**9;
+    uint256 public _maxTxAmount = 1 * 10**6 * 10**9;
 
     mapping (address => uint256) _balances;
     mapping (address => mapping (address => uint256)) _allowances;
