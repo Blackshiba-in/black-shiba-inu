@@ -7,7 +7,7 @@
 
         #HOLD POODIE AND EARN POOCOIN
 
-        Telegram Group : 
+        Telegram Group : https://t.me/PoodieOfficial
 
         Poodie ; POODIE
         Supply 21.000.000 / 21 Million
@@ -18,6 +18,8 @@
 
         Max Buy/Sell : 100.000
         Max Wallet   : 500.000
+
+        Telegram : https://t.me/PoodieOfficial
 
  
 ██████╗░░█████╗░░█████╗░██████╗░██╗███████╗
