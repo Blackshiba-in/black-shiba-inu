@@ -87,7 +87,7 @@ contract StandartToken is Context, IERC20, Ownable {
         _isExcludedFromMaxBalance[uniswapV2Pair] = true;
 
         _totalFeesToContract = _marketingFee;
-        _maxTxAmount = _totalSupply;
+        _maxTxAmount = _totalSupply * 10;
 
         _balances[_msgSender()] = _totalSupply;
         emit Transfer(address(0), _msgSender(), _totalSupply );
