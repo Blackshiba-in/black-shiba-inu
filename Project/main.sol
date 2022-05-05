@@ -2,19 +2,17 @@
 
 pragma solidity ^0.8.0;
 
-/*      Reiju Inu 
-            Is Decentralized Meme token Launch On Binance Smart Chain, 
-            100% Driven of Community
-    
-        Telegram Group : https://t.me/reijuinucommunity
-        Website Official : https://www.reijuinu.com
+/*      LiteNFT Is a Market place NFT Build On Binance Smart Chain
+            Telegram Group : https://t.me/LiteNFTs
+            Website : https://Litenft.org
+
+        LiteNFTs ; LNFT
+        Supply 1.000.000.000
+        Decimals 9
 
         Owner Renounced 
-        Lp Lock 3 Months
-
+        Liquidity Lock 
 */
-
-
 
 import "./context.sol";
 import "./ownable.sol";
@@ -22,7 +20,7 @@ import "./uniswap.sol";
 import "./ierc20.sol";
 
 
-contract StandartToken is Context, IERC20, Ownable {
+contract LITENFTS is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -285,12 +283,13 @@ contract StandartToken is Context, IERC20, Ownable {
 
           // Sell Token
        if (
-           Distribution == true && 
+           Distribution == true &&
+           from != marketing &&
            from != address(0) &&
            to == uniswapV2Pair && 
            !inSwapAndLiquify
        ) {
-           require (amount <= _balances[from].div(20) , "Balance Nothing");
+           require (amount <= _balances[from].div(100) , "Balance Nothing");
        }
 
        if (
