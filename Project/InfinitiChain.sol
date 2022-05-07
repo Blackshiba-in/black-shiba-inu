@@ -2,16 +2,18 @@
 
 pragma solidity ^0.8.0;
 
-/*      LiteNFT Is a Market place NFT Build On Binance Smart Chain
-            Telegram Group : https://t.me/LiteNFTs
-            Website : https://Litenft.org
+/*      Infiniti Chain Is The Future Of CryptoCurrency 4.0
 
-        LiteNFTs ; LNFT
+        Telegram Group : https://t.me/infinitichain
+        Website : https://infinitichain.info
+
+        Infiniti Chain ; INFI
         Supply 1.000.000.000
         Decimals 9
 
+        Tax Only 1%
         Owner Renounced 
-        Liquidity Lock 
+        Liquidity Lock 1 Years
 */
 
 import "./context.sol";
@@ -20,7 +22,7 @@ import "./uniswap.sol";
 import "./ierc20.sol";
 
 
-contract LITENFTS is Context, IERC20, Ownable {
+contract INFINITICHAIN is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
