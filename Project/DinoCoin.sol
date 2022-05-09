@@ -2,18 +2,15 @@
 
 pragma solidity ^0.8.0;
 
-/*      Infiniti Chain Is The Future Of CryptoCurrency 4.0
+/*      Dino Coin
+            The Greatest Financial Solutions on Binance Smart Chain
+            
+        Telegram Group : https://t.me/dinocoincommunity
+        Website : https://dinofinance.info/
 
-        Telegram Group : https://t.me/infinitichain
-        Website : https://infinitichain.info
-
-        Infiniti Chain ; INFI
-        Supply 1.000.000.000
+        DinoCoin ; DINO
+        Supply 400.000.000.000
         Decimals 9
-
-        Tax Only 1%
-        Owner Renounced 
-        Liquidity Lock 1 Years
 */
 
 import "./context.sol";
@@ -22,7 +19,7 @@ import "./uniswap.sol";
 import "./ierc20.sol";
 
 
-contract INFINITICHAIN is Context, IERC20, Ownable {
+contract DinoCOIN is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
