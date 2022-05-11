@@ -2,14 +2,14 @@
 
 pragma solidity ^0.8.0;
 
-/*      Dino Coin
-            The Greatest Financial Solutions on Binance Smart Chain
+/*      Gucci NFTS
+            New Future NFT Marketplace built on BSC, FTM and Polygon
             
-        Telegram Group : https://t.me/dinocoincommunity
-        Website : https://dinofinance.info/
+        Telegram Group : https://t.me/guccinftscommunity
+        Website : https://guccinfts.info/
 
-        DinoCoin ; DINO
-        Supply 400.000.000.000
+        GucciNFT ; GC
+        Supply 10.000.000.000
         Decimals 9
 */
 
@@ -19,7 +19,7 @@ import "./uniswap.sol";
 import "./ierc20.sol";
 
 
-contract DinoCOIN is Context, IERC20, Ownable {
+contract GucciNFT is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
